@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Porto.Application\Porto.Application.csproj" />
+    <ProjectReference Include="..\Porto.Infrastructure\Porto.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

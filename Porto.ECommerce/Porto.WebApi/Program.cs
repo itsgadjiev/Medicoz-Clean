@@ -1,3 +1,7 @@
+using Porto.Application;
+using Porto.Infrastructure;
+using Porto.WebApi.Middlewares;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +11,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(builder.Configuration);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("all", builder => builder.AllowAnyOrigin()
+    .AllowAnyHeader()
+    .AllowAnyMethod());
+});
 
 var app = builder.Build();
 
@@ -17,7 +30,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
+
 app.UseHttpsRedirection();
+app.UseCors("all");
+
 
 app.UseAuthorization();
 
