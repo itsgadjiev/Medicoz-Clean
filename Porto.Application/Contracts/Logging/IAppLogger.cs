@@ -1,4 +1,4 @@
-﻿namespace Porto.Application.Contracts.Logging;
+﻿namespace Medicoz.Application.Contracts.Logging;
 
 public interface IAppLogger<T>
 {

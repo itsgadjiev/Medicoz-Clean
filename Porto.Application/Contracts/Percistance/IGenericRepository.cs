@@ -1,4 +1,4 @@
-﻿namespace Porto.Application.Contracts.Percistance;
+﻿namespace Medicoz.Application.Contracts.Percistance;
 
 public interface IGenericRepository<T>
 {

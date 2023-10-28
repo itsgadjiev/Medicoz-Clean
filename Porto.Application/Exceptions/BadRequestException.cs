@@ -1,4 +1,4 @@
-﻿namespace Porto.Application.Exceptions;
+﻿namespace Medicoz.Application.Exceptions;
 
 public class BadRequestException : ApplicationException
 {

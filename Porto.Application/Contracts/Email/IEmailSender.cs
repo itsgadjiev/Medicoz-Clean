@@ -1,4 +1,4 @@
-﻿namespace Porto.Application.Contracts.Email;
+﻿namespace Medicoz.Application.Contracts.Email;
 
 public interface IEmailSender
 {

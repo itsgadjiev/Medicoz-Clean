@@ -1,9 +1,9 @@
 ﻿
 
+using Medicoz.Application.Contracts.Logging;
 using Microsoft.Extensions.Logging;
-using Porto.Application.Contracts.Logging;
 
-namespace Porto.Infrastructure.Logging
+namespace Medicoz.Infrastructure.Logging
 {
     public class LoggerAdapter<T> : IAppLogger<T>
     {

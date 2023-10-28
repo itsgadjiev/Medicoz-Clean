@@ -1,5 +1,5 @@
-using Porto.Application;
-using Porto.Infrastructure;
+using Medicoz.Application;
+using Medicoz.Infrastructure;
 using Porto.WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddSingleton<GlobalExceptionHandlingMiddleware>();
 
 builder.Services.AddCors(options =>
 {

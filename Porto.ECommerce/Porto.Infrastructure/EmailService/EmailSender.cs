@@ -1,10 +1,10 @@
 ﻿using MailKit.Net.Smtp;
+using Medicoz.Application.Contracts.Email;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
-using Porto.Application.Contracts.Email;
 
 
-namespace Porto.Infrastructure.EmailService;
+namespace Medicoz.Infrastructure.EmailService;
 
 public class EmailSender : IEmailSender
 {

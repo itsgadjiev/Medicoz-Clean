@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Porto.Application\Porto.Application.csproj" />
+    <ProjectReference Include="..\..\Porto.Application\Medicoz.Application.csproj" />
   </ItemGroup>
 
 </Project>

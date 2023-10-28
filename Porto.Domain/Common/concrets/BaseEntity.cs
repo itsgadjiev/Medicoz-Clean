@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Porto.Domain.Common.concrets;
+namespace Medicoz.Domain.Common.concrets;
 
 public class BaseEntity
 {

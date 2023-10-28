@@ -1,21 +1,20 @@
-﻿using Porto.Application.Contracts.Logging;
-using Porto.Application.Exceptions;
-using System.Net.Mime;
+﻿using Medicoz.Application.Exceptions;
 using System.Net;
+using System.Net.Mime;
 using System.Security.Claims;
-using System.Text.Json;
 using System.Text;
+using System.Text.Json;
 
 namespace Porto.WebApi.Middlewares;
 
 public class GlobalExceptionHandlingMiddleware : IMiddleware
 {
-    private readonly IAppLogger<GlobalExceptionHandlingMiddleware> _logger;
+    private readonly ILogger<GlobalExceptionHandlingMiddleware> _logger;
     private readonly IWebHostEnvironment _hostingEnvironment;
 
-    public GlobalExceptionHandlingMiddleware(IAppLogger<GlobalExceptionHandlingMiddleware> logger, IWebHostEnvironment hostingEnvironment)
+    public GlobalExceptionHandlingMiddleware(ILoggerFactory loggerFactory, IWebHostEnvironment hostingEnvironment)
     {
-        _logger = logger;
+        _logger = loggerFactory.CreateLogger<GlobalExceptionHandlingMiddleware>();
         _hostingEnvironment = hostingEnvironment;
     }
 
@@ -68,7 +67,7 @@ public class GlobalExceptionHandlingMiddleware : IMiddleware
 
         if (_hostingEnvironment.IsProduction())
         {
-            _logger.LogCritical( "Internal server error happened.", exception);
+            _logger.LogCritical("Internal server error happened.", exception);
             context.Response.ContentType = MediaTypeNames.Application.Json;
             responseMessage = JsonSerializer.Serialize("Internal server error happened.");
         }

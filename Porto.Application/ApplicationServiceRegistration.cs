@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Porto.Application;
+namespace Medicoz.Application;
 
 public static class ApplicationServiceRegistration
 {

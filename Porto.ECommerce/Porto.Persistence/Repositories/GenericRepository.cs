@@ -1,12 +1,16 @@
-﻿namespace Porto.Persistence.Repositories;
+﻿using Medicoz.Persistence.Database;
+using Microsoft.EntityFrameworkCore;
+using BaseEntity = Medicoz.Domain.Common.concrets.BaseEntity;
+namespace Medicoz.Persistence.Repositories;
 
-public class GenericRepository<T> where T : Domain.Common.concrets.BaseEntity
+public class GenericRepository<T> where T : BaseEntity
 {
-    //protected readonly AppDb _context;
+
+    protected readonly AppDbContext _context;
 
     public GenericRepository(AppDbContext context)
     {
-       
+        _context = context;
     }
 
     public async Task CreateAsync(T entity)

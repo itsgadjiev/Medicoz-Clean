@@ -1,12 +1,11 @@
-﻿
+﻿using Medicoz.Application.Contracts.Email;
+using Medicoz.Application.Contracts.Logging;
+using Medicoz.Infrastructure.EmailService;
+using Medicoz.Infrastructure.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Porto.Application.Contracts.Email;
-using Porto.Application.Contracts.Logging;
-using Porto.Infrastructure.EmailService;
-using Porto.Infrastructure.Logging;
 
-namespace Porto.Infrastructure;
+namespace Medicoz.Infrastructure;
 
 public static class InfrastructureServicesRegistration
 {
