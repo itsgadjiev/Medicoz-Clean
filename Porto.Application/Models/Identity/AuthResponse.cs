@@ -1,4 +1,4 @@
-﻿namespace Medicoz.Application.Models
+﻿namespace Medicoz.Application.Models.Identity
 {
     public class AuthResponse
     {

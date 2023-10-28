@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Medicoz.Application.Models
+namespace Medicoz.Application.Models.Identity
 {
-    public class RegistartionRequest
+    public class RegistrationRequest
     {
         [Required]
         public string FirstName { get; set; }

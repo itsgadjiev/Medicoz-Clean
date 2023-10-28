@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Porto.Application\Medicoz.Application.csproj" />
+    <ProjectReference Include="..\Medicoz.Identity\Medicoz.Identity.csproj" />
     <ProjectReference Include="..\Porto.Infrastructure\Medicoz.Infrastructure.csproj" />
   </ItemGroup>
 

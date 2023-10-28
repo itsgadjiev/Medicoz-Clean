@@ -1,4 +1,5 @@
 using Medicoz.Application;
+using Medicoz.Identity;
 using Medicoz.Infrastructure;
 using Medicoz.MVC.Middlewares;
 
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddApplicationServices();
+builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddSingleton<GlobalExceptionHandlingMiddleware>();
 
