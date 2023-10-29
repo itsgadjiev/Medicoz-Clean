@@ -3,6 +3,7 @@ using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace Medicoz.Identity.Services
@@ -43,5 +44,27 @@ namespace Medicoz.Identity.Services
                 Lastname = q.LastName
             }).ToList();
         }
-    }
+
+        public User GetUser()
+        {
+            return new User { Firstname = "slaak" };
+        }
+
+            //    var subClaim = JwtSecurityToken.Claims.FirstOrDefault(claim => claim.Type == "sub"); // subject claim
+            //    var emailClaim = claims.FirstOrDefault(claim => claim.Type == "email");
+            //    var uidClaim = claims.FirstOrDefault(claim => claim.Type == "uid");
+            //    var roleClaim = claims.FirstOrDefault(claim => claim.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role");
+            //    var expClaim = claims.FirstOrDefault(claim => claim.Type == "exp");
+            //    var issClaim = claims.FirstOrDefault(claim => claim.Type == "iss");
+            //    var audClaim = claims.FirstOrDefault(claim => claim.Type == "aud");
+            //    // You can add more claims as needed
+
+            //    return new User
+            //    {
+            //        Id = userId,
+            //        Firstname = userName,
+            //        Email = userEmail
+            //    };
+            //}
+        }
 }

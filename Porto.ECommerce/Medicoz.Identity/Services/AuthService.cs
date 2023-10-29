@@ -2,6 +2,7 @@
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -52,6 +53,8 @@ namespace Medicoz.Identity.Services
                 UserName = user.UserName
             };
 
+            //await _signInManager.SignInAsync(user, isPersistent: true);
+
             return response;
         }
 
@@ -64,14 +67,14 @@ namespace Medicoz.Identity.Services
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 UserName = request.UserName,
-                EmailConfirmed = false
+                EmailConfirmed = true
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, "User");
+                await _userManager.AddToRoleAsync(user, "Employee");
                 return new RegistrationResponse() { UserId = user.Id };
             }
             else

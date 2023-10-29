@@ -23,7 +23,7 @@ namespace Medicoz.Identity.Configurations
                 },
                 new IdentityRole
                 {
-                     Id = "cbc43a8e-f7bb-4445-baaf-1add431ffbbf",
+                     Id = "abc43a8e-f7bb-8875-baaf-1add431ffbbf",
                      Name = "Doctor",
                      NormalizedName = "DOCTOR"
                 }
