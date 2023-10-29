@@ -10,12 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSingleton<GlobalExceptionHandlingMiddleware>();
-builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
@@ -35,6 +35,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCookiePolicy();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

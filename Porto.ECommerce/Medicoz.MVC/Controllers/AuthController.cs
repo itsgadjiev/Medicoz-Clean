@@ -1,10 +1,12 @@
 ﻿using Medicoz.Application.Contracts.Identity;
+using Medicoz.Application.Contracts.Logging;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualBasic;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System.Security.Claims;
 
@@ -15,42 +17,50 @@ namespace Medicoz.MVC.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
-        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IAppLogger<AuthController> _appLogger;
 
-
-
-        public AuthController(IAuthService authService, IUserService userService, IHttpContextAccessor httpContextAccessor)
+        public AuthController(IAuthService authService ,IUserService userService,IAppLogger<AuthController> appLogger)
         {
             _authService = authService;
             _userService = userService;
-            _httpContextAccessor = httpContextAccessor;
-
+            _appLogger = appLogger;
         }
         [HttpGet("login")]
         public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost("login")]
-        public async Task<IActionResult> Login(AuthRequest authRequest)
+        public async Task<IActionResult> Login(AuthRequest model)
         {
-
-            var authResponse = await _authService.Login(authRequest);
-            if (authResponse != null)
+            var response = await _authService.Login(model);
+           
+            if (response != null)
             {
-                return RedirectToAction("Logged","Auth");
+                _appLogger.LogCritical(_userService.UserId, response);
+                return RedirectToAction("Logged");
             }
-            return BadRequest();
-
-
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt");
+                return View(model);
+            }
         }
-
-        public async Task<IActionResult> Logged()
+        public async Task<IActionResult> LoggedAsync()
         {
-            
-            var user = await _userService.GetEmployee(_userService.UserId);
+            var user =await _userService.GetEmployee(_userService.UserId);
             return View(user);
         }
+
+        [HttpGet("OutAsync")]
+        public async Task<IActionResult> OutAsync()
+        {
+            await _authService.SignOut();
+             return RedirectToAction("Login");
+        }
+
+
 
 
 

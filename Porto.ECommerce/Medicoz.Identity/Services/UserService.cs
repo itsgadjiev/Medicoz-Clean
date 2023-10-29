@@ -1,8 +1,10 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.Models;
+using Medicoz.Persistence.Database;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -12,15 +14,16 @@ namespace Medicoz.Identity.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IHttpContextAccessor _contextAccessor;
+        private readonly HttpContext _httpContext;
 
         public UserService(UserManager<ApplicationUser> userManager, IHttpContextAccessor contextAccessor)
         {
             _userManager = userManager;
             _contextAccessor = contextAccessor;
+        
         }
 
-        public string UserId { get => _contextAccessor.HttpContext?.User?.FindFirstValue("uid"); }
-
+        public string UserId => _contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         public async Task<User> GetEmployee(string userId)
         {
             var employee = await _userManager.FindByIdAsync(userId);
@@ -45,26 +48,34 @@ namespace Medicoz.Identity.Services
             }).ToList();
         }
 
-        public User GetUser()
+        public async Task<User> GetUserAsync()
         {
-            return new User { Firstname = "slaak" };
+
+            var userClaimId = _contextAccessor.HttpContext?.User.FindFirst("uid");
+            if (userClaimId is null)
+            {
+                throw new Exception("User is not authenticated");
+            }
+
+            var userClaimIdInt = (userClaimId.Value).ToString();
+            ApplicationUser user = await _userManager.FindByIdAsync(userClaimIdInt);
+
+            if (user is null)
+            {
+                throw new Exception("User is not found");
+            }
+
+            User needUser = new User
+            {
+                Email = user.Email,
+                Id = user.Id,
+                Firstname= user.FirstName,
+                Lastname= user.LastName
+            };
+
+            return needUser;
         }
 
-            //    var subClaim = JwtSecurityToken.Claims.FirstOrDefault(claim => claim.Type == "sub"); // subject claim
-            //    var emailClaim = claims.FirstOrDefault(claim => claim.Type == "email");
-            //    var uidClaim = claims.FirstOrDefault(claim => claim.Type == "uid");
-            //    var roleClaim = claims.FirstOrDefault(claim => claim.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role");
-            //    var expClaim = claims.FirstOrDefault(claim => claim.Type == "exp");
-            //    var issClaim = claims.FirstOrDefault(claim => claim.Type == "iss");
-            //    var audClaim = claims.FirstOrDefault(claim => claim.Type == "aud");
-            //    // You can add more claims as needed
-
-            //    return new User
-            //    {
-            //        Id = userId,
-            //        Firstname = userName,
-            //        Email = userEmail
-            //    };
-            //}
-        }
+       
+    }
 }

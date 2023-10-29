@@ -11,6 +11,7 @@ namespace Medicoz.Application.Contracts.Identity
     {
         Task<AuthResponse> Login(AuthRequest authRequest);
         Task<RegistrationResponse> Register(RegistrationRequest registartionRequest);
+        Task SignOut();
 
     }
 }
