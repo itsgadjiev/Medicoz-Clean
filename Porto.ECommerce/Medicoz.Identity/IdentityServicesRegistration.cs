@@ -1,5 +1,6 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Models.Identity;
+using Medicoz.Identity.DbContext;
 using Medicoz.Identity.Models;
 using Medicoz.Identity.Services;
 using Medicoz.Persistence.Database;
@@ -19,11 +20,11 @@ namespace Medicoz.Identity
         {
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
-            services.AddDbContext<AppDbContext>(options =>
-               options.UseSqlServer(configuration.GetConnectionString("HrDatabaseConnectionString")));
+            services.AddDbContext<AppIdentityDbContext>(options =>
+               options.UseSqlServer(configuration.GetConnectionString("Default")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
 
             services.AddTransient<IAuthService, AuthService>();
             services.AddTransient<IUserService, UserService>();

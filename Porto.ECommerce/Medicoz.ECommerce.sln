@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medicoz.Persistence", "Port
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{D9B34D3E-8CC4-4D60-9FBB-9B52DEBFFE2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicoz.MVC", "Medicoz.MVC\Medicoz.MVC.csproj", "{387083E6-A510-4EC0-975F-21797ADAFCB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medicoz.MVC", "Medicoz.MVC\Medicoz.MVC.csproj", "{387083E6-A510-4EC0-975F-21797ADAFCB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicoz.Identity", "Medicoz.Identity\Medicoz.Identity.csproj", "{B14CE6F1-97B2-4D59-9584-089B8870DC5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medicoz.Identity", "Medicoz.Identity\Medicoz.Identity.csproj", "{B14CE6F1-97B2-4D59-9584-089B8870DC5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medicoz.Form.API", "Medicoz.Form.API\Medicoz.Form.API.csproj", "{5D211838-962A-4DAB-A1F9-5704F5B80D16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B14CE6F1-97B2-4D59-9584-089B8870DC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B14CE6F1-97B2-4D59-9584-089B8870DC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B14CE6F1-97B2-4D59-9584-089B8870DC5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D211838-962A-4DAB-A1F9-5704F5B80D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D211838-962A-4DAB-A1F9-5704F5B80D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D211838-962A-4DAB-A1F9-5704F5B80D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D211838-962A-4DAB-A1F9-5704F5B80D16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{D9B34D3E-8CC4-4D60-9FBB-9B52DEBFFE2B} = {749EB492-48BC-4FC2-B9FD-80C0EBB65DDF}
 		{387083E6-A510-4EC0-975F-21797ADAFCB9} = {D9B34D3E-8CC4-4D60-9FBB-9B52DEBFFE2B}
 		{B14CE6F1-97B2-4D59-9584-089B8870DC5E} = {A8520852-91B4-4153-A702-A69B41FDDEBC}
+		{5D211838-962A-4DAB-A1F9-5704F5B80D16} = {842DEAEE-1B46-40DA-B0D0-FCD9762E583A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FC0FDB6-4E15-4628-A348-6F86AF712D3F}

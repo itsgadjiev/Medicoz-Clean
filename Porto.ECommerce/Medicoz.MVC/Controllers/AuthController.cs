@@ -21,9 +21,9 @@ namespace Medicoz.MVC.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(AuthRequest authRequest)
         {
-            await _authService.Login(authRequest);
+            var resp = await _authService.Login(authRequest);
 
-            return Ok(authRequest);
+            return Ok(resp);
         }
 
 
