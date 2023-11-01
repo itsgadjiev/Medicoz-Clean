@@ -1,8 +1,5 @@
-﻿using Medicoz.Application.Contracts.Identity;
-using Medicoz.Application.Models.slide;
+﻿using Medicoz.Domain;
 using Medicoz.Domain.Common.abstracts;
-using Medicoz.Domain.Common.concrets;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Medicoz.Persistence.Database;
@@ -12,9 +9,9 @@ public class AppDbContext : DbContext
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
-        
+
     }
-    public DbSet<Slider> Sliders { get; set; }
+    public DbSet<LocalizationEntry> LocalizationEntries { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

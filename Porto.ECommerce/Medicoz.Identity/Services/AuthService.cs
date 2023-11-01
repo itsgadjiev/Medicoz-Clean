@@ -41,15 +41,15 @@ namespace Medicoz.Identity.Services
 
             if (user == null)
             {
-                throw new NotFoundException($"User with {request.Email} not found.");
+                throw new NotFoundException($"Invalid username or Password.");
             }
 
-            await _signInManager.SignInAsync(user,false);
+            var result = await _signInManager.PasswordSignInAsync(user, request.Password, false, false);
 
-            //if (result.Succeeded == false)
-            //{
-            //    throw new BadRequestException($"Credentials for '{request.Email} aren't valid'.");
-            //}
+            if (result.Succeeded == false)
+            {
+                throw new NotFoundException($"Invalid username or Password.");
+            }
 
             JwtSecurityToken jwtSecurityToken = await GenerateToken(user);
 
@@ -60,7 +60,7 @@ namespace Medicoz.Identity.Services
                 Email = user.Email,
                 UserName = user.UserName
             };
-          
+
 
             return response;
         }
@@ -109,7 +109,7 @@ namespace Medicoz.Identity.Services
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim("uid", user.Id),
-              
+
             }
             .Union(userClaims)
             .Union(roleClaims);
@@ -130,7 +130,7 @@ namespace Medicoz.Identity.Services
 
         public async Task SignOut()
         {
-           await _signInManager.SignOutAsync();
+            await _signInManager.SignOutAsync();
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Contracts.Logging;
+using Medicoz.Application.Exceptions;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.Services;
 using Microsoft.AspNetCore.Authentication;
@@ -19,7 +20,7 @@ namespace Medicoz.MVC.Controllers
         private readonly IUserService _userService;
         private readonly IAppLogger<AuthController> _appLogger;
 
-        public AuthController(IAuthService authService ,IUserService userService,IAppLogger<AuthController> appLogger)
+        public AuthController(IAuthService authService, IUserService userService, IAppLogger<AuthController> appLogger)
         {
             _authService = authService;
             _userService = userService;
@@ -34,22 +35,22 @@ namespace Medicoz.MVC.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(AuthRequest model)
         {
-            var response = await _authService.Login(model);
-           
-            if (response != null)
+            try
             {
-                _appLogger.LogCritical(_userService.UserId, response);
-                return RedirectToAction("Logged");
+                var response = await _authService.Login(model);
             }
-            else
+            catch (NotFoundException e)
             {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt");
+                ModelState.AddModelError("", e.Value.ToString());
                 return View(model);
+                throw;
             }
+
+            return RedirectToAction("Index", "Home");
         }
         public async Task<IActionResult> LoggedAsync()
         {
-            var user =await _userService.GetEmployee(_userService.UserId);
+            var user = await _userService.GetEmployee(_userService.UserId);
             return View(user);
         }
 
@@ -57,7 +58,7 @@ namespace Medicoz.MVC.Controllers
         public async Task<IActionResult> OutAsync()
         {
             await _authService.SignOut();
-             return RedirectToAction("Login");
+            return RedirectToAction("Login");
         }
 
 

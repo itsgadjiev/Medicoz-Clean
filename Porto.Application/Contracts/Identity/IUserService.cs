@@ -6,7 +6,6 @@ namespace Medicoz.Application.Contracts.Identity
     {
         Task<List<User>> GetEmployees();
         Task<User> GetEmployee(string userId);
-        Task<User> GetUserAsync();
         public string UserId { get; }
     }
 }

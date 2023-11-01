@@ -14,7 +14,6 @@ namespace Medicoz.Identity.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IHttpContextAccessor _contextAccessor;
-        private readonly HttpContext _httpContext;
 
         public UserService(UserManager<ApplicationUser> userManager, IHttpContextAccessor contextAccessor)
         {
@@ -48,33 +47,33 @@ namespace Medicoz.Identity.Services
             }).ToList();
         }
 
-        public async Task<User> GetUserAsync()
-        {
+        //public async Task<User> GetUserAsync()
+        //{
 
-            var userClaimId = _contextAccessor.HttpContext?.User.FindFirst("uid");
-            if (userClaimId is null)
-            {
-                throw new Exception("User is not authenticated");
-            }
+        //    var userClaimId = _contextAccessor.HttpContext?.User.FindFirst("uid");
+        //    if (userClaimId is null)
+        //    {
+        //        throw new Exception("User is not authenticated");
+        //    }
 
-            var userClaimIdInt = (userClaimId.Value).ToString();
-            ApplicationUser user = await _userManager.FindByIdAsync(userClaimIdInt);
+        //    var userClaimIdInt = (userClaimId.Value).ToString();
+        //    ApplicationUser user = await _userManager.FindByIdAsync(userClaimIdInt);
 
-            if (user is null)
-            {
-                throw new Exception("User is not found");
-            }
+        //    if (user is null)
+        //    {
+        //        throw new Exception("User is not found");
+        //    }
 
-            User needUser = new User
-            {
-                Email = user.Email,
-                Id = user.Id,
-                Firstname= user.FirstName,
-                Lastname= user.LastName
-            };
+        //    User needUser = new User
+        //    {
+        //        Email = user.Email,
+        //        Id = user.Id,
+        //        Firstname= user.FirstName,
+        //        Lastname= user.LastName
+        //    };
 
-            return needUser;
-        }
+        //    return needUser;
+        //}
 
        
     }

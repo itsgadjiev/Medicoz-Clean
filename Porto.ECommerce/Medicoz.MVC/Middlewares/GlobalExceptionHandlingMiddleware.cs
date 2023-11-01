@@ -1,4 +1,6 @@
 ﻿using Medicoz.Application.Exceptions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Net;
 using System.Net.Mime;
 using System.Security.Claims;

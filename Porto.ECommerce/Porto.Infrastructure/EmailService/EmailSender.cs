@@ -20,7 +20,7 @@ public class EmailSender : IEmailSender
         var emailSettings = _configuration.GetSection("EmailSettings");
 
         var message = new MimeMessage();
-        message.From.Add(new MailboxAddress("PRONIA ADMIN", emailSettings["Username"]));
+        message.From.Add(new MailboxAddress("Medicoz", emailSettings["Username"]));
 
         message.Subject = subject;
         message.Body = new TextPart("plain") { Text = messageText };

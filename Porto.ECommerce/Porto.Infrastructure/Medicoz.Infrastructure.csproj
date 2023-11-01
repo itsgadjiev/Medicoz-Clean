@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Porto.Application\Medicoz.Application.csproj" />
+    <ProjectReference Include="..\Porto.Persistence\Medicoz.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

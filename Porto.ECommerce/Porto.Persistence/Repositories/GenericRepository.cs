@@ -1,9 +1,10 @@
-﻿using Medicoz.Persistence.Database;
+﻿using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Persistence.Database;
 using Microsoft.EntityFrameworkCore;
 using BaseEntity = Medicoz.Domain.Common.concrets.BaseEntity;
 namespace Medicoz.Persistence.Repositories;
 
-public class GenericRepository<T> where T : BaseEntity
+public class GenericRepository<T> where T : BaseEntity, IGenericRepository<T>
 {
 
     protected readonly AppDbContext _context;
