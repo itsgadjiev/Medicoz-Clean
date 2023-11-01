@@ -1,4 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Localizer;
 using Medicoz.Persistence.Database;
 using Medicoz.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@ public static class PersistenceServiceRegistration
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<IDatabaseLocalisationRepository, DatabaseLocalisationRepository>();
-   
+
 
         return services;
     }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Medicoz.Application.Localizer;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace Medicoz.Application;
@@ -9,6 +10,7 @@ public static class ApplicationServiceRegistration
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+        services.AddScoped<DatabaseStringLocalizer>();
 
         return services;
     }

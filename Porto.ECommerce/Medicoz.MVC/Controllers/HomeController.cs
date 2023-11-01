@@ -18,7 +18,7 @@ namespace Medicoz.MVC.Controllers
             _databaseStringLocalizer = databaseStringLocalizer;
         }
         [Authorize]
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
             var local = _databaseStringLocalizer["Navbar"];
             var user = await _userService.GetEmployee(_userService.UserId);

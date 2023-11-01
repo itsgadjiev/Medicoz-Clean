@@ -1,49 +1,394 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from smallcharge.ml/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Feb 2023 13:39:28 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Medicoz.MVC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Medicoz.MVC.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <title>Medicoz | Health and Medical HTML Template | Home Page 01</title>
+
+    <!-- Stylesheets -->
+    <link href="~/medicoz/css/bootstrap.css" rel="stylesheet">
+    <link href="~/medicoz/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+    <link href="~/medicoz/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+    <link href="~/medicoz/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+    <link href="~/medicoz/css/style.css" rel="stylesheet">
+    <link href="~/medicoz/css/responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="~/medicoz/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/medicoz/images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="~/medicoz/https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="~/medicoz/js/respond.js"></script><![endif]-->
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Medicoz.MVC</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header-->
+        <header class="main-header header-style-one">
+
+            <!-- Header top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="top-left">
+                            <ul class="contact-list clearfix">
+                                <li><i class="flaticon-hospital-1"></i>234 Triumph, Los Angeles, California, US </li>
+                                <li><i class="flaticon-back-in-time"></i>Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+                            </ul>
+                        </div>
+                        <div class="top-right">
+                            <ul class="social-icon-one">
+                                <li><a href="~/medicoz/#"><span class="fab fa-facebook-f"></span></a></li>
+                                <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="~/medicoz/#"><span class="fab fa-skype"></span></a></li>
+                                <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            <!-- End Header Top -->
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="auto-container">
+                    <!-- Main box -->
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="~/medicoz/index-2.html"><img src="~/medicoz/images/logo.png" alt="" title=""></a></div>
+                        </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Medicoz.MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+                        <!--Nav Box-->
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation" id="navbar">
+                                    <li class="current dropdown">
+                                        <span>Home</span>
+                                        <ul>
+                                            <li class="current"><a href="~/medicoz/index-2.html">Home Medical</a></li>
+                                            <li><a href="~/medicoz/index-3.html">Home Clanic</a></li>
+                                            <li><a href="~/medicoz/index-4.html">Home Dental Care</a></li>
+                                            <li><a href="~/medicoz/index-5.html">Home Eye Care</a></li>
+                                            <li><a href="~/medicoz/index-6.html">Home Prenatal care</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <span>Pages</span>
+                                        <ul>
+                                            <li><a href="~/medicoz/about-us.html">About Us</a></li>
+                                            <li><a href="~/medicoz/services.html">Services</a></li>
+                                            <li><a href="~/medicoz/services.html">Gallery</a></li>
+                                            <li><a href="~/medicoz/pricing-table.html">Pricing Table</a></li>
+                                            <li><a href="~/medicoz/elements.html">UI Elements</a></li>
+                                            <li><a href="~/medicoz/coming-soon.html">Coming Soon</a></li>
+                                            <li><a href="~/medicoz/error-page.html">Error 404</a></li>
+                                            <li><a href="~/medicoz/terms-and-condition.html">Terms and Condition</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <span>Doctors</span>
+                                        <ul>
+                                            <li><a href="~/medicoz/doctors.html">Doctors</a></li>
+                                            <li><a href="~/medicoz/doctor-detail.html">Doctor Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <span>Departments</span>
+                                        <ul>
+                                            <li><a href="~/medicoz/departments.html">Departments</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Cardiology</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Neurology</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Urology</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Gynecological</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Pediatrical</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Laboratory</a></li>
+                                            <li><a href="~/medicoz/department-detail.html">Department Detail</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <span>Blog</span>
+                                        <ul>
+                                            <li><a href="~/medicoz/blog-checkboard.html">Checkerboard</a></li>
+                                            <li><a href="~/medicoz/blog-masonry.html">Masonry</a></li>
+                                            <li><a href="~/medicoz/blog-two-col.html">Two Columns</a></li>
+                                            <li><a href="~/medicoz/blog-three-col.html">Three Colums</a></li>
+                                            <li><a href="~/medicoz/blog-four-col-wide.html">Four Colums</a></li>
+                                            <li class="dropdown">
+                                                <span>Post Types</span>
+                                                <ul>
+                                                    <li><a href="~/medicoz/blog-post-image.html">Image Post</a></li>
+                                                    <li><a href="~/medicoz/blog-post-gallery.html">Gallery Post</a></li>
+                                                    <li><a href="~/medicoz/blog-post-link.html">Link Post</a></li>
+                                                    <li><a href="~/medicoz/blog-post-audio.html">Audio Post</a></li>
+                                                    <li><a href="~/medicoz/blog-post-quote.html">Quote Post</a></li>
+                                                    <li><a href="~/medicoz/blog-post-video.html">Video Post</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <span>Shop</span>
+                                        <ul>
+                                            <li><a href="~/medicoz/shop.html">Shop</a></li>
+                                            <li><a href="~/medicoz/shop-single.html">Shop Single</a></li>
+                                            <li><a href="~/medicoz/shopping-cart.html">Shopping Cart</a></li>
+                                            <li><a href="~/medicoz/checkout.html">Checkout</a></li>
+                                            <li><a href="~/medicoz/login.html">Login</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="~/medicoz/contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->
+
+                            <div class="outer-box">
+                                <button class="search-btn"><span class="fa fa-search"></span></button>
+                                <a href="~/medicoz/appointment.html" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container">
+
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="~/medicoz/index-2.html"><img src="~/medicoz/images/logo.png" alt="" title=""></a></div>
+                        </div>
+
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+            <!-- Mobile Header -->
+            <div class="mobile-header">
+                <div class="logo"><a href="~/medicoz/index-2.html"><img src="~/medicoz/images/logo.png" alt="" title=""></a></div>
+
+                <!--Nav Box-->
+                <div class="nav-outer clearfix">
+
+                    <div class="outer-box">
+                        <!-- Search Btn -->
+                        <div class="search-box">
+                            <button class="search-btn mobile-search-btn"><i class="flaticon-magnifying-glass"></i></button>
+                        </div>
+
+                        <a href="~/medicoz/#nav-mobile" class="mobile-nav-toggler navbar-trigger"><span class="fa fa-bars"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div id="nav-mobile"></div>
+
+            <!-- Header Search -->
+            <div class="search-popup">
+                <span class="search-back-drop"></span>
+                <button class="close-search"><span class="fa fa-times"></span></button>
+
+                <div class="search-inner">
+                    <form method="post" action="https://smallcharge.ml/blog-showcase.html">
+                        <div class="form-group">
+                            <input type="search" name="search-field" value="" placeholder="Search..." required="">
+                            <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Header Search -->
+        </header>
+        <!--End Main Header -->
+        @RenderBody()
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!--Widgets Section-->
+            <div class="widgets-section" style="background-image: url(images/background/7.jpg);">
+                <div class="auto-container">
+                    <div class="row">
+                        <!--Big Column-->
+                        <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <!--Footer Column-->
+                                <div class="footer-column col-xl-7 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget about-widget">
+                                        <div class="logo">
+                                            <a href="~/medicoz/index-2.html"><img src="~/medicoz/images/logo-2.png" alt="" /></a>
+                                        </div>
+                                        <div class="text">
+                                            <p>Our Clinic has grown to provide a world class facility for the clinic advanced restorative. </p>
+                                            <p>We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
+                                        </div>
+                                        <ul class="social-icon-three">
+                                            <li><a href="~/medicoz/#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="~/medicoz/#"><i class="fab fa-pinterest"></i></a></li>
+                                            <li><a href="~/medicoz/#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="~/medicoz/#"><i class="fab fa-skype"></i></a></li>
+                                            <li><a href="~/medicoz/#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="footer-widget">
+                                        <h2 class="widget-title">Departments</h2>
+                                        <ul class="user-links">
+                                            <li><a href="~/medicoz/#">Surgery & Radiology</a></li>
+                                            <li><a href="~/medicoz/#">Family Medicine</a></li>
+                                            <li><a href="~/medicoz/#">Women’s Health</a></li>
+                                            <li><a href="~/medicoz/#">Optician</a></li>
+                                            <li><a href="~/medicoz/#">Pediatrics</a></li>
+                                            <li><a href="~/medicoz/#">Dermatology</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Big Column-->
+                        <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                            <div class="row">
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <!--Footer Column-->
+                                    <div class="footer-widget recent-posts">
+                                        <h2 class="widget-title">Latest News</h2>
+                                        <!--Footer Column-->
+                                        <div class="widget-content">
+                                            <div class="post">
+                                                <div class="thumb"><a href="~/medicoz/blog-post-image.html"><img src="~/medicoz/images/resource/post-thumb-1.jpg" alt=""></a></div>
+                                                <h4><a href="~/medicoz/blog-post-image.html">Integrative Medicine <Br>& Cancer Treatment.</a></h4>
+                                                <span class="date">July 11, 2019</span>
+                                            </div>
+
+                                            <div class="post">
+                                                <div class="thumb"><a href="~/medicoz/blog-post-image.html"><img src="~/medicoz/images/resource/post-thumb-2.jpg" alt=""></a></div>
+                                                <h4><a href="~/medicoz/blog-post-image.html">Achieving Better <br>Health Care Time.</a></h4>
+                                                <span class="date">August 1, 2019</span>
+                                            </div>
+
+                                            <div class="post">
+                                                <div class="thumb"><a href="~/medicoz/blog-post-image.html"><img src="~/medicoz/images/resource/post-thumb-3.jpg" alt=""></a></div>
+                                                <h4><a href="~/medicoz/blog-post-image.html">Great Health Care <br>For Patients.</a></h4>
+                                                <span class="date">August 1, 2019</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                    <!--Footer Column-->
+                                    <div class="footer-widget contact-widget">
+                                        <h2 class="widget-title">Contact Us</h2>
+                                        <!--Footer Column-->
+                                        <div class="widget-content">
+                                            <ul class="contact-list">
+                                                <li>
+                                                    <span class="icon flaticon-placeholder"></span>
+                                                    <div class="text">2130 Fulton Street San Diego <Br>CA 94117-1080 USA</div>
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon flaticon-call-1"></span>
+                                                    <div class="text">Mon to Fri : 08:30 - 18:00</div>
+                                                    <a href="~/medicoz/tel:+89868679575"><strong>+898 68679 575</strong></a>
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon flaticon-email"></span>
+                                                    <div class="text">
+                                                        Do you have a Question?<br>
+                                                        <a href="~/medicoz/mailto:info@gmail.com"><strong>info@gmail.com</strong></a>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <span class="icon flaticon-back-in-time"></span>
+                                                    <div class="text">
+                                                        Mon - Sat 8.00 - 18.00<br>
+                                                        <strong>Sunday CLOSED</strong>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <!-- Scroll To Top -->
+                <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <div class="footer-nav">
+                            <ul class="clearfix">
+                                <li><a href="~/medicoz/index-2.html">Privacy Policy</a></li>
+                                <li><a href="~/medicoz/about-us.html">Contact</a></li>
+                                <li><a href="~/medicoz/services.html">Supplier</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="copyright-text">
+                            <p>Copyright © 2019 <a href="~/medicoz/#">Bold Touch</a>All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Main Footer -->
+
+    </div><!-- End Page Wrapper -->
+
+
+    <script src="~/medicoz/js/jquery.js"></script>
+    <script src="~/medicoz/js/popper.min.js"></script>
+    <!--Revolution Slider-->
+    <script src="~/medicoz/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/medicoz/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="~/medicoz/js/main-slider-script.js"></script>
+    <!--Revolution Slider-->
+    <script src="~/medicoz/js/bootstrap.min.js"></script>
+    <script src="~/medicoz/js/jquery.fancybox.js"></script>
+    <script src="~/medicoz/js/mmenu.polyfills.js"></script>
+    <script src="~/medicoz/js/jquery.modal.min.js"></script>
+    <script src="~/medicoz/js/mmenu.js"></script>
+    <script src="~/medicoz/js/appear.js"></script>
+    <script src="~/medicoz/js/owl.js"></script>
+    <script src="~/medicoz/js/wow.js"></script>
+    <script src="~/medicoz/js/script.js"></script>
 </body>
+
+<!-- Mirrored from smallcharge.ml/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Feb 2023 13:39:53 GMT -->
 </html>
+
+
