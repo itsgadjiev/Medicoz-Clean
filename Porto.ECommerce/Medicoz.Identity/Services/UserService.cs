@@ -1,11 +1,8 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.Models;
-using Medicoz.Persistence.Database;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace Medicoz.Identity.Services
@@ -19,7 +16,6 @@ namespace Medicoz.Identity.Services
         {
             _userManager = userManager;
             _contextAccessor = contextAccessor;
-        
         }
 
         public string UserId => _contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -35,7 +31,7 @@ namespace Medicoz.Identity.Services
             };
         }
 
-        public async Task<List<User>> GetEmployees()
+        public async Task<List<User>> GetEmployeesAsync()
         {
             var employees = await _userManager.GetUsersInRoleAsync("Employee");
             return employees.Select(q => new User
@@ -47,34 +43,18 @@ namespace Medicoz.Identity.Services
             }).ToList();
         }
 
-        //public async Task<User> GetUserAsync()
-        //{
-
-        //    var userClaimId = _contextAccessor.HttpContext?.User.FindFirst("uid");
-        //    if (userClaimId is null)
-        //    {
-        //        throw new Exception("User is not authenticated");
-        //    }
-
-        //    var userClaimIdInt = (userClaimId.Value).ToString();
-        //    ApplicationUser user = await _userManager.FindByIdAsync(userClaimIdInt);
-
-        //    if (user is null)
-        //    {
-        //        throw new Exception("User is not found");
-        //    }
-
-        //    User needUser = new User
-        //    {
-        //        Email = user.Email,
-        //        Id = user.Id,
-        //        Firstname= user.FirstName,
-        //        Lastname= user.LastName
-        //    };
-
-        //    return needUser;
-        //}
-
-       
+        public async Task<User> GetCurrentUserAsync()
+        {
+            var employee = await _userManager.FindByIdAsync(UserId);
+            if (employee is null) { throw new Exception("User is not authenticated"); }
+          
+            return new User
+            {
+                Id = employee.Id,
+                Email = employee.Email,
+                Firstname = employee.FirstName,
+                Lastname = employee.LastName
+            };
+        }
     }
 }

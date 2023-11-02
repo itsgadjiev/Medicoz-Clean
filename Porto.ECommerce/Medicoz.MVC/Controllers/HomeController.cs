@@ -19,22 +19,9 @@ namespace Medicoz.MVC.Controllers
             _userService = userService;
             _databaseStringLocalizer = databaseStringLocalizer;
         }
-        [Authorize]
         public async Task<IActionResult> Index()
         {
-            
-            var user = await _userService.GetEmployeeAsync(_userService.UserId);
-            
-
-            HomeViewModel homeViewModel = new HomeViewModel
-            {
-                User = user,
-            };
-
-            return View(homeViewModel);
+            return View();
         }
-
-
-
     }
 }
