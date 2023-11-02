@@ -8,3 +8,4 @@ namespace Medicoz.Identity.Models
         public string LastName { get; set; }
     }
 }
+

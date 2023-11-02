@@ -50,7 +50,7 @@ namespace Medicoz.MVC.Controllers
         }
         public async Task<IActionResult> LoggedAsync()
         {
-            var user = await _userService.GetEmployee(_userService.UserId);
+            var user = await _userService.GetEmployeeAsync(_userService.UserId);
             return View(user);
         }
 

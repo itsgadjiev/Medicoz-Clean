@@ -15,6 +15,7 @@
     <link href="~/medicoz/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
     <link href="~/medicoz/css/style.css" rel="stylesheet">
     <link href="~/medicoz/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="shortcut icon" href="~/medicoz/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="~/medicoz/images/favicon.png" type="image/x-icon">
@@ -53,6 +54,15 @@
                                 <li><a href="~/medicoz/#"><span class="fab fa-skype"></span></a></li>
                                 <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
                             </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-globe text-secondary"></i>
+                            </button>
+                            <div class="dropdown-menu" style="min-width:4rem; width: 20px !important; position: absolute; transform: translate3d(0px, 38px, 0px);top: 0px; right: 0px;  justify-content: center; flex-direction: column; align-items: center;" aria-labelledby="dropdownMenuButton">
+                                <a asp-action="ChangeCulture" asp-controller="Culture" asp-route-culture="az" class="dropdown-item" style="display: flex; justify-content: center;" ><img style="max-width:20px" src="~/medicoz/flags/az-flag.png" alt="Azerbaycanca"></a>
+                                <a asp-action="ChangeCulture" asp-controller="Culture" asp-route-culture="en-US" class="dropdown-item" style="display: flex; justify-content: center;"><img style="max-width:20px" src="~/medicoz/flags/us-flag.png" alt="Russian"> </a>
+                            </div>
                         </div>
                     </div>
                 </div>

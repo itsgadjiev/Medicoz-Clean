@@ -23,7 +23,7 @@ namespace Medicoz.Identity.Services
         }
 
         public string UserId => _contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        public async Task<User> GetEmployee(string userId)
+        public async Task<User> GetEmployeeAsync(string userId)
         {
             var employee = await _userManager.FindByIdAsync(userId);
             return new User

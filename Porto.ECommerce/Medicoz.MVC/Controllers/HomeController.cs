@@ -2,8 +2,10 @@
 using Medicoz.Application.Contracts.Logging;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Localizer;
+using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace Medicoz.MVC.Controllers
 {
@@ -20,10 +22,16 @@ namespace Medicoz.MVC.Controllers
         [Authorize]
         public async Task<IActionResult> Index()
         {
-            var local = _databaseStringLocalizer["Navbar"];
-            var user = await _userService.GetEmployee(_userService.UserId);
+            
+            var user = await _userService.GetEmployeeAsync(_userService.UserId);
+            
 
-            return View(user);
+            HomeViewModel homeViewModel = new HomeViewModel
+            {
+                User = user,
+            };
+
+            return View(homeViewModel);
         }
 
 

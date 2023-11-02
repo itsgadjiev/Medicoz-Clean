@@ -1,4 +1,8 @@
-﻿<!--Main Slider-->
+﻿@using Medicoz.Application.Localizer;
+@using Medicoz.MVC.ViewModels;
+@model HomeViewModel
+@inject DatabaseStringLocalizer Localiser
+<!--Main Slider-->
 
 <section class="main-slider">
     <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
@@ -186,7 +190,7 @@
             <div class="feature-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <span class="icon flaticon-charity"></span>
-                    <h4><a href="~/medicoz/#">Quality & Safety</a></h4>
+                    <h4><a href="~/medicoz/#">@Localiser["home"]</a></h4>
                     <p>Our Delmont hospital utilizes state of the art technology and employs a team of true experts.</p>
                 </div>
             </div>
