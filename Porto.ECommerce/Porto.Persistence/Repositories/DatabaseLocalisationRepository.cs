@@ -1,21 +1,35 @@
-﻿using Medicoz.Application.Contracts.Percistance;
+﻿using Medicoz.Application.Contracts.Localisation;
+using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Domain;
+using Medicoz.Domain.Common.concrets;
 using Medicoz.Persistence.Database;
+using Microsoft.EntityFrameworkCore;
+
 namespace Medicoz.Persistence.Repositories;
 
-public class DatabaseLocalisationRepository : IDatabaseLocalisationRepository
+public class DatabaseLocalisationRepository<T> : GenericRepository<T> , IDatabaseLocalisationRepository<T>
+    where T : LocalizationEntry
 {
     private readonly AppDbContext _appDbContext;
 
-    public DatabaseLocalisationRepository(AppDbContext appDbContext)
+    public DatabaseLocalisationRepository(AppDbContext appDbContext) : base(appDbContext)
     {
         _appDbContext = appDbContext;
     }
 
-    public string GetLocalizedString(string culture, string key)
-    {
-        var localizedString = _appDbContext.LocalizationEntries
-            .FirstOrDefault(e => e.Culture == culture && e.Key == key);
 
-        return localizedString?.Value ?? key;
+    public async Task<T> GetLocalizedEntity(string key)
+    {
+        var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+        return await _appDbContext.Set<T>().FirstOrDefaultAsync(x=>x.Culture==culture && x.Key == key);
+           
     }
+
+    public async Task<List<T>> GetLocalizedEntities(string key)
+    {
+        var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+        return await _appDbContext.Set<T>().Where(x => x.Culture == culture && x.Key == key).ToListAsync();
+    }
+
+
 }

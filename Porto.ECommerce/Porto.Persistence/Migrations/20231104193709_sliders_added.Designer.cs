@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Medicoz.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231101065950_localisation_service")]
-    partial class localisation_service
+    [Migration("20231104193709_sliders_added")]
+    partial class sliders_added
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace Medicoz.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Medicoz.Domain.LocalizationEntry", b =>
+            modelBuilder.Entity("Medicoz.Domain.Slider", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,13 @@ namespace Medicoz.Persistence.Migrations
                     b.Property<string>("Culture")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Desc")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Value")
@@ -42,7 +48,7 @@ namespace Medicoz.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LocalizationEntries");
+                    b.ToTable("Sliders");
                 });
 #pragma warning restore 612, 618
         }

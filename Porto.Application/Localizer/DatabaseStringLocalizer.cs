@@ -3,12 +3,12 @@ using Microsoft.Extensions.Localization;
 
 namespace Medicoz.Application.Localizer;
 
-public class DatabaseStringLocalizer : IStringLocalizer
+public class DatabaseStringLocalizer<T> : IStringLocalizer
 {
 
-    private readonly IDatabaseLocalizationService _localizationService;
+    private readonly IDatabaseLocalizationService<T> _localizationService;
 
-    public DatabaseStringLocalizer(IDatabaseLocalizationService localizationService)
+    public DatabaseStringLocalizer(IDatabaseLocalizationService<T> localizationService)
     {
         _localizationService = localizationService;
     }
@@ -18,8 +18,8 @@ public class DatabaseStringLocalizer : IStringLocalizer
         get
         {
             var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
-            var localizedString = _localizationService.GetLocalizedString(culture, name);
-            return new LocalizedString(name, localizedString);
+            var localizedEntity = _localizationService.GetLocalizedEntity(culture, name);
+            return new LocalizedString(name, localizedEntity.ToString());
         }
     }
 

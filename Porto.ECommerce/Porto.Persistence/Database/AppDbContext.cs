@@ -11,7 +11,7 @@ public class AppDbContext : DbContext
     {
 
     }
-    public DbSet<LocalizationEntry> LocalizationEntries { get; set; }
+    public DbSet<Slider> Sliders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

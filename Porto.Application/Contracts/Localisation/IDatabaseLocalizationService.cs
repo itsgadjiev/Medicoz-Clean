@@ -1,6 +1,6 @@
 ﻿namespace Medicoz.Application.Contracts.Localisation;
 
-public interface IDatabaseLocalizationService
+public interface IDatabaseLocalizationService<T>
 {
-    string GetLocalizedString(string culture, string key);
+    Task<T> GetLocalizedEntity(string culture, string key);
 }

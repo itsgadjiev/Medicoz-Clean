@@ -10,7 +10,7 @@ public static class ApplicationServiceRegistration
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-        services.AddScoped<DatabaseStringLocalizer>();
+        services.AddScoped(typeof(DatabaseStringLocalizer<>));
 
         return services;
     }

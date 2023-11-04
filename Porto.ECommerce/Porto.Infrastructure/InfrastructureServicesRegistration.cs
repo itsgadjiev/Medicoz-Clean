@@ -17,8 +17,8 @@ public static class InfrastructureServicesRegistration
     {
         serviceDescriptors
             .AddScoped<IEmailSender, EmailSender>()
-            .AddScoped<IDatabaseLocalizationService, DatabaseLocalizationService>()
-            .AddScoped<IStringLocalizer, DatabaseStringLocalizer>()  
+            .AddScoped(typeof(IDatabaseLocalizationService<>), typeof(DatabaseLocalizationService<>))
+            .AddScoped( typeof(IStringLocalizer<>), typeof(DatabaseStringLocalizer<>))  
             .AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 
         return serviceDescriptors;

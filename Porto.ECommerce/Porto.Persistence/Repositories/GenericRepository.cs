@@ -1,10 +1,11 @@
 ﻿using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Domain;
 using Medicoz.Persistence.Database;
 using Microsoft.EntityFrameworkCore;
 using BaseEntity = Medicoz.Domain.Common.concrets.BaseEntity;
 namespace Medicoz.Persistence.Repositories;
 
-public class GenericRepository<T> where T : BaseEntity, IGenericRepository<T>
+public class GenericRepository<T> : IGenericRepository<T> where T : LocalizationEntry
 {
 
     protected readonly AppDbContext _context;
@@ -14,7 +15,7 @@ public class GenericRepository<T> where T : BaseEntity, IGenericRepository<T>
         _context = context;
     }
 
-    public async Task CreateAsync(T entity)
+    public async Task AddAsync(T entity)
     {
         await _context.AddAsync(entity);
         await _context.SaveChangesAsync();
@@ -26,10 +27,15 @@ public class GenericRepository<T> where T : BaseEntity, IGenericRepository<T>
         await _context.SaveChangesAsync();
     }
 
-    public async Task<IReadOnlyList<T>> GetAsync()
+    public async Task<List<T>> GetAllAsync()
     {
         return await _context.Set<T>().AsNoTracking().ToListAsync();
     }
+
+    //public async Task<T> GetLocalizedEntity(string culture, string key)
+    //{
+    //    return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(x => x.Culture == culture && x.Key == key);
+    //}
 
     public async Task<T> GetByIdAsync(int id)
     {
@@ -43,4 +49,9 @@ public class GenericRepository<T> where T : BaseEntity, IGenericRepository<T>
         _context.Entry(entity).State = EntityState.Modified;
         await _context.SaveChangesAsync();
     }
+
+    //Task<List<T>> IGenericRepository<T>.GetAllAsync()
+    //{
+    //    throw new NotImplementedException();
+    //}
 }

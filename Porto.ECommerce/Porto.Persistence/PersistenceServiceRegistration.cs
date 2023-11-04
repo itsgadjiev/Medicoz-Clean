@@ -18,7 +18,7 @@ public static class PersistenceServiceRegistration
         });
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-        services.AddScoped<IDatabaseLocalisationRepository, DatabaseLocalisationRepository>();
+        services.AddScoped( typeof(DatabaseLocalisationRepository<>));
 
 
         return services;

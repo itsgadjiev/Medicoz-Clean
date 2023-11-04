@@ -1,7 +1,6 @@
 ﻿@using Medicoz.Application.Localizer;
 @using Medicoz.Application.Models.Identity;
 @using Medicoz.Identity.Services;
-@inject DatabaseStringLocalizer Localiser 
 @model User
 
 <header class="main-header header-style-one">
@@ -48,7 +47,7 @@
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
                             <li class="current dropdown">
-                                 <span>@Localiser["home"]</span> 
+                                 @* <span>@Localiser["home"]</span>  *@
                             </li>
 
                             <li class="dropdown">

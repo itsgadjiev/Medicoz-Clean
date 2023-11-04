@@ -1,10 +1,10 @@
-﻿namespace Medicoz.Domain
+﻿using Medicoz.Domain.Common.concrets;
+
+namespace Medicoz.Domain
 {
-    public class LocalizationEntry
+    public class LocalizationEntry : BaseEntity 
     {
-        public int Id { get; set; } 
         public string Culture { get; set; } 
         public string Key { get; set; } 
-        public string Value { get; set; } 
     }
 }

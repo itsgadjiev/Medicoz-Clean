@@ -22,4 +22,13 @@
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.24" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Slider\Commands\CreateSlider\" />
+    <Folder Include="Features\Slider\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Porto.Domain\Medicoz.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

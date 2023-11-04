@@ -1,6 +1,7 @@
 ﻿namespace Medicoz.Application.Contracts.Percistance;
 
-public interface IDatabaseLocalisationRepository
+public interface IDatabaseLocalisationRepository<T>
 {
-    string GetLocalizedString(string culture, string key);
+    Task<T> GetLocalizedEntity( string key);
+    Task<List<T>> GetLocalizedEntities( string key);
 }
