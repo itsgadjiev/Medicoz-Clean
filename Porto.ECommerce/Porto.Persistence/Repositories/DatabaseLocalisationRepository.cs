@@ -21,14 +21,14 @@ public class DatabaseLocalisationRepository<T> : GenericRepository<T> , IDatabas
     public async Task<T> GetLocalizedEntity(string key)
     {
         var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
-        return await _appDbContext.Set<T>().FirstOrDefaultAsync(x=>x.Culture==culture && x.Key == key);
+        return await _appDbContext.Set<T>().FirstOrDefaultAsync(x=>x.Culture==culture);
            
     }
 
     public async Task<List<T>> GetLocalizedEntities(string key)
     {
         var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
-        return await _appDbContext.Set<T>().Where(x => x.Culture == culture && x.Key == key).ToListAsync();
+        return await _appDbContext.Set<T>().Where(x => x.Culture == culture).ToListAsync();
     }
 
 

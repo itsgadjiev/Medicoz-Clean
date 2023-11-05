@@ -26,10 +26,14 @@ namespace Medicoz.MVC.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var sliders=await _databaseLocalisationRepository.GetLocalizedEntities("slider");
+            var sliders = await _databaseLocalisationRepository.GetLocalizedEntities("slider");
             HomeViewModel homeViewModel = new HomeViewModel();
             homeViewModel.Sliders = sliders;
             return View(homeViewModel);
+        }
+        public async Task<IActionResult> Create()
+        {
+            return View();
         }
     }
 }
