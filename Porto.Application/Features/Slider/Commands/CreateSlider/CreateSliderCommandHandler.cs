@@ -4,12 +4,13 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider;
 
 public class CreateSliderCommandHandler : IRequestHandler<CreateSliderCommand, Unit>
 {
-    public CreateSliderCommandHandler()
+    public CreateSliderCommandHandler(SliderRepository)
     {
 
     }
-    public async Task<Unit> Handle(CreateSliderCommand request, CancellationToken cancellationToken)
-    {
 
+    public Task<Unit> Handle(CreateSliderCommand request, CancellationToken cancellationToken)
+    {
+       
     }
 }

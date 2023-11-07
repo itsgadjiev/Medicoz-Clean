@@ -17,7 +17,7 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
             RuleFor(command => command.FrenchContent)
                 .SetValidator(new SliderContentValidator());
 
-            RuleFor(command => command.ImageUrl)
+            RuleFor(command => command.Image)
                 .NotEmpty().WithMessage("Image URL is required.");
         }
     }
@@ -26,12 +26,10 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
     {
         public SliderContentValidator()
         {
-          
-
             RuleFor(content => content.Title)
                 .NotEmpty().WithMessage("Title is required.");
 
-            
+
         }
     }
 }

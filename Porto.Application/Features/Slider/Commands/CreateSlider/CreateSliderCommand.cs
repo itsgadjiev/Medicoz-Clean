@@ -1,9 +1,5 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
 {
@@ -11,7 +7,7 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
     {
         public SliderContent EnglishContent { get; set; }
         public SliderContent FrenchContent { get; set; }
-        public string ImageUrl { get; set; }
+        public IFormFile Image { get; set; }
         public string RedirectUrl1 { get; set; }
         public string RedirectUrl2 { get; set; }
 
