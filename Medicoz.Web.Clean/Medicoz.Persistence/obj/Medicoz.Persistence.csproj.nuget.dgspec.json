@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj": {
+                "projectPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -15,3 +15,5 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Me
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\ref\Medicoz.Identity.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Identity\bin\Debug\net6.0\Medicoz.Domain.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Identity\bin\Debug\net6.0\Medicoz.Domain.pdb

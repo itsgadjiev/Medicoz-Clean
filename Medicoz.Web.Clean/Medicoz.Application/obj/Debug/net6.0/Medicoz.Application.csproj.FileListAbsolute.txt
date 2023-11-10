@@ -12,3 +12,6 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Me
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Application\obj\Debug\net6.0\Medicoz.Application.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Application\obj\Debug\net6.0\Medicoz.Application.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Application\obj\Debug\net6.0\ref\Medicoz.Application.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Application\bin\Debug\net6.0\Medicoz.Domain.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Application\bin\Debug\net6.0\Medicoz.Domain.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Application\obj\Debug\net6.0\Medicoz.Application.csproj.CopyComplete

@@ -495,6 +495,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Medicoz.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Medicoz.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Medicoz.Domain.dll": {}
+        }
       }
     }
   },
@@ -1174,6 +1184,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Medicoz.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Medicoz.Domain/Medicoz.Domain.csproj",
+      "msbuildProject": "../Medicoz.Domain/Medicoz.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1183,6 +1198,7 @@
       "FluentValidation >= 11.8.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.8.0",
       "MediatR >= 12.1.1",
+      "Medicoz.Domain >= 1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.24",
@@ -1216,7 +1232,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj": {
+              "projectPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

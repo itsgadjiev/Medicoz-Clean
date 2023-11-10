@@ -22,4 +22,8 @@
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.24" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Medicoz.Domain\Medicoz.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

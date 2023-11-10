@@ -1,9 +1,10 @@
-﻿using Medicoz.Domain;
+﻿using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Domain;
 using Medicoz.Persistence.Database;
 
 namespace Medicoz.Persistence.Repositories
 {
-    public class SliderRepository : DatabaseLocalisationRepository<Slider>
+    public class SliderRepository : DatabaseLocalisationRepository<Slider> , ISliderRepository
     {
         private readonly AppDbContext _appDbContext;
 
