@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj": {}
+    "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj": {
+    "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj",
         "projectName": "Medicoz.Domain",
-        "projectPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj",
+        "projectPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Domain\\Medicoz.Domain.csproj",
         "packagesPath": "C:\\Users\\ceyhu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Domain\\obj\\",
+        "outputPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ceyhu\\AppData\\Roaming\\NuGet\\NuGet.Config",

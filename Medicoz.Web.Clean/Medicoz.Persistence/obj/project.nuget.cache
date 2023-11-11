@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CRKUwUpzl5sEXZgSqL7Hxr61uRSqeV7t3IzHRUf8T9svoS6gtrIRhLneV+vR0JeefZVnD0RVgNeILzA5jwUerQ==",
+  "dgSpecHash": "LGV17HwxIfXq0FDSiQvPUBQf0w4SRiadKH46U8hfm+kimdbNRcjVPJhQxqX81MrkH8kEXhrEctCf/tCZZUSFUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Persistence\\Medicoz.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Persistence\\Medicoz.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ceyhu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

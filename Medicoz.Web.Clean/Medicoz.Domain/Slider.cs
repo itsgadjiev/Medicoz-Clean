@@ -10,7 +10,8 @@
         public string ButtonName2 { get; set; }
         public string RedirectUrl2 { get; set; }
         public string ImageUrl { get; set; }
-       
+        public string UniqueCodeForLocalisation { get; set; }
+
 
     }
 }

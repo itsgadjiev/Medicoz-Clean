@@ -28,6 +28,7 @@ public class CreateSliderCommandHandler : IRequestHandler<CreateSliderCommand, U
             throw new CustomValidationException(validationResult.Errors);
         }
         var imgUrl = _fileService.Upload(request.Image, "uploads/images");
+        var uniquCode=Guid.NewGuid().ToString();
 
         Domain.Slider azerbaijaniSlider = new Domain.Slider
         {
@@ -40,6 +41,7 @@ public class CreateSliderCommandHandler : IRequestHandler<CreateSliderCommand, U
             ImageUrl = imgUrl,
             RedirectUrl = request.RedirectUrl1,
             RedirectUrl2 = request.RedirectUrl2,
+            UniqueCodeForLocalisation = uniquCode
         };
 
         Domain.Slider englishSlider = new Domain.Slider
@@ -53,6 +55,7 @@ public class CreateSliderCommandHandler : IRequestHandler<CreateSliderCommand, U
             ImageUrl = imgUrl,
             RedirectUrl = request.RedirectUrl1,
             RedirectUrl2 = request.RedirectUrl2,
+            UniqueCodeForLocalisation = uniquCode
         };
 
 

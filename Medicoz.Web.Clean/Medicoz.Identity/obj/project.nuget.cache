@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W4nwkr/seFx8lvBUUPhpqoFgPX9/zjr9ZpB32cv2GCVznzJivthBOgNCyf6gX8bAagTJDPCZsxH7a8TjR9tw1A==",
+  "dgSpecHash": "wa5i5GnlhlGiKjArYjnUxAH5RSVUPUdrz32xxXRvS3y5ZMq9kfH70Z1AQjNkqIaVj/iwGLibwvv7iFppwG11Zw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.Identity\\Medicoz.Identity.csproj",
+  "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Identity\\Medicoz.Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ceyhu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

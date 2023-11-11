@@ -1,1007 +1,1007 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Medicoz.MVC.bundle.scp.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Medicoz.MVC.bundle.scp.css",
       "PackagePath": "staticwebassets\\Medicoz.MVC.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\animate.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\animate.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\animate.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\bootstrap.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\flaticon.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\flaticon.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\flaticon.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\fontawesome-all.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\fontawesome-all.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\fontawesome-all.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_444444_256x240.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_444444_256x240.png",
       "PackagePath": "staticwebassets\\medicoz\\css\\images\\ui-icons_444444_256x240.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_555555_256x240.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_555555_256x240.png",
       "PackagePath": "staticwebassets\\medicoz\\css\\images\\ui-icons_555555_256x240.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_777620_256x240.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_777620_256x240.html",
       "PackagePath": "staticwebassets\\medicoz\\css\\images\\ui-icons_777620_256x240.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_777777_256x240.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_777777_256x240.html",
       "PackagePath": "staticwebassets\\medicoz\\css\\images\\ui-icons_777777_256x240.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_cc0000_256x240.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_cc0000_256x240.html",
       "PackagePath": "staticwebassets\\medicoz\\css\\images\\ui-icons_cc0000_256x240.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_ffffff_256x240.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\images\\ui-icons_ffffff_256x240.html",
       "PackagePath": "staticwebassets\\medicoz\\css\\images\\ui-icons_ffffff_256x240.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery-ui.min.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery-ui.min.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\jquery-ui.min.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery.bootstrap-touchspin.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery.bootstrap-touchspin.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\jquery.bootstrap-touchspin.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery.fancybox.min.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery.fancybox.min.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\jquery.fancybox.min.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery.modal.min.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\jquery.modal.min.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\jquery.modal.min.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\mmenu.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\mmenu.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\mmenu.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\owl.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\owl.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\owl.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\owl.video.play.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\owl.video.play.html",
       "PackagePath": "staticwebassets\\medicoz\\css\\owl.video.play.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\responsive.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\responsive.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\responsive.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\style.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\css\\style.css",
       "PackagePath": "staticwebassets\\medicoz\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\flags\\az-flag.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\flags\\az-flag.png",
       "PackagePath": "staticwebassets\\medicoz\\flags\\az-flag.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\flags\\ru-flag.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\flags\\ru-flag.png",
       "PackagePath": "staticwebassets\\medicoz\\flags\\ru-flag.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\flags\\us-flag.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\flags\\us-flag.png",
       "PackagePath": "staticwebassets\\medicoz\\flags\\us-flag.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\Flaticon.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.html",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\Flaticon.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.svg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.svg",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\Flaticon.svg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.ttf",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.ttf",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\Flaticon.ttf"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.woff2",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticon.woff2",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\Flaticon.woff2"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticond41d.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\Flaticond41d.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\Flaticond41d.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-brands-400.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.html",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-brands-400.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.svg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.svg",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-brands-400.svg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.ttf",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.woff2",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400.woff2",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-brands-400.woff2"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400d41d.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-brands-400d41d.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-brands-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-regular-400.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.html",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-regular-400.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.svg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.svg",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-regular-400.svg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.ttf",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.woff2",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400.woff2",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-regular-400.woff2"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400d41d.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-regular-400d41d.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-regular-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-solid-900.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.html",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-solid-900.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.svg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.svg",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-solid-900.svg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.ttf",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.woff2",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900.woff2",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900d41d.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\fonts\\fa-solid-900d41d.eot",
       "PackagePath": "staticwebassets\\medicoz\\fonts\\fa-solid-900d41d.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\1.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\1.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\1.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\2-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\2-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\2-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\2.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\2.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\2.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\4-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\4-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\4-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\5.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\5.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\5.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\7.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\7.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\8.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\8.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\9.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\background\\9.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\background\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\blog-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\blog-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\blog-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\blog-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\blog-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\blog-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\blog-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\blog-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\blog-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\favicon.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\favicon.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-7.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-7.html",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-7.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-8.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-8.html",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-8.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-9.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\gallery\\1-9.html",
       "PackagePath": "staticwebassets\\medicoz\\images\\gallery\\1-9.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-2.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-2.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\divider-2.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-3.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-3.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\divider-3.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-4.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-4.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\divider-4.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-5.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-5.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\divider-5.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-light.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider-light.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\divider-light.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\divider.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\divider.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\dotted-map.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\dotted-map.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\dotted-map.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\error.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\error.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\error.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\hex.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\hex.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\hex.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\icon-select.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\icon-select.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\icon-select.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\map-marker.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\map-marker.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\map-marker.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader-2.gif",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader-2.gif",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\page-loader-2.gif"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader-3.gif",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader-3.gif",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\page-loader-3.gif"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader-4.gif",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader-4.gif",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\page-loader-4.gif"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader.gif",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\page-loader.gif",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\page-loader.gif"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-1.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-1.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-1.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-10.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-10.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-10.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-11.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-11.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-11.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-12.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-12.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-12.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-2.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-2.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-2.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-3.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-3.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-3.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-4.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-4.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-4.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-5.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-5.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-5.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-6.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-6.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-6.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-8.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-8.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-8.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-9.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\pattern-9.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\pattern-9.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\paypal.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\paypal.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\paypal.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\shape-1.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\shape-1.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\shape-1.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\sign-2.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\sign-2.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\sign-2.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\sign.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\icons\\sign.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\icons\\sign.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\image-1.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\image-1.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\image-1.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\image-2.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\image-2.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\image-2.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\image-3.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\image-3.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\image-3.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-2.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-2.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-2.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-3.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-3.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-3.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-4.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-4.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-4.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-5.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-5.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-5.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-6.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-6.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-6.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-7.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-7.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-7.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-8.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-8.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-8.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-9.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo-9.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo-9.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\logo.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\2-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\2-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\main-slider\\2-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\3-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\3-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\main-slider\\3-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\3-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\3-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\main-slider\\3-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\4-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\4-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\main-slider\\4-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\5-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\5-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\main-slider\\5-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\5-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\main-slider\\5-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\main-slider\\5-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\author-thumb.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\author-thumb.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\author-thumb.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\avatar-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\avatar-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\avatar-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\avatar-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\avatar-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\avatar-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\avatar-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\avatar-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\avatar-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-masonry-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-masonry-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-masonry-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-masonry-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-masonry-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-masonry-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-masonry-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-single.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\blog-single.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\blog-single.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\cs-img.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\cs-img.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\cs-img.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\doctor-thumb.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\doctor-thumb.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\doctor-thumb.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\footer-img.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\footer-img.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\footer-img.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-10.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-10.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-10.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-11.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-11.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-11.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-12.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-12.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-12.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-4.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-4.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-4.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-7.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-7.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-7.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-8.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-8.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-8.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-9.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\image-9.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\image-9.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\instagram-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\instagram-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\instagram-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\instagram-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\instagram-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\instagram-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\instagram-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\news-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\news-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\news-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\news-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\news-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\news-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-img.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-img.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\post-img.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-thumb-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-thumb-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\post-thumb-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-thumb-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-thumb-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\post-thumb-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-thumb-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\post-thumb-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\post-thumb-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\10.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\10.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\11.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\11.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\11.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\12.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\12.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\12.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\7.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\7.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\8.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\8.html",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\8.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\9.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\9.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\cart-img.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\cart-img.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\cart-img.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-sinlge.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-sinlge.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\product-sinlge.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-thumb-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-thumb-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\product-thumb-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-thumb-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-thumb-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\product-thumb-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-thumb-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\products\\product-thumb-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\products\\product-thumb-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-10.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-10.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-10.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-11.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-11.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-11.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-12.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-12.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-12.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-7.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-7.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-7.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-8.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-8.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-8.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-9.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-9.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-9.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-single.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\service-single.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\service-single.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\signature.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\signature.png",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\signature.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\team-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\team-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\team-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\team-6.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\team-6.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\team-6.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\team-8.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\resource\\team-8.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\resource\\team-8.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\service-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\service-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\service-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-4.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\service-4.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\service-4.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-10.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-10.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-10.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-5.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-5.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-5.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-7.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-7.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-7.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-9.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\team-9.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\team-9.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\testi-thumb-1.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\testi-thumb-1.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\testi-thumb-1.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\testi-thumb-2.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\testi-thumb-2.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\testi-thumb-2.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\testi-thumb-3.jpg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\images\\testi-thumb-3.jpg",
       "PackagePath": "staticwebassets\\medicoz\\images\\testi-thumb-3.jpg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\appear.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\appear.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\appear.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\isotope.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\isotope.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\isotope.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.bootstrap-touchspin.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.bootstrap-touchspin.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\jquery.bootstrap-touchspin.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.countdown.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.countdown.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\jquery.countdown.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.fancybox.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.fancybox.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\jquery.fancybox.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.modal.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\jquery.modal.min.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\jquery.modal.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\main-slider-script.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\main-slider-script.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\main-slider-script.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\map-script.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\map-script.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\map-script.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\mixitup.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\mixitup.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\mixitup.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\mmenu.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\mmenu.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\mmenu.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\mmenu.polyfills.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\mmenu.polyfills.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\mmenu.polyfills.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\owl.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\owl.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\owl.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\popper.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\script.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\script.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\script.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\wow.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\js\\wow.js",
       "PackagePath": "staticwebassets\\medicoz\\js\\wow.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\coloredbg.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\coloredbg.png",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\assets\\coloredbg.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile.png",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\assets\\gridtile.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile_3x3.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile_3x3.png",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\assets\\gridtile_3x3.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile_3x3_white.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile_3x3_white.png",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\assets\\gridtile_3x3_white.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile_white.png",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\gridtile_white.png",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\assets\\gridtile_white.png"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\loader.gif",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\assets\\loader.gif",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\assets\\loader.gif"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\closedhand.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\closedhand.html",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\css\\closedhand.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\layers.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\layers.css",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\css\\layers.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\navigation.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\navigation.css",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\css\\navigation.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\openhand.html",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\openhand.html",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\css\\openhand.html"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\settings.css",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\css\\settings.css",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\css\\settings.css"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.eot",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.eot",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.eot"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.svg",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.svg",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.svg"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.ttf",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.ttf",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.ttf"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.woff",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.woff",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\fonts\\revicons\\revicons90c6.woff"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.actions.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.actions.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.actions.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.carousel.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.carousel.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.kenburn.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.layeranimation.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.migration.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.migration.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.migration.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.navigation.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.navigation.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.navigation.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.parallax.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.parallax.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.parallax.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.slideanims.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.video.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.video.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\extensions\\revolution.extension.video.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.revolution.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.revolution.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.revolution.min.js"
     },
     {
-      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\LastMedicoz\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js",
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js",
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js"
     },
     {

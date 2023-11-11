@@ -17,3 +17,22 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Me
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\ref\Medicoz.Persistence.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Persistence.deps.json
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Persistence.runtimeconfig.json
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Persistence.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Persistence.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Application.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Domain.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Application.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\bin\Debug\net6.0\Medicoz.Domain.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.csproj.AssemblyReference.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.AssemblyInfoInputs.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.AssemblyInfo.cs
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.csproj.CopyComplete
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\refint\Medicoz.Persistence.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\Medicoz.Persistence.genruntimeconfig.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Persistence\obj\Debug\net6.0\ref\Medicoz.Persistence.dll

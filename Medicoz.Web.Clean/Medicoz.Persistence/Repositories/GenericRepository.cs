@@ -27,6 +27,11 @@ public class GenericRepository<T> : IGenericRepository<T> where T : Localization
         await _context.SaveChangesAsync();
     }
 
+    public async Task SaveChangesAsync()
+    {
+        await _context.SaveChangesAsync();
+    }
+
     public async Task<List<T>> GetAllAsync()
     {
         return await _context.Set<T>().AsNoTracking().ToListAsync();
@@ -46,6 +51,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : Localization
 
     public async Task UpdateAsync(T entity)
     {
+        _context.Set<T>().Attach(entity);
         _context.Entry(entity).State = EntityState.Modified;
         await _context.SaveChangesAsync();
     }
