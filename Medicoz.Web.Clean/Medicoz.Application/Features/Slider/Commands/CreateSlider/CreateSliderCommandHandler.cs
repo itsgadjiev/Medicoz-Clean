@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using MediatR;
 using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
-using Medicoz.Domain;
 
 namespace Medicoz.Application.Features.Slider.Commands.CreateSlider;
 
