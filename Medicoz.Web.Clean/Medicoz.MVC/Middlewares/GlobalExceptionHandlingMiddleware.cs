@@ -20,7 +20,6 @@ public class GlobalExceptionHandlingMiddleware : IMiddleware
         _hostingEnvironment = hostingEnvironment;
     }
 
-
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
 
@@ -50,6 +49,7 @@ public class GlobalExceptionHandlingMiddleware : IMiddleware
                 break;
             case NotFoundException:
                 httpStatusCode = HttpStatusCode.NotFound;
+
                 break;
         }
 

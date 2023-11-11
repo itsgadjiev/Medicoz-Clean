@@ -1,4 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Email;
+using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Logging;
 using Medicoz.Application.Localizer;
@@ -17,8 +18,9 @@ public static class InfrastructureServicesRegistration
     {
         serviceDescriptors
             .AddScoped<IEmailSender, EmailSender>()
+            .AddScoped<IFileService, FileService.FileService>()
             .AddScoped(typeof(IDatabaseLocalizationService<>), typeof(DatabaseLocalizationService<>))
-            .AddScoped( typeof(IStringLocalizer<>), typeof(DatabaseStringLocalizer<>))  
+            .AddScoped(typeof(IStringLocalizer<>), typeof(DatabaseStringLocalizer<>))
             .AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 
         return serviceDescriptors;

@@ -1,4 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Identity;
+using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
 using Medicoz.Persistence.Repositories;
@@ -9,17 +10,17 @@ namespace Medicoz.MVC.Controllers
     public class HomeController : Controller
     {
         private readonly IUserService _userService;
-        private readonly DatabaseLocalisationRepository<Slider> _databaseLocalisationRepository;
+        private readonly IDatabaseLocalisationRepository<Slider> _databaseLocalisationRepository;
 
         public HomeController(IUserService userService,
-            DatabaseLocalisationRepository<Slider> databaseLocalisationRepository)
+            IDatabaseLocalisationRepository<Slider> databaseLocalisationRepository)
         {
             _userService = userService;
             _databaseLocalisationRepository = databaseLocalisationRepository;
         }
         public async Task<IActionResult> Index()
         {
-            var sliders = await _databaseLocalisationRepository.GetLocalizedEntities("slider");
+            var sliders = await _databaseLocalisationRepository.GetLocalizedEntities();
             HomeViewModel homeViewModel = new HomeViewModel();
             homeViewModel.Sliders = sliders;
             return View(homeViewModel);

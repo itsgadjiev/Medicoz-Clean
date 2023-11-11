@@ -1,25 +1,25 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Medicoz.Application.Contracts.FileService;
+using Microsoft.AspNetCore.Http;
 
 namespace Medicoz.Infrastructure.FileService
 {
-    public static class FileService
+    public class FileService : IFileService
     {
-        public static string SaveFile(this IFormFile file, string path, string folderName)
+        public string Upload(IFormFile file, string path)
         {
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
 
-            string fileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
-            string fullPath = Path.Combine(path, folderName, fileName);
+            var uniqueFileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+            var fullPath = Path.Combine(path, uniqueFileName);
 
-            using (FileStream fileStream = new FileStream(fullPath, FileMode.Create))
-            {
-                file.CopyTo(fileStream);
-            };
+            using var fileStream = new FileStream(fullPath, FileMode.Create);
+            file.CopyTo(fileStream);
 
-            return fileName;
-
+            return uniqueFileName;
         }
 
-        public static void RemoveFile(this IFormFile file, string path, string folderName, string fileName)
+        public void RemoveFile(IFormFile file, string path, string folderName, string fileName)
         {
             if (file != null)
             {
@@ -28,7 +28,7 @@ namespace Medicoz.Infrastructure.FileService
             }
         }
 
-        public static void RemoveFile(string path, string folderName, string fileName)
+        public void RemoveFile(string path, string folderName, string fileName)
         {
             string fullPath = Path.Combine(path, folderName, fileName);
             if (System.IO.File.Exists(fullPath)) { System.IO.File.Delete(fullPath); }

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 
 namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
 {
@@ -9,11 +10,33 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
             RuleFor(command => command.EnglishContent)
                 .SetValidator(new SliderContentValidator());
 
-            RuleFor(command => command.FrenchContent)
+            RuleFor(command => command.AzerbaijaniContent)
                 .SetValidator(new SliderContentValidator());
 
-            RuleFor(command => command.Image)
-                .NotEmpty().WithMessage("Image is required.");
+            RuleFor(x => x.Image)
+             .NotNull()
+             .WithMessage("Cant be null");
+
+             RuleFor(x => x.Image)
+             .Must(IsValidImage)
+             .WithMessage("Not valid image");
+        }
+
+        public bool IsValidImage(IFormFile file)
+        {
+            if (file != null)
+            {
+                if (file.ContentType != "image/jpeg" && file.ContentType != "image/png")
+                {
+                    return false;
+                }
+                if (file.Length > 2097152)
+                {
+                    return false;
+                }
+                return true;
+            }
+            return false;
         }
     }
 
@@ -55,9 +78,6 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
                 .NotEmpty().WithMessage("Title is required.")
                 .MinimumLength(5)
                 .MaximumLength(300);
-
-
-
         }
     }
 }
