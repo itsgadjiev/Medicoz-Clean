@@ -7,5 +7,7 @@ namespace Medicoz.MVC.ViewModels
     {
         public User User { get; set; }
         public List<Slider> Sliders { get; set; }
+        public Dictionary<int,string> EntitiesLocalizedValues { get; set; }
+
     }
 }

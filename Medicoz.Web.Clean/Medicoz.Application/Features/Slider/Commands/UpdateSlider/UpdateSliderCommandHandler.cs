@@ -18,6 +18,7 @@ namespace Medicoz.Application.Features.Slider.Commands.UpdateSlider
         {
             var sliders = await _sliderRepository.GetByUniqueCode(request.UniqueCodeForLocalisation);
             string filename = string.Empty;
+
             if (request.Image != null)
                 filename = _fileService.Upload(request.Image, "images/uploads");
 

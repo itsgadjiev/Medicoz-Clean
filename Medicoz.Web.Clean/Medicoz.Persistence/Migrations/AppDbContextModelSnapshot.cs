@@ -63,6 +63,25 @@ namespace Medicoz.Persistence.Migrations
 
                     b.ToTable("Sliders");
                 });
+
+            modelBuilder.Entity("Medicoz.Domain.TestModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TestModels");
+                });
 #pragma warning restore 612, 618
         }
     }

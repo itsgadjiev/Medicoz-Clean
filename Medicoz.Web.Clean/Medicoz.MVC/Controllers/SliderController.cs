@@ -4,6 +4,8 @@ using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Slider.Commands.CreateSlider;
 using Medicoz.Application.Features.Slider.Commands.UpdateSlider;
 using Medicoz.Application.Features.Slider.Queries.GetSliderByUniqueCode;
+using Medicoz.Domain;
+using Medicoz.Persistence.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Controllers
@@ -13,16 +15,34 @@ namespace Medicoz.MVC.Controllers
     {
         private readonly IMediator _mediator;
         private readonly ISliderRepository _sliderRepository;
+        private readonly ITestRepository _testRepository;
 
-        public SliderController(IMediator mediator, ISliderRepository sliderRepository)
+        public SliderController(IMediator mediator, ISliderRepository sliderRepository, ITestRepository testRepository)
         {
             _mediator = mediator;
             _sliderRepository = sliderRepository;
+            _testRepository = testRepository;
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> CreateAsync()
         {
+            var newSlider = new TestModel
+            {
+                Title = new Dictionary<string, string>
+            {
+                { "az", "Salam" },
+                { "ru", "Privet" }
+            },
+                Description = new Dictionary<string, string>
+            {
+                { "az", "Necesen" },
+                { "ru", "Kak dela" }
+            }
+                // Other properties as needed
+            };
+
+            await _testRepository.AddAsync(newSlider);
             return View();
         }
         [HttpPost]

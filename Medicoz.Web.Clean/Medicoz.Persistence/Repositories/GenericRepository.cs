@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using BaseEntity = Medicoz.Domain.Common.concrets.BaseEntity;
 namespace Medicoz.Persistence.Repositories;
 
-public class GenericRepository<T> : IGenericRepository<T> where T : LocalizationEntry
+public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
 
     protected readonly AppDbContext _context;

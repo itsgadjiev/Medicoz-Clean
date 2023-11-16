@@ -275,6 +275,9 @@
             "projectReferences": {
               "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Application\\Medicoz.Application.csproj": {
                 "projectPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Application\\Medicoz.Application.csproj"
+              },
+              "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Persistence\\Medicoz.Persistence.csproj": {
+                "projectPath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Persistence\\Medicoz.Persistence.csproj"
               }
             }
           }

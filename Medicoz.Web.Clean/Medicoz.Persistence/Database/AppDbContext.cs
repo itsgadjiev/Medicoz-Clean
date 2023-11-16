@@ -1,6 +1,9 @@
 ﻿using Medicoz.Domain;
 using Medicoz.Domain.Common.abstracts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.Text.Json;
+
 
 namespace Medicoz.Persistence.Database;
 
@@ -12,11 +15,31 @@ public class AppDbContext : DbContext
 
     }
     public DbSet<Slider> Sliders { get; set; }
+    public DbSet<TestModel> TestModels { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        var jsonConverter = new ValueConverter<Dictionary<string, string>, string>(
+           v => JsonSerializer.Serialize(v, new JsonSerializerOptions { IgnoreNullValues = true }),
+           v => JsonSerializer.Deserialize<Dictionary<string, string>>(v, new JsonSerializerOptions { IgnoreNullValues = true }),
+           new ConverterMappingHints(size: -1) // Use -1 to indicate max size
+       );
+
+        modelBuilder.Entity<TestModel>()
+            .Property(e => e.Title)
+            .HasConversion(jsonConverter)
+            .HasColumnType("nvarchar(MAX)"); // Set the column type explicitly
+
+        modelBuilder.Entity<TestModel>()
+            .Property(e => e.Description)
+            .HasConversion(jsonConverter)
+            .HasColumnType("nvarchar(MAX)"); // Set the column type explicitly
+
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         base.OnModelCreating(modelBuilder);
+
+
+
     }
 
 

@@ -106,15 +106,15 @@
     <div class="auto-container">
         <div class="row">
 
-           @*  @foreach (var item in Model.Sliders)
+            @*  @foreach (var item in Model.Sliders)
             {
-                <div class="feature-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <span class="icon flaticon-charity"></span>
-                        <h4><a href="~/medicoz/#"></a></h4>
-                        <p>@item.Desc</p>
-                    </div>
-                </div>
+            <div class="feature-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+            <span class="icon flaticon-charity"></span>
+            <h4><a href="~/medicoz/#"></a></h4>
+            <p>@item.Desc</p>
+            </div>
+            </div>
             } *@
             <!-- Feature Block -->
             @*     <!-- Feature Block -->
@@ -187,59 +187,62 @@
         </div>
 
         <div class="row">
-            <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <span class="icon flaticon-heartbeat"></span>
-                    <h5><a href="~/medicoz/#">Health Check</a></h5>
-                    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+            @foreach (var item in Model.EntitiesLocalizedValues)
+            {
+
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-heartbeat"></span>
+                        <h5><a href="~/medicoz/#">@item.Value</a></h5>
+                        <div class="text">@(item.Key)</div>
+                    </div>
                 </div>
+            }
+            <!-- Service Block -->
+            @*    <!-- Service Block -->
+            <div class="service-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+            <span class="icon flaticon-surgery-room"></span>
+            <h5><a href="~/medicoz/#">Operation Theater</a></h5>
+            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+            </div>
             </div>
 
             <!-- Service Block -->
             <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <span class="icon flaticon-surgery-room"></span>
-                    <h5><a href="~/medicoz/#">Operation Theater</a></h5>
-                    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-                </div>
+            <div class="inner-box">
+            <span class="icon flaticon-pharmacy"></span>
+            <h5><a href="~/medicoz/#">Pharmacy Support</a></h5>
+            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+            </div>
             </div>
 
             <!-- Service Block -->
             <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <span class="icon flaticon-pharmacy"></span>
-                    <h5><a href="~/medicoz/#">Pharmacy Support</a></h5>
-                    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-                </div>
+            <div class="inner-box">
+            <span class="icon flaticon-transport"></span>
+            <h5><a href="~/medicoz/#">Ambulance Car</a></h5>
+            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+            </div>
             </div>
 
             <!-- Service Block -->
             <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <span class="icon flaticon-transport"></span>
-                    <h5><a href="~/medicoz/#">Ambulance Car</a></h5>
-                    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-                </div>
+            <div class="inner-box">
+            <span class="icon flaticon-lab"></span>
+            <h5><a href="~/medicoz/#">Lat Tests</a></h5>
+            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
+            </div>
             </div>
 
             <!-- Service Block -->
             <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <span class="icon flaticon-lab"></span>
-                    <h5><a href="~/medicoz/#">Lat Tests</a></h5>
-                    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-                </div>
+            <div class="inner-box">
+            <span class="icon flaticon-first-aid"></span>
+            <h5><a href="~/medicoz/#">Intensive Care</a></h5>
+            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
             </div>
-
-            <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <span class="icon flaticon-first-aid"></span>
-                    <h5><a href="~/medicoz/#">Intensive Care</a></h5>
-                    <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-                </div>
-            </div>
+            </div> *@
         </div>
     </div>
 </section>

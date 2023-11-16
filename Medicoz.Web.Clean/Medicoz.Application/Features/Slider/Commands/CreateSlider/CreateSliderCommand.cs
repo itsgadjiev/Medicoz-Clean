@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
+using System.Text.Json;
 
 namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
 {
@@ -21,5 +22,6 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
         public string Quote { get; set; }
         public string ButtonName1 { get; set; }
         public string ButtonName2 { get; set; }
+        public JsonDocument Content { get; set; }
     }
 }

@@ -1558,6 +1558,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Medicoz.Application": "1.0.0",
+          "Medicoz.Persistence": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "MimeKit": "4.2.0",
