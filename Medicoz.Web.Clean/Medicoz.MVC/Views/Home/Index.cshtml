@@ -187,17 +187,32 @@
         </div>
 
         <div class="row">
-            @foreach (var item in Model.EntitiesLocalizedValues)
-            {
 
+            @*    <div class="service-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+            <span class="icon flaticon-heartbeat"></span>
+            @foreach (var item in Model.EntitiesLocalizedValuesTitle)
+            {
+            <h5><a href="~/medicoz/#">@item.Value</a></h5>
+            }
+            @foreach (var item in Model.EntitiesLocalizedValuesDesc)
+            {
+            <div class="text">@(item.Value)</div>
+            }
+            </div>
+            </div> *@
+
+            @foreach (var testModel in Model.TestModels)
+            {
                 <div class="service-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <span class="icon flaticon-heartbeat"></span>
-                        <h5><a href="~/medicoz/#">@item.Value</a></h5>
-                        <div class="text">@(item.Key)</div>
+                        <h5><a href="~/medicoz/#">@Model.EntitiesLocalizedValuesTitle.GetValueOrDefault(testModel.Id, "Default TestModel Title")</a></h5>
+                        <div class="text">@Model.EntitiesLocalizedValuesDesc.GetValueOrDefault(testModel.Id, "Default TestModel Description")</div>
                     </div>
                 </div>
             }
+
             <!-- Service Block -->
             @*    <!-- Service Block -->
             <div class="service-block col-lg-4 col-md-6 col-sm-12">
