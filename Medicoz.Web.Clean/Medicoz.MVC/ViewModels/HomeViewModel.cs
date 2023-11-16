@@ -9,7 +9,7 @@ namespace Medicoz.MVC.ViewModels
         public List<Slider> Sliders { get; set; }
         public Dictionary<int,string> EntitiesLocalizedValuesTitle { get; set; }
         public Dictionary<int,string> EntitiesLocalizedValuesDesc { get; set; }
-        public List<TestModel> TestModels { get; set; }
+        public List<OurService> OurServices { get; set; }
 
     }
 }

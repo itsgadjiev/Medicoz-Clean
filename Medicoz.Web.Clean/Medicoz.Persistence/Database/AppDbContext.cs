@@ -15,25 +15,25 @@ public class AppDbContext : DbContext
 
     }
     public DbSet<Slider> Sliders { get; set; }
-    public DbSet<TestModel> TestModels { get; set; }
+    public DbSet<OurService> OurServices { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         var jsonConverter = new ValueConverter<Dictionary<string, string>, string>(
            v => JsonSerializer.Serialize(v, new JsonSerializerOptions { IgnoreNullValues = true }),
            v => JsonSerializer.Deserialize<Dictionary<string, string>>(v, new JsonSerializerOptions { IgnoreNullValues = true }),
-           new ConverterMappingHints(size: -1) // Use -1 to indicate max size
+           new ConverterMappingHints(size: -1) 
        );
 
-        modelBuilder.Entity<TestModel>()
+        modelBuilder.Entity<OurService>()
             .Property(e => e.Title)
             .HasConversion(jsonConverter)
-            .HasColumnType("nvarchar(MAX)"); // Set the column type explicitly
+            .HasColumnType("nvarchar(MAX)"); 
 
-        modelBuilder.Entity<TestModel>()
+        modelBuilder.Entity<OurService>()
             .Property(e => e.Description)
             .HasConversion(jsonConverter)
-            .HasColumnType("nvarchar(MAX)"); // Set the column type explicitly
+            .HasColumnType("nvarchar(MAX)"); 
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         base.OnModelCreating(modelBuilder);

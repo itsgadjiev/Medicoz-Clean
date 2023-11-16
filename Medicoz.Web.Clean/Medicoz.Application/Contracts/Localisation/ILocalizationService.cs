@@ -10,7 +10,7 @@ namespace Medicoz.Application.Contracts.Localisation
     {
         string GetLocalizedValue(int entityId, string propertyName, string language);
         void UpdateLocalizedValue(int entityId, string propertyName, string language, string newValue);
-        Dictionary<int, string> GetAllEntitiesLocalizedValues(string propertyName, string language);
-        Dictionary<int, string> GetAllEntitiesLocalizedValues(string language);
+        Dictionary<int, string> GetAllEntitiesLocalizedValues(string propertyName);
+       
     }
 }

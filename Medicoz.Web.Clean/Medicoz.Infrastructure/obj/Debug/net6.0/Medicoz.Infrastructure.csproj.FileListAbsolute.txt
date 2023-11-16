@@ -20,7 +20,9 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Infrastructure.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Application.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Domain.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Persistence.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Application.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Persistence.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Domain.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\obj\Debug\net6.0\Medicoz.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\obj\Debug\net6.0\Medicoz.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
@@ -32,5 +34,3 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\obj\Debug\net6.0\refint\Medicoz.Infrastructure.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\obj\Debug\net6.0\Medicoz.Infrastructure.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\obj\Debug\net6.0\ref\Medicoz.Infrastructure.dll
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Persistence.dll
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Infrastructure\bin\Debug\net6.0\Medicoz.Persistence.pdb

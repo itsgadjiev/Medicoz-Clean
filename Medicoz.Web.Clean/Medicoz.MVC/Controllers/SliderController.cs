@@ -15,9 +15,9 @@ namespace Medicoz.MVC.Controllers
     {
         private readonly IMediator _mediator;
         private readonly ISliderRepository _sliderRepository;
-        private readonly ITestRepository _testRepository;
+        private readonly IOurServicesRepository _testRepository;
 
-        public SliderController(IMediator mediator, ISliderRepository sliderRepository, ITestRepository testRepository)
+        public SliderController(IMediator mediator, ISliderRepository sliderRepository, IOurServicesRepository testRepository)
         {
             _mediator = mediator;
             _sliderRepository = sliderRepository;
@@ -27,7 +27,7 @@ namespace Medicoz.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateAsync()
         {
-            var newSlider = new TestModel
+            var newSlider = new OurService
             {
                 Title = new Dictionary<string, string>
             {

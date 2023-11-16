@@ -3,9 +3,7 @@ using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
-using Medicoz.Persistence.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Medicoz.MVC.Controllers
 {
@@ -13,13 +11,13 @@ namespace Medicoz.MVC.Controllers
     {
         private readonly IUserService _userService;
         private readonly IDatabaseLocalisationRepository<Slider> _databaseLocalisationRepository;
-        private readonly ILocalizationService<TestModel> _localizationService;
-        private readonly ITestRepository _testRepository;
+        private readonly ILocalizationService<OurService> _localizationService;
+        private readonly IOurServicesRepository _testRepository;
 
         public HomeController(IUserService userService,
             IDatabaseLocalisationRepository<Slider> databaseLocalisationRepository,
-            ILocalizationService<TestModel> localizationService
-          , ITestRepository testRepository)
+            ILocalizationService<OurService> localizationService
+          , IOurServicesRepository testRepository)
         {
             _userService = userService;
             _databaseLocalisationRepository = databaseLocalisationRepository;
@@ -32,9 +30,9 @@ namespace Medicoz.MVC.Controllers
             var sliders = await _databaseLocalisationRepository.GetLocalizedEntities();
             homeViewModel.Sliders = sliders;
 
-            homeViewModel.TestModels = await _testRepository.GetAllAsync();
-            var testModelTitle = _localizationService.GetAllEntitiesLocalizedValues(nameof(TestModel.Title), "ru");
-            var testModelDesc = _localizationService.GetAllEntitiesLocalizedValues(nameof(TestModel.Description), "ru");
+            homeViewModel.OurServices = await _testRepository.GetAllAsync();
+            var testModelTitle = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Title));
+            var testModelDesc = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Description));
             homeViewModel.EntitiesLocalizedValuesTitle = testModelTitle;
             homeViewModel.EntitiesLocalizedValuesDesc = testModelDesc;
 

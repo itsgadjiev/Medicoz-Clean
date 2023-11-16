@@ -1,10 +1,9 @@
 ﻿using Medicoz.Application.Contracts.Localisation;
-using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Persistence.Database;
 
 namespace Medicoz.Infrastructure.LocalizationService;
 
-public class LocalizationService<T> : ILocalizationService<T> where T : class 
+public class LocalizationService<T> : ILocalizationService<T> where T : class
 {
     private readonly AppDbContext _context;
 
@@ -32,8 +31,9 @@ public class LocalizationService<T> : ILocalizationService<T> where T : class
         return null;
     }
 
-    public Dictionary<int, string> GetAllEntitiesLocalizedValues(string propertyName, string language)
+    public Dictionary<int, string> GetAllEntitiesLocalizedValues(string propertyName)
     {
+        var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
         var entities = _context.Set<T>().ToList();
         var result = new Dictionary<int, string>();
 
@@ -74,29 +74,29 @@ public class LocalizationService<T> : ILocalizationService<T> where T : class
         }
     }
 
-    public Dictionary<int, string> GetAllEntitiesLocalizedValues(string language)
-    {
-        var entities = _context.Set<T>().ToList();
-        var result = new Dictionary<int, string>();
+    //public Dictionary<int, string> GetAllEntitiesLocalizedValues(string language)
+    //{
+    //    var entities = _context.Set<T>().ToList();
+    //    var result = new Dictionary<int, string>();
 
-        foreach (var entity in entities)
-        {
-            var properties = entity.GetType().GetProperties()
-                .Where(prop => prop.PropertyType == typeof(Dictionary<string, string>));
+    //    foreach (var entity in entities)
+    //    {
+    //        var properties = entity.GetType().GetProperties()
+    //            .Where(prop => prop.PropertyType == typeof(Dictionary<string, string>));
 
-            foreach (var property in properties)
-            {
-                var localizedData = property.GetValue(entity) as Dictionary<string, string>;
-                if (localizedData != null && localizedData.ContainsKey(language))
-                {
-                    result.Add((int)entity.GetType().GetProperty("Id").GetValue(entity), localizedData[language]);
-                    // This assumes that 'Id' is the property name for the entity ID
-                    // Modify 'Id' accordingly if it's different in your entity
-                    break; // Remove this line if you want to aggregate values from all properties
-                }
-            }
-        }
+    //        foreach (var property in properties)
+    //        {
+    //            var localizedData = property.GetValue(entity) as Dictionary<string, string>;
+    //            if (localizedData != null && localizedData.ContainsKey(language))
+    //            {
+    //                result.Add((int)entity.GetType().GetProperty("Id").GetValue(entity), localizedData[language]);
+    //                // This assumes that 'Id' is the property name for the entity ID
+    //                // Modify 'Id' accordingly if it's different in your entity
+    //                break; // Remove this line if you want to aggregate values from all properties
+    //            }
+    //        }
+    //    }
 
-        return result;
-    }
+    //    return result;
+    //}
 }
