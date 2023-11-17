@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.ViewComponents
 {
-    public class NavbarViewComponent : ViewComponent
+    public class NavbarApViewComponent : ViewComponent
     {
         private readonly IUserService _userService;
 
-        public NavbarViewComponent(IUserService userService)
+        public NavbarApViewComponent(IUserService userService)
         {
             _userService = userService;
         }
@@ -18,6 +18,10 @@ namespace Medicoz.MVC.Areas.Admin.ViewComponents
             if (User.Identity.IsAuthenticated)
             {
                 user = await _userService.GetCurrentUserAsync();
+            }
+            else
+            {
+                user.Firstname = "Hele login olmamisham yetm";
             }
             return View(user);
         }

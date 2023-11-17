@@ -1,6 +1,7 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Features.OurServices.Commands.AddOurService;
 using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,7 @@ namespace Medicoz.MVC.Controllers
         private readonly IUserService _userService;
         private readonly IDatabaseLocalisationRepository<Slider> _databaseLocalisationRepository;
         private readonly ILocalizationService<OurService> _localizationService;
-        private readonly IOurServicesRepository _testRepository;
+        private readonly IOurServicesRepository _ourServicesRepository;
 
         public HomeController(IUserService userService,
             IDatabaseLocalisationRepository<Slider> databaseLocalisationRepository,
@@ -22,7 +23,7 @@ namespace Medicoz.MVC.Controllers
             _userService = userService;
             _databaseLocalisationRepository = databaseLocalisationRepository;
             _localizationService = localizationService;
-            _testRepository = testRepository;
+            _ourServicesRepository = testRepository;
         }
         public async Task<IActionResult> Index()
         {
@@ -30,7 +31,7 @@ namespace Medicoz.MVC.Controllers
             var sliders = await _databaseLocalisationRepository.GetLocalizedEntities();
             homeViewModel.Sliders = sliders;
 
-            homeViewModel.OurServices = await _testRepository.GetAllAsync();
+            homeViewModel.OurServices = await _ourServicesRepository.GetAllAsync();
             var testModelTitle = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Title));
             var testModelDesc = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Description));
             homeViewModel.EntitiesLocalizedValuesTitle = testModelTitle;

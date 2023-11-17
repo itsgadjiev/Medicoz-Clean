@@ -1,0 +1,32 @@
+﻿using MediatR;
+using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Features.OurServices.Commands.UpdateOurService;
+using Medicoz.Domain;
+
+namespace Medicoz.Application.Features.OurServices.Queries.GetOurServices
+{
+    public class GetOurServiceByIdQueryHandler : IRequestHandler<GetOurServiceByIdQuery, UpdateOurServiceCommand>
+    {
+        private readonly IOurServicesRepository _ourServicesRepository;
+
+        public GetOurServiceByIdQueryHandler(IOurServicesRepository ourServicesRepository)
+        {
+            _ourServicesRepository = ourServicesRepository;
+        }
+
+        public async Task<UpdateOurServiceCommand> Handle(GetOurServiceByIdQuery request, CancellationToken cancellationToken)
+        {
+            var service = await _ourServicesRepository.GetByIdAsync(request.Id);
+            var viewModel = new UpdateOurServiceCommand
+            {
+                Id = service.Id,
+                Title = service.Title,
+                Description = service.Description,
+                Icon = service.Icon
+            };
+
+            return viewModel;
+        }
+
+    }
+}

@@ -1,0 +1,69 @@
+﻿@using Medicoz.Application.Features.OurServices.Commands.AddOurService;
+@model AddOurServiceCommand
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="ourservices" asp-action="index">Services</a></li>
+                    <li class="breadcrumb-item active">Add Service</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Add Service</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="ourservices" asp-action="create" enctype="multipart/form-data" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label asp-for="Icon">Icon</label>
+                                <input asp-for="Icon" class="form-control">
+                                <span asp-validation-for="Icon" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                             <div class="mb-3">
+                                <label asp-for="TitleEn">Title En</label>
+                                <input asp-for="TitleEn" class="form-control">
+                                <span asp-validation-for="TitleEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="TitleAz">Title Az</label>
+                                <input asp-for="TitleAz" class="form-control">
+                                <span asp-validation-for="TitleAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DescriptionAz">Description Az</label>
+                                <input asp-for="DescriptionAz" class="form-control">
+                                <span asp-validation-for="DescriptionAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DescriptionEn">Description En</label>
+                                <input asp-for="DescriptionEn" class="form-control">
+                                <span asp-validation-for="DescriptionEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mt-3 text-end">
+                    <button class="btn btn-success" type="submit" form="submit-form">Create</button>
+                    <a asp-controller="ourservices" asp-action="index" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

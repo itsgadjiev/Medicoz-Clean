@@ -21,13 +21,18 @@ namespace Medicoz.Identity.Services
         public string UserId => _contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
         public async Task<User> GetEmployeeAsync(string userId)
         {
+
             var employee = await _userManager.FindByIdAsync(userId);
+            if (employee is null) { throw new Exception("User is not authenticated"); }
+
+            var role = await _userManager.GetRolesAsync(employee);
             return new User
             {
                 Email = employee.Email,
                 Id = employee.Id,
                 Firstname = employee.FirstName,
-                Lastname = employee.LastName
+                Lastname = employee.LastName,
+                Role = role.FirstOrDefault(),
             };
         }
 
@@ -47,13 +52,15 @@ namespace Medicoz.Identity.Services
         {
             var employee = await _userManager.FindByIdAsync(UserId);
             if (employee is null) { throw new Exception("User is not authenticated"); }
-          
+            var role = await _userManager.GetRolesAsync(employee);
+
             return new User
             {
                 Id = employee.Id,
                 Email = employee.Email,
                 Firstname = employee.FirstName,
-                Lastname = employee.LastName
+                Lastname = employee.LastName,
+                Role = role.FirstOrDefault(),
             };
         }
     }

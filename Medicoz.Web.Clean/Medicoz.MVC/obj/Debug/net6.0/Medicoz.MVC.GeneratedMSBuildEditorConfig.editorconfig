@@ -20,16 +20,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEhvc3BpdGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/OurServices/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3VyU2VydmljZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/OurServices/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3VyU2VydmljZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Shared/Components/Navbar/Deafult.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2YmFyXERlYWZ1bHQuY3NodG1s
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/OurServices/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3VyU2VydmljZXNcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Shared/Components/NavbarAp/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2YmFyQXBcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/_ViewStart.cshtml]

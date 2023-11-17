@@ -814,7 +814,8 @@
     <!-- end leftbar-tab-menu-->
     <!-- Top Bar Start -->
     <!-- Top Bar Start -->
-    <div class="topbar">
+    @await Component.InvokeAsync("NavbarAp")
+  @*   <div class="topbar">
         <!-- Navbar -->
         <nav class="navbar-custom" id="navbar-custom">
             <ul class="list-unstyled topbar-nav float-end mb-0">
@@ -1042,7 +1043,7 @@
             </ul>
         </nav>
         <!-- end navbar-->
-    </div>
+    </div> *@
     <!-- Top Bar End -->
     <!-- Top Bar End -->
     <div class="page-wrapper">

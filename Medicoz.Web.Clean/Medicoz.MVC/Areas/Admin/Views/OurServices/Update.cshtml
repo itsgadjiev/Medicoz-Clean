@@ -1,0 +1,70 @@
+﻿@using Medicoz.Application.Constants;
+@using Medicoz.Application.Features.OurServices.Commands.UpdateOurService;
+@model UpdateOurServiceCommand
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="ourservices" asp-action="index">Services</a></li>
+                    <li class="breadcrumb-item active">Add Service</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Add Service</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="ourservices" asp-action="update" asp-route-id="@Model.Id" enctype="multipart/form-data" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label asp-for="Icon">Icon</label>
+                                <input asp-for="Icon" class="form-control">
+                                <span asp-validation-for="Icon" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                             <div class="mb-3">
+                                <label asp-for="Title[LocalizationLanguages.EN]">Title En</label>
+                                <input asp-for="Title[LocalizationLanguages.EN]" class=" form-control">
+                                <span asp-validation-for="Title[LocalizationLanguages.EN]" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Title[LocalizationLanguages.AZ]">Title Az</label>
+                                <input asp-for="Title[LocalizationLanguages.AZ]" class="form-control">
+                                <span asp-validation-for="Title[LocalizationLanguages.AZ]" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Description[LocalizationLanguages.AZ]">Description Az</label>
+                                <input asp-for="Description[LocalizationLanguages.AZ]" class="form-control">
+                                <span asp-validation-for="Description[LocalizationLanguages.AZ]" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Description[LocalizationLanguages.EN]">Description En</label>
+                                <input asp-for="Description[LocalizationLanguages.EN]" class="form-control">
+                                <span asp-validation-for="Description[LocalizationLanguages.EN]" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mt-3 text-end">
+                    <button class="btn btn-success" type="submit" form="submit-form">Update</button>
+                    <a asp-controller="ourservices" asp-action="index" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

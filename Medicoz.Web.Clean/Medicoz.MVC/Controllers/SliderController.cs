@@ -27,22 +27,6 @@ namespace Medicoz.MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateAsync()
         {
-            var newSlider = new OurService
-            {
-                Title = new Dictionary<string, string>
-            {
-                { "az", "Salam" },
-                { "ru", "Privet" }
-            },
-                Description = new Dictionary<string, string>
-            {
-                { "az", "Necesen" },
-                { "ru", "Kak dela" }
-            }
-                // Other properties as needed
-            };
-
-            await _testRepository.AddAsync(newSlider);
             return View();
         }
         [HttpPost]
