@@ -3,6 +3,7 @@ using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.OurServices.Commands.AddOurService;
+using Medicoz.Application.Features.OurServices.Commands.DeleteOurService;
 using Medicoz.Application.Features.OurServices.Commands.UpdateOurService;
 using Medicoz.Application.Features.OurServices.Queries.GetOurServices;
 using Medicoz.Application.Features.Slider.Commands.CreateSlider;
@@ -10,6 +11,7 @@ using Medicoz.Domain;
 using Medicoz.MVC.Areas.Admin.ViewModels;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
@@ -69,12 +71,15 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpGet("update/{id}")]
         public async Task<IActionResult> Update(int id)
         {
-            var query = new GetOurServiceByIdQuery { Id  = id };
-            var serviceViewModel = await _mediator.Send(query);
-
-            if (serviceViewModel == null)
+            var query = new GetOurServiceByIdQuery { Id = id };
+            var serviceViewModel = new UpdateOurServiceCommand();
+            try
             {
-                return NotFound(); 
+                serviceViewModel = await _mediator.Send(query);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex);
             }
 
             return View(serviceViewModel);
@@ -83,7 +88,38 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpPost("update/{id}")]
         public async Task<IActionResult> UpdateAsync(UpdateOurServiceCommand updateOurServiceCommand)
         {
-            await _mediator.Send(updateOurServiceCommand);
+            try
+            {
+                await _mediator.Send(updateOurServiceCommand);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex);
+            }
+            catch (CustomValidationException e)
+            {
+                foreach (var item in e.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet("delete/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var command = new DeleteOurServiceCommand() { Id = id };
+            try
+            {
+                await _mediator.Send(command);
+
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+
             return RedirectToAction(nameof(Index));
         }
     }

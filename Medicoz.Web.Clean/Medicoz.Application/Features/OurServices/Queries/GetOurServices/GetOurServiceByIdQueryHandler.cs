@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.OurServices.Commands.UpdateOurService;
 using Medicoz.Domain;
 
@@ -17,6 +18,8 @@ namespace Medicoz.Application.Features.OurServices.Queries.GetOurServices
         public async Task<UpdateOurServiceCommand> Handle(GetOurServiceByIdQuery request, CancellationToken cancellationToken)
         {
             var service = await _ourServicesRepository.GetByIdAsync(request.Id);
+            if (service is null) throw new NotFoundException(service);
+
             var viewModel = new UpdateOurServiceCommand
             {
                 Id = service.Id,
