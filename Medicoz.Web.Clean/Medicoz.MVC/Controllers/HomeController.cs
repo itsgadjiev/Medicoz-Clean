@@ -1,7 +1,6 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Percistance;
-using Medicoz.Application.Features.OurServices.Commands.AddOurService;
 using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -17,8 +16,8 @@ namespace Medicoz.MVC.Controllers
 
         public HomeController(IUserService userService,
             IDatabaseLocalisationRepository<Slider> databaseLocalisationRepository,
-            ILocalizationService<OurService> localizationService
-          , IOurServicesRepository testRepository)
+            ILocalizationService<OurService> localizationService,
+            IOurServicesRepository testRepository)
         {
             _userService = userService;
             _databaseLocalisationRepository = databaseLocalisationRepository;

@@ -17,30 +17,59 @@ public class AppDbContext : DbContext
     }
     public DbSet<Slider> Sliders { get; set; }
     public DbSet<OurService> OurServices { get; set; }
+    public DbSet<DoctorSchedule> DoctorSchedules { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         var jsonConverter = new ValueConverter<Dictionary<string, string>, string>(
            v => JsonSerializer.Serialize(v, new JsonSerializerOptions { IgnoreNullValues = true }),
            v => JsonSerializer.Deserialize<Dictionary<string, string>>(v, new JsonSerializerOptions { IgnoreNullValues = true }),
-           new ConverterMappingHints(size: -1) 
+           new ConverterMappingHints(size: -1)
        );
 
+        #region OurService
         modelBuilder.Entity<OurService>()
-            .Property(e => e.Title)
-            .HasConversion(jsonConverter)
-            .HasColumnType("nvarchar(MAX)"); 
+           .Property(e => e.Title)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
 
         modelBuilder.Entity<OurService>()
             .Property(e => e.Description)
             .HasConversion(jsonConverter)
-            .HasColumnType("nvarchar(MAX)"); 
+            .HasColumnType("nvarchar(MAX)");
+        #endregion
+
+        #region Doctor
+        modelBuilder.Entity<Doctor>()
+        .ToTable("Doctors")
+        .HasMany(d => d.DoctorSchedules)
+        .WithOne(ds => ds.Doctor)
+        .HasForeignKey(ds => ds.DoctorId);
+
+        modelBuilder.Entity<Doctor>()
+            .Property(d => d.Title)
+            .HasConversion(jsonConverter)
+            .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Doctor>()
+            .Property(d => d.Education)
+            .HasConversion(jsonConverter)
+            .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Doctor>()
+           .Property(d => d.Description)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Doctor>()
+         .Property(d => d.Experience)
+         .HasConversion(jsonConverter)
+         .HasColumnType("nvarchar(MAX)");
+
+        #endregion
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         base.OnModelCreating(modelBuilder);
-
-
-
     }
 
 
