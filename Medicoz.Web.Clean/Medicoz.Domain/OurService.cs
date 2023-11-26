@@ -1,4 +1,5 @@
-﻿using Medicoz.Domain.Common.concrets;
+﻿using Medicoz.Domain.Common.abstracts;
+using Medicoz.Domain.Common.concrets;
 
 namespace Medicoz.Domain
 {
@@ -7,5 +8,6 @@ namespace Medicoz.Domain
         public string Icon { get; set; }
         public Dictionary<string, string> Title { get; set; }
         public Dictionary<string, string> Description { get; set; }
+      
     }
 }

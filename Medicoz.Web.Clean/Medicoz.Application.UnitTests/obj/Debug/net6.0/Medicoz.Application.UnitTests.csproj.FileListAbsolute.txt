@@ -1,9 +1,4 @@
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.csproj.AssemblyReference.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.AssemblyInfoInputs.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.AssemblyInfo.cs
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.csproj.CoreCompileInputs.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\testhost.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\EmptyFiles\archive\empty.7z
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\EmptyFiles\archive\empty.bz2
@@ -162,6 +157,11 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Medicoz.Domain.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Medicoz.Application.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Medicoz.Domain.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.csproj.AssemblyReference.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.AssemblyInfoInputs.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.AssemblyInfo.cs
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.csproj.CoreCompileInputs.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.csproj.CopyComplete
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\refint\Medicoz.Application.UnitTests.dll

@@ -1,5 +1,6 @@
 ﻿using Medicoz.Domain;
 using Medicoz.Domain.Common.abstracts;
+using Medicoz.Domain.Common.concrets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Text.Json;
@@ -46,7 +47,7 @@ public class AppDbContext : DbContext
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-        foreach (var entry in base.ChangeTracker.Entries<IAuditable>()
+        foreach (var entry in base.ChangeTracker.Entries<BaseEntity>()
             .Where(q => q.State == EntityState.Added || q.State == EntityState.Modified))
         {
             entry.Entity.UpdatedAt = DateTime.Now;

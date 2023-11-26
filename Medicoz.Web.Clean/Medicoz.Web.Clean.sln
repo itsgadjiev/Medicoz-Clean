@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medicoz.MVC", "Medicoz.MVC\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicoz.Application.UnitTests", "Medicoz.Application.UnitTests\Medicoz.Application.UnitTests.csproj", "{EF8EC85E-1465-4670-89DE-37E567A5A093}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medicoz.Persistence.IntegrationTests", "Medicoz.Persistence.IntegrationTests\Medicoz.Persistence.IntegrationTests.csproj", "{FD953141-221C-46F2-9BDA-2BE46A628FCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{EF8EC85E-1465-4670-89DE-37E567A5A093}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF8EC85E-1465-4670-89DE-37E567A5A093}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF8EC85E-1465-4670-89DE-37E567A5A093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD953141-221C-46F2-9BDA-2BE46A628FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD953141-221C-46F2-9BDA-2BE46A628FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD953141-221C-46F2-9BDA-2BE46A628FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD953141-221C-46F2-9BDA-2BE46A628FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{8C18DCD3-14C3-4931-A7E3-06E8D75642A0} = {65781F0F-1563-42F1-97C7-6EE4AAF444FC}
 		{2018CFA7-BE8A-4396-984C-ABA6BADD0BC5} = {8C18DCD3-14C3-4931-A7E3-06E8D75642A0}
 		{EF8EC85E-1465-4670-89DE-37E567A5A093} = {40319800-92BF-4B7E-86C0-CD817E6CD769}
+		{FD953141-221C-46F2-9BDA-2BE46A628FCE} = {40319800-92BF-4B7E-86C0-CD817E6CD769}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89D49F93-64B4-4D33-9470-B9DF2EA2FB6F}

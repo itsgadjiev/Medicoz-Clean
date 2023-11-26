@@ -99,14 +99,6 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Me
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\ref\Medicoz.MVC.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\Humanizer.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\LastMedicoz\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.csproj.AssemblyReference.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.AssemblyInfoInputs.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.AssemblyInfo.cs
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.csproj.CoreCompileInputs.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.RazorAssemblyInfo.cache
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.RazorAssemblyInfo.cs
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\appsettings.json
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\Medicoz.MVC.staticwebassets.runtime.json
@@ -365,6 +357,14 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\Medicoz.Identity.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\Medicoz.Infrastructure.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\bin\Debug\net6.0\Medicoz.Persistence.pdb
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.csproj.AssemblyReference.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.AssemblyInfoInputs.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.AssemblyInfo.cs
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.csproj.CoreCompileInputs.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.RazorAssemblyInfo.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.RazorAssemblyInfo.cs
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\staticwebassets\msbuild.Medicoz.MVC.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\staticwebassets\msbuild.build.Medicoz.MVC.props
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Medicoz.MVC.props
