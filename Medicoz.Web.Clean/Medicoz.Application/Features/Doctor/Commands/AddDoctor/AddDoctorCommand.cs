@@ -20,6 +20,7 @@ public class AddDoctorCommand : IRequest<Unit>
     public string Email { get; set; }
     public IFormFile Image { get; set; }
     public DoctorScheduleForAddDoctorCommand DoctorScheduleForAddDoctorCommand { get; set; }
+    public string WebRootPath { get; set; }
 
 }
 public class DoctorScheduleForAddDoctorCommand
@@ -32,10 +33,3 @@ public class DoctorScheduleForAddDoctorCommand
     public DateTime EndTime { get; set; }
 }
 
-//public class DoctorScheduleForAddDoctorCommand
-//{
-//    public DayOfWeek WorkingDayOfDoctor { get; set; }
-//    public Domain.Doctor Doctor { get; set; }
-//    public DateTime StartTime { get; set; }
-//    public DateTime EndTime { get; set; }
-//}

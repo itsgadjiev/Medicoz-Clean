@@ -18656,5 +18656,21 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\medicoz\plugins\revolution\js\jquery.themepunch.tools.min.js))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Medicoz.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Medicoz.MVC</BasePath>
+      <RelativePath>uploads/images/c105f960-e012-4090-b89b-e09ad4964dc0.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

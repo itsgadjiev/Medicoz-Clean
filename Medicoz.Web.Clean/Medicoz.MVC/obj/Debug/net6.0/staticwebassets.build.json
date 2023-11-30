@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EiD+QpzXOiPs0mRokawoEeu2tQo6ohsz6pUdSmLC9bs=",
+  "Hash": "/eVg0apLgEyRXfXKaYBdImUKtQW1Meqk9QacT/9Rzfk=",
   "Source": "Medicoz.MVC",
   "BasePath": "_content/Medicoz.MVC",
   "Mode": "Default",
@@ -19854,6 +19854,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg",
+      "SourceId": "Medicoz.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\",
+      "BasePath": "_content/Medicoz.MVC",
+      "RelativePath": "uploads/images/c105f960-e012-4090-b89b-e09ad4964dc0.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg"
     }
   ]
 }

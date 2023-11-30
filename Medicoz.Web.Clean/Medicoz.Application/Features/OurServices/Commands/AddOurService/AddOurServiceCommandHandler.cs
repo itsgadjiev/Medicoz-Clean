@@ -2,13 +2,7 @@
 using Medicoz.Application.Constants;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
-using Medicoz.Application.Features.Slider.Commands.CreateSlider;
 using Medicoz.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Medicoz.Application.Features.OurServices.Commands.AddOurService
 {
@@ -42,7 +36,7 @@ namespace Medicoz.Application.Features.OurServices.Commands.AddOurService
                     { LocalizationLanguages.AZ, request.DescriptionAz },
                     { LocalizationLanguages.EN, request.DescriptionEn }
                 },
-                Icon=request.Icon,
+                Icon = request.Icon,
             };
 
 

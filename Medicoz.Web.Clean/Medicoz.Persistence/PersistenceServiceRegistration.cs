@@ -21,6 +21,8 @@ public static class PersistenceServiceRegistration
         services.AddScoped(typeof(IDatabaseLocalisationRepository<>), typeof(DatabaseLocalisationRepository<>));
         services.AddScoped<ISliderRepository, SliderRepository>();
         services.AddScoped<IOurServicesRepository, OurServicesRepository>();
+        services.AddScoped<IDoctorRepository, DoctorRepository>();
+        services.AddScoped<IDoctorScheduleRepository, DoctorScheduleRepository>();
 
 
         return services;

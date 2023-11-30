@@ -7,7 +7,7 @@
             <div class="float-end">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a asp-controller="ourservices" asp-action="index">Services</a></li>
-                    <li class="breadcrumb-item active">Add Service</li>
+                    <li class="breadcrumb-item active">Add Doctor</li>
                 </ol>
             </div>
             <h4 class="page-title">Add Service</h4>
@@ -19,7 +19,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <form method="post" asp-controller="ourservices" asp-action="create" enctype="multipart/form-data" id="submit-form">
+                <form method="post" asp-controller="AdminDoctor" asp-action="create" enctype="multipart/form-data" id="submit-form">
                     <div asp-validation-summary="ModelOnly"></div>
                     <div class="row">
                         <div class="col-md-12">
@@ -27,6 +27,11 @@
                                 <label asp-for="Name">Name</label>
                                 <input asp-for="Name" class="form-control">
                                 <span asp-validation-for="Name" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Surname">Surname</label>
+                                <input asp-for="Surname" class="form-control">
+                                <span asp-validation-for="Surname" class="invalid-feedback text-danger" style="display:block"></span>
                             </div>
                             <div class="mb-3">
                                 <label asp-for="TitleEn">Title En</label>
@@ -59,6 +64,31 @@
                                 <input asp-for="EducationAz" class="form-control">
                                 <span asp-validation-for="EducationAz" class="invalid-feedback text-danger" style="display:block"></span>
                             </div>
+                            <div class="mb-3">
+                                <label asp-for="ExperienceAz">ExperienceAz</label>
+                                <input asp-for="ExperienceAz" class="form-control">
+                                <span asp-validation-for="ExperienceAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="ExperienceEn">ExperienceEn</label>
+                                <input asp-for="ExperienceEn" class="form-control">
+                                <span asp-validation-for="ExperienceEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" class="form-control">
+                                <span asp-validation-for="Email" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Phone">Phone</label>
+                                <input asp-for="Phone" class="form-control">
+                                <span asp-validation-for="Phone" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Image">Image</label>
+                                <input asp-for="Image" class="form-control">
+                                <span asp-validation-for="Image" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
 
                             <select class="form-select" asp-for="DoctorScheduleForAddDoctorCommand.WorkingDaysOfDoctor" id="days-multiselect" multiple>
                                 @foreach (var day in Enum.GetValues(typeof(DayOfWeek)))
@@ -77,46 +107,6 @@
                                 <input asp-for="DoctorScheduleForAddDoctorCommand.EndTime" class="form-control">
                                 <span asp-validation-for="DoctorScheduleForAddDoctorCommand.EndTime" class="invalid-feedback text-danger" style="display:block"></span>
                             </div>
-
-
-
-                            @* <div class="mb-3">
-                            <label asp-for="E">EducationAz</label>
-                            <input asp-for="EducationAz" class="form-control">
-                            <span asp-validation-for="EducationAz" class="invalid-feedback text-danger" style="display:block"></span>
-                            </div> *@
-
-                            <div id="doctorSchedules">
-                                <!-- This div will contain dynamically created inputs -->
-                            </div>
-
-                            <!-- Button to add new input fields -->
-                            <button id="addSchedule" type="button">Add Doctor Schedule</button>
-                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-                            <script>
-                                $(document).ready(function () {
-                                    $('#addSchedule').click(function () {
-                                        var html = '<div>' +
-                                            '<label>Working Day of Doctor:</label>' +
-                                            '<select class="workingDay">' +
-                                            '<option value="0">Sunday</option>' +
-                                            '<option value="1">Monday</option>' +
-                                            '<option value="2">Tuesday</option>' +
-                                            '</select>' +
-                                            '<label>Doctor Name:</label>' +
-                                            '<input type="text" class="doctorName" asp->' +
-                                            '<label>Start Time:</label>' +
-                                            '<input type="datetime-local" class="startTime">' +
-                                            '<label>End Time:</label>' +
-                                            '<input type="datetime-local" class="endTime">' +
-                                            '</div>';
-
-                                        $('#doctorSchedules').append(html);
-                                    });
-                                });
-                            </script>
-
                         </div>
                     </div>
                 </form>
@@ -131,7 +121,7 @@
             <div class="card-body">
                 <div class="form-group mt-3 text-end">
                     <button class="btn btn-success" type="submit" form="submit-form">Create</button>
-                    <a asp-controller="ourservices" asp-action="index" class="btn btn-danger">Cancel</a>
+                    <a asp-controller="AdminDoctors" asp-action="index" class="btn btn-danger">Cancel</a>
                 </div>
             </div>
         </div>

@@ -10,10 +10,12 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
     public class AdminDoctorController : Controller
     {
         private readonly IMediator _mediator;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public AdminDoctorController(IMediator mediator)
+        public AdminDoctorController(IMediator mediator,IWebHostEnvironment webHostEnvironment)
         {
             _mediator = mediator;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -30,6 +32,8 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> Create(AddDoctorCommand addDoctorCommand)
         {
+            var webRootPath = _webHostEnvironment.WebRootPath;
+            addDoctorCommand.WebRootPath = webRootPath;
             try
             {
                 await _mediator.Send(addDoctorCommand);

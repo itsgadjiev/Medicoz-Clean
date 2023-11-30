@@ -4665,6 +4665,10 @@
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js"
     },
     {
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\images\\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Medicoz.MVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
