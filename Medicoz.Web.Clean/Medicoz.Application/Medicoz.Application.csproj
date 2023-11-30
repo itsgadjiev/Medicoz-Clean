@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Features\Doctor\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
-﻿using Medicoz.Domain;
-using Medicoz.Domain.Common.abstracts;
+﻿using Medicoz.Application.Contracts.Identity;
+using Medicoz.Domain;
 using Medicoz.Domain.Common.concrets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -10,10 +10,11 @@ namespace Medicoz.Persistence.Database;
 
 public class AppDbContext : DbContext
 {
+    private readonly IUserService _userService;
 
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    public AppDbContext(DbContextOptions<AppDbContext> options,IUserService userService) : base(options)
     {
-
+        _userService = userService;
     }
     public DbSet<Slider> Sliders { get; set; }
     public DbSet<OurService> OurServices { get; set; }
@@ -66,6 +67,8 @@ public class AppDbContext : DbContext
          .HasConversion(jsonConverter)
          .HasColumnType("nvarchar(MAX)");
 
+
+
         #endregion
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
@@ -80,11 +83,11 @@ public class AppDbContext : DbContext
             .Where(q => q.State == EntityState.Added || q.State == EntityState.Modified))
         {
             entry.Entity.UpdatedAt = DateTime.Now;
-            //entry.Entity.UpdatedBy = _userService.UserId;
+            entry.Entity.UpdatedBy = _userService.UserId;
             if (entry.State == EntityState.Added)
             {
                 entry.Entity.CreatedAt = DateTime.Now;
-                //entry.Entity.UpdatedBy = _userService.UserId;
+                entry.Entity.UpdatedBy = _userService.UserId;
             }
         }
 
