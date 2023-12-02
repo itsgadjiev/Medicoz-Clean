@@ -1,4 +1,5 @@
 ﻿using Medicoz.Domain.Common.concrets;
+using System.Security.Principal;
 
 namespace Medicoz.Domain
 {
@@ -10,5 +11,7 @@ namespace Medicoz.Domain
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public Doctor Doctor { get; set; }
+        public bool IsReserved { get; set; }
+        public string ReservingUserID { get; set; }
     }
 }

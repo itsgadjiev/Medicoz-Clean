@@ -4442,6 +4442,7 @@
         "dependencies": {
           "Medicoz.Application": "1.0.0",
           "Medicoz.Domain": "1.0.0",
+          "Medicoz.Identity": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.24",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.24"
         },

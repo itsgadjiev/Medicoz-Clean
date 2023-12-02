@@ -1,3 +1,4 @@
+using Medicoz.Application.Contracts.Identity;
 using Medicoz.Domain;
 using Medicoz.Persistence.Database;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +15,7 @@ namespace Medicoz.Persistence.IntegrationTests
             var dbOptions = new DbContextOptionsBuilder<AppDbContext>()
                .UseInMemoryDatabase(Guid.NewGuid().ToString()).Options;
 
-            _medicozDbContext = new AppDbContext(dbOptions);
+            _medicozDbContext = new AppDbContext(dbOptions,null);
         }
 
         [Fact]

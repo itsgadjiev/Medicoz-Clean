@@ -19,48 +19,50 @@ namespace Medicoz.Identity.Services
         }
 
         public string UserId => _contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        public async Task<User> GetEmployeeAsync(string userId)
+        public async Task<ApplicationUser> GetEmployeeAsync(string userId)
         {
 
             var employee = await _userManager.FindByIdAsync(userId);
             if (employee is null) { throw new Exception("User is not authenticated"); }
 
             var role = await _userManager.GetRolesAsync(employee);
-            return new User
+            return new ApplicationUser
             {
                 Email = employee.Email,
                 Id = employee.Id,
-                Firstname = employee.FirstName,
-                Lastname = employee.LastName,
-                Role = role.FirstOrDefault(),
+                FirstName = employee.FirstName,
+                LastName = employee.LastName,
+                FirstRoleName = role.FirstOrDefault(),
             };
         }
 
-        public async Task<List<User>> GetEmployeesAsync()
+        public async Task<List<ApplicationUser>> GetEmployeesAsync()
         {
             var employees = await _userManager.GetUsersInRoleAsync("Employee");
-            return employees.Select(q => new User
+            return employees.Select(q => new ApplicationUser
             {
                 Id = q.Id,
                 Email = q.Email,
-                Firstname = q.FirstName,
-                Lastname = q.LastName
+                FirstName = q.FirstName,
+                LastName = q.LastName,
+                FirstRoleName= q.FirstRoleName,
+                
             }).ToList();
         }
 
-        public async Task<User> GetCurrentUserAsync()
+        public async Task<ApplicationUser> GetCurrentUserAsync()
         {
             var employee = await _userManager.FindByIdAsync(UserId);
             if (employee is null) { throw new Exception("User is not authenticated"); }
             var role = await _userManager.GetRolesAsync(employee);
 
-            return new User
+            return new ApplicationUser
             {
                 Id = employee.Id,
                 Email = employee.Email,
-                Firstname = employee.FirstName,
-                Lastname = employee.LastName,
-                Role = role.FirstOrDefault(),
+                FirstName = employee.FirstName,
+                LastName = employee.LastName,
+                FirstRoleName = role.FirstOrDefault(),
             };
         }
     }

@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Medicoz.Application\Medicoz.Application.csproj" />
     <ProjectReference Include="..\Medicoz.Domain\Medicoz.Domain.csproj" />
+    <ProjectReference Include="..\Medicoz.Identity\Medicoz.Identity.csproj" />
   </ItemGroup>
 
 </Project>

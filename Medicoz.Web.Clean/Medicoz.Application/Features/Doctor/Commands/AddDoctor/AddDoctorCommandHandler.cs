@@ -3,7 +3,6 @@ using Medicoz.Application.Constants;
 using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
-using Medicoz.Application.Features.OurServices.Commands.AddOurService;
 using Medicoz.Domain;
 
 namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
@@ -82,7 +81,6 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                     await _doctorScheduleRepository.AddAsync(doctorSchedules);
                 }
             }
-
 
             return Unit.Value;
         }
