@@ -1,9 +1,10 @@
 ﻿using Medicoz.Application.Contracts.Localisation;
+using Medicoz.Domain.Common.concrets;
 using Medicoz.Persistence.Database;
 
 namespace Medicoz.Infrastructure.LocalizationService;
 
-public class LocalizationService<T> : ILocalizationService<T> where T : class
+public class LocalizationService<T> : ILocalizationService<T> where T : BaseEntity
 {
     private readonly AppDbContext _context;
 
@@ -12,9 +13,31 @@ public class LocalizationService<T> : ILocalizationService<T> where T : class
         _context = context;
     }
 
-    public string GetLocalizedValue(int entityId, string propertyName, string language)
+    public string GetLocalizedValue(int entityId, string propertyName)
     {
+        var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
         var entity = _context.Set<T>().Find(entityId);
+        
+        if (entity != null)
+        {
+            var property = entity.GetType().GetProperty(propertyName);
+            if (property != null)
+            {
+                var localizedData = property.GetValue(entity) as Dictionary<string, string>;
+                if (localizedData != null && localizedData.ContainsKey(language))
+                {
+                    return localizedData[language];
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public string GetLocalizedValueInsideView(T entity, string propertyName)
+    {
+        var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+
         if (entity != null)
         {
             var property = entity.GetType().GetProperty(propertyName);

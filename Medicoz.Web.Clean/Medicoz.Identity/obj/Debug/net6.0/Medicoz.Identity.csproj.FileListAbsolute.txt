@@ -36,3 +36,4 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\ref\Medicoz.Identity.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.sourcelink.json

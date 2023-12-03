@@ -20,3 +20,4 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Domain\obj\Debug\net6.0\refint\Medicoz.Domain.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Domain\obj\Debug\net6.0\Medicoz.Domain.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Domain\obj\Debug\net6.0\ref\Medicoz.Domain.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Domain\obj\Debug\net6.0\Medicoz.Domain.sourcelink.json

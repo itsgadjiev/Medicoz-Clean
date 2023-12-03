@@ -1,5 +1,8 @@
-﻿@using Medicoz.MVC.Areas.Admin.ViewModels;
+﻿@using Medicoz.Application.Contracts.Localisation
+@using Medicoz.Domain
+@using Medicoz.MVC.Areas.Admin.ViewModels;
 @model OurServicesListVM
+@inject ILocalizationService<OurService> _localService ;
 @{
     int counter = 1;
 }
@@ -15,7 +18,8 @@
                                 <th>Icon</th>
                                 <th>Title</th>
                                 <th>Description </th>
-                                <th class="text-end">Action
+                                <th class="text-end">
+                                    Action
                                     <a class="btn btn-success" asp-action="create" asp-controller="ourservices">Create</a>
                                 </th>
                             </tr>
@@ -26,8 +30,9 @@
                                 <tr>
                                     <td>@(counter++)</td>
                                     <td>@Html.Raw(item.Icon)</td>
-                                    <td>@Model.Title.GetValueOrDefault(item.Id, "Default TestModel Title")</td>
-                                    <td>@Model.Desc.GetValueOrDefault(item.Id, "Default TestModel Description")</td>
+                                    <td>@_localService.GetLocalizedValueInsideView(item, nameof(item.Title))</td>
+                                    @* <td>@_localserv.GetLocalizedValue(item.Id, nameof(item.Description))</td> *@
+                                    <td>@_localService.GetLocalizedValueInsideView(item, nameof(item.Description))</td>
                                     <td class="text-end">
                                         <a asp-action="update" asp-controller="OurServices" asp-route-id="@item.Id"><i class="las la-pen text-secondary font-16"></i></a>
                                         <a asp-action="delete" asp-controller="OurServices" asp-route-id="@item.Id"><i class="las la-trash-alt text-secondary font-16"></i></a>
@@ -41,4 +46,3 @@
         </div><!--end card-->
     </div> <!-- end col -->
 </div> <!-- end row -->
-

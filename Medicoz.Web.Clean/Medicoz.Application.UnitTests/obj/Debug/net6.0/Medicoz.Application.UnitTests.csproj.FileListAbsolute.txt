@@ -168,3 +168,4 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\ref\Medicoz.Application.UnitTests.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.sourcelink.json

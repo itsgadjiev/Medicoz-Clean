@@ -1,5 +1,6 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Domain;
+using Medicoz.Domain.Common;
 using Medicoz.Domain.Common.concrets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -12,7 +13,7 @@ public class AppDbContext : DbContext
 {
     private readonly IUserService _userService;
 
-    public AppDbContext(DbContextOptions<AppDbContext> options,IUserService userService) : base(options)
+    public AppDbContext(DbContextOptions<AppDbContext> options, IUserService userService) : base(options)
     {
         _userService = userService;
     }
@@ -68,6 +69,22 @@ public class AppDbContext : DbContext
          .HasColumnType("nvarchar(MAX)");
 
 
+
+        #endregion
+
+        #region DoctorReservations
+
+        modelBuilder.Entity<DoctorReservation>()
+            .HasOne(dr => dr.Doctor)
+            .WithMany(dr=>dr.DoctorReservations)
+            .HasForeignKey(dr => dr.DoctorId)
+            .OnDelete(DeleteBehavior.NoAction);
+
+        modelBuilder.Entity<DoctorReservation>()
+            .HasOne(dr => dr.DoctorSchedule)
+            .WithMany(dr => dr.DoctorReservations)
+            .HasForeignKey(dr => dr.DoctorScheduleId)
+            .OnDelete(DeleteBehavior.NoAction);
 
         #endregion
 

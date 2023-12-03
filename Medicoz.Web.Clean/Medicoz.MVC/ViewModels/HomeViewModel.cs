@@ -10,6 +10,7 @@ namespace Medicoz.MVC.ViewModels
         public Dictionary<int,string> EntitiesLocalizedValuesTitle { get; set; }
         public Dictionary<int,string> EntitiesLocalizedValuesDesc { get; set; }
         public List<OurService> OurServices { get; set; }
+        public List<Doctor> Doctors { get; set; }
 
     }
 }

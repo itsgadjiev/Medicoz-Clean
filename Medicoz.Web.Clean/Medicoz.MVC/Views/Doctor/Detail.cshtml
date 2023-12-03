@@ -1,0 +1,249 @@
+﻿@using Medicoz.MVC.ViewModels
+@model DoctorDetailViewModel
+<!--End Main Header -->
+<!--Page Title-->
+<section class="page-title" style="background-image: url(images/background/8.jpg);">
+    <div class="auto-container">
+        <div class="title-outer">
+            <h1>Dedicated Doctor</h1>
+            <ul class="page-breadcrumb">
+                <li><a asp-action="index" asp-controller="home">Home</a></li>
+                <li>Doctors</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+<!-- Doctor Detail Section -->
+<section class="doctor-detail-section">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Content Side -->
+            <div class="content-side col-lg-8 col-md-12 col-sm-12 order-2">
+                <div class="docter-detail">
+                    <h3 class="name">Dr. @Model.Name @Model.Surname</h3>
+                    <span class="designation">@Model.Title</span>
+                    <div class="text">@Model.Description</div>
+                    <ul class="doctor-info-list">
+                        <li>
+                            <strong>Speciality</strong>
+                            <p>Endocrinology <br>Paediatric Medicine <br>Urology</p>
+                        </li>
+                        <li>
+                            <strong>Education</strong>
+                            <p>@Model.Education</p>
+                        </li>
+                        <li>
+                            <strong>Experience</strong>
+                            <p>@Model.Experience</p>
+                        </li>
+                        <li>
+                            <strong>Timing</strong>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    See Doctor Schedule
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    @foreach (var item in Model.DoctorSchedules)
+                                    {
+                                        <a class="dropdown-item">
+                                            @item.DayOfWeek @item.StartTime.ToString("T") - @item.EndTime.ToString("T")
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Phone</strong>
+                            <p><a href="#">@Model.Phone</a></p>
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            <p><a href="#">@Model.Email</a></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="appointment-form default-form">
+                    <div class="sec-title">
+                        <span class="sub-title">Online Appoinment</span>
+                        <h2>Make An Appointment</h2>
+                        <span class="divider"></span>
+                    </div>
+
+                    <!--Comment Form-->
+                    <form action="#" method="post" id="email-form">
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-12">
+                                <input type="text" name="username" placeholder="Your Name">
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-12">
+                                <input type="text" name="phone" placeholder="Your Phone">
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12">
+                                <input type="email" name="email" placeholder="Your Email *">
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12">
+                                <textarea name="contact_message" placeholder="Tell us about Pasent"></textarea>
+                            </div>
+                            @*      <div class="dropdown col-lg-12 col-md-12 ">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Options
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            @foreach (var item in Model.DoctorSchedules)
+                            {
+                            <a class="dropdown-item">
+                            <label>
+                            <input  type="radio" name="selectedSlot" class="mr-2"> @item.DayOfWeek @item.StartTime.ToString("T") - @item.EndTime.ToString("T")
+                            </label>
+                            </a>
+                            }
+                            </div>
+                            </div> *@
+                            <div class="form-group col-lg-12 col-md-12">
+                                <input asp-for="DoctorDetailReservationViewModel.ReservationDate" class=" p-1" style="border:1px solid #e1e1e1ff;" value="now" />
+                            </div>
+                            <div class="form-group col-lg-12 col-md-12 mt-5">
+                                <button class="theme-btn btn-style-two" type="button" name="submit-form"><span class="btn-title">Submit Query</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar Side -->
+            <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                <div class="sidebar">
+                    <!-- Team Block -->
+                    <div class="team-block wow fadeInUp">
+                        <div class="inner-box">
+                            <figure class="image"><img src="~/uploads/images/@Model.ImageURL" alt=""></figure>
+                            <ul class="social-links">
+                                <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Availability -->
+                    <div class="docter-availability">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <span class="sub-title">Fee</span>
+                                <h3>@Model.Fee$</h3>
+                                <span class="divider"></span>
+                                <div class="text">Suspendisse potenti. Maecenas dapibus ac tellus sed pulvinar. Vestibulum bib volutpat accumsan non laoreet nulla luctus.</div>
+                            </div>
+                            <ul class="timing-list-two">
+                                @foreach (var item in Model.DoctorSchedules)
+                                {
+                                    <li>@item.DayOfWeek <span>  @item.StartTime.ToString("T") - @item.EndTime.ToString("T")</span></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Doctor Detail Section -->
+<!-- Team Section -->
+<section class="team-section">
+    <div class="auto-container">
+        <div class="row">
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/resource/team-1.jpg" alt=""></figure>
+                    <ul class="social-links">
+                        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    </ul>
+                    <div class="info-box">
+                        <h4 class="name"><a href="doctor-detail.html">Dr. Morila Wood</a></h4>
+                        <span class="designation">Senior Dr. at Delmont</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/resource/team-2.jpg" alt=""></figure>
+                    <ul class="social-links">
+                        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    </ul>
+                    <div class="info-box">
+                        <h4 class="name"><a href="doctor-detail.html">Dr. Morila Wood</a></h4>
+                        <span class="designation">Senior Dr. at Delmont</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/resource/team-3.jpg" alt=""></figure>
+                    <ul class="social-links">
+                        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    </ul>
+                    <div class="info-box">
+                        <h4 class="name"><a href="doctor-detail.html">Dr. Morila Wood</a></h4>
+                        <span class="designation">Senior Dr. at Delmont</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/resource/team-4.jpg" alt=""></figure>
+                    <ul class="social-links">
+                        <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    </ul>
+                    <div class="info-box">
+                        <h4 class="name"><a href="doctor-detail.html">Dr. Morila Wood</a></h4>
+                        <span class="designation">Senior Dr. at Delmont</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
+<!-- Clients Section -->
+<section class="clients-section alternate">
+    <div class="auto-container">
+
+        <!-- Sponsors Outer -->
+        <div class="sponsors-outer">
+            <!--clients carousel-->
+            <ul class="clients-carousel owl-carousel owl-theme">
+                <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Clients Section -->

@@ -13,16 +13,19 @@ namespace Medicoz.MVC.Controllers
         private readonly IDatabaseLocalisationRepository<Slider> _databaseLocalisationRepository;
         private readonly ILocalizationService<OurService> _localizationService;
         private readonly IOurServicesRepository _ourServicesRepository;
+        private readonly IDoctorRepository _doctorRepository;
 
         public HomeController(IUserService userService,
             IDatabaseLocalisationRepository<Slider> databaseLocalisationRepository,
             ILocalizationService<OurService> localizationService,
-            IOurServicesRepository testRepository)
+            IOurServicesRepository testRepository,
+            IDoctorRepository doctorRepository)
         {
             _userService = userService;
             _databaseLocalisationRepository = databaseLocalisationRepository;
             _localizationService = localizationService;
             _ourServicesRepository = testRepository;
+            _doctorRepository = doctorRepository;
         }
         public async Task<IActionResult> Index()
         {
@@ -35,6 +38,9 @@ namespace Medicoz.MVC.Controllers
             var testModelDesc = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Description));
             homeViewModel.EntitiesLocalizedValuesTitle = testModelTitle;
             homeViewModel.EntitiesLocalizedValuesDesc = testModelDesc;
+            homeViewModel.Doctors = await _doctorRepository.GetAllAsync();
+
+
 
             return View(homeViewModel);
         }

@@ -22,6 +22,56 @@ namespace Medicoz.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Medicoz.Domain.Common.DoctorReservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoctorScheduleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PasentEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentNotes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentPhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ReservationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("DoctorScheduleId");
+
+                    b.ToTable("DoctorReservation");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>
                 {
                     b.Property<int>("Id")
@@ -44,6 +94,9 @@ namespace Medicoz.Persistence.Migrations
 
                     b.Property<string>("Experience")
                         .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<double>("Fee")
+                        .HasColumnType("float");
 
                     b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
@@ -90,6 +143,12 @@ namespace Medicoz.Persistence.Migrations
 
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsReserved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ReservingUserID")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
@@ -190,6 +249,25 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("Sliders");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.Common.DoctorReservation", b =>
+                {
+                    b.HasOne("Medicoz.Domain.Doctor", "Doctor")
+                        .WithMany("DoctorReservations")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Medicoz.Domain.DoctorSchedule", "DoctorSchedule")
+                        .WithMany("DoctorReservations")
+                        .HasForeignKey("DoctorScheduleId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("DoctorSchedule");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.DoctorSchedule", b =>
                 {
                     b.HasOne("Medicoz.Domain.Doctor", "Doctor")
@@ -203,7 +281,14 @@ namespace Medicoz.Persistence.Migrations
 
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>
                 {
+                    b.Navigation("DoctorReservations");
+
                     b.Navigation("DoctorSchedules");
+                });
+
+            modelBuilder.Entity("Medicoz.Domain.DoctorSchedule", b =>
+                {
+                    b.Navigation("DoctorReservations");
                 });
 #pragma warning restore 612, 618
         }

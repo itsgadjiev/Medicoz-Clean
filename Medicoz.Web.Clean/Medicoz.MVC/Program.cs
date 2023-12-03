@@ -17,7 +17,7 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
-app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
+//app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

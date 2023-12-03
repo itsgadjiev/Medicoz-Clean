@@ -381,3 +381,4 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\ref\Medicoz.MVC.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC\obj\Debug\net6.0\Medicoz.MVC.sourcelink.json

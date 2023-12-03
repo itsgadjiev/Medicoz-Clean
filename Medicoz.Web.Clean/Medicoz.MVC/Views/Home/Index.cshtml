@@ -185,9 +185,7 @@
             <h2>We Care Our Patients.</h2>
             <span class="divider"></span>
         </div>
-
         <div class="row">
-
             @foreach (var testModel in Model.OurServices)
             {
                 <div class="service-block col-lg-4 col-md-6 col-sm-12">
@@ -198,52 +196,11 @@
                     </div>
                 </div>
             }
-
-            <!-- Service Block -->
-            @*    <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box">
+            @*    <span class="icon flaticon-surgery-room"></span>
             <span class="icon flaticon-surgery-room"></span>
-            <h5><a href="~/medicoz/#">Operation Theater</a></h5>
-            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-            </div>
-            </div>
-
-            <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box">
             <span class="icon flaticon-pharmacy"></span>
-            <h5><a href="~/medicoz/#">Pharmacy Support</a></h5>
-            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-            </div>
-            </div>
+            <span class="icon flaticon-first-aid"></span> *@
 
-            <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box">
-            <span class="icon flaticon-transport"></span>
-            <h5><a href="~/medicoz/#">Ambulance Car</a></h5>
-            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-            </div>
-            </div>
-
-            <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box">
-            <span class="icon flaticon-lab"></span>
-            <h5><a href="~/medicoz/#">Lat Tests</a></h5>
-            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-            </div>
-            </div>
-
-            <!-- Service Block -->
-            <div class="service-block col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box">
-            <span class="icon flaticon-first-aid"></span>
-            <h5><a href="~/medicoz/#">Intensive Care</a></h5>
-            <div class="text">We offer extensive medical procedures to outbound & inbound patients what it is and we are very proud achievement staff.</div>
-            </div>
-            </div> *@
         </div>
     </div>
 </section>
@@ -258,73 +215,27 @@
         </div>
 
         <div class="row">
-            <!-- Team Block -->
-            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div class="inner-box">
-                    <figure class="image"><img src="~/medicoz/images/resource/team-1.jpg" alt=""></figure>
-                    <ul class="social-links">
-                        <li><a href="~/medicoz/#"><span class="fab fa-facebook"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-pinterest"></span></a></li>
-                    </ul>
-                    <div class="info-box">
-                        <h4 class="name"><a href="~/medicoz/doctor-detail.html">Dr. Morila Wood</a></h4>
-                        <span class="designation">Senior Dr. at Delmont</span>
+            @foreach (var item in Model.Doctors)
+            {
+                <!-- Team Block -->
+                <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <figure class="image"><img src="~/uploads/images/@item.ImageURL" alt=""></figure>
+                        <ul class="social-links">
+                            <li><a href="~/medicoz/#"><span class="fab fa-facebook"></span></a></li>
+                            <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
+                            <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="~/medicoz/#"><span class="fab fa-pinterest"></span></a></li>
+                        </ul>
+                        <div class="info-box">
+                            <h4 class="name"><a asp-controller="doctor" asp-action="detail" asp-route-doctorId="@item.Id">Dr.@item.Name @item.Surname</a></h4>
+                            <span class="designation">Senior Dr. at Medicoz</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Team Block -->
-            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div class="inner-box">
-                    <figure class="image"><img src="~/medicoz/images/resource/team-2.jpg" alt=""></figure>
-                    <ul class="social-links">
-                        <li><a href="~/medicoz/#"><span class="fab fa-facebook"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-pinterest"></span></a></li>
-                    </ul>
-                    <div class="info-box">
-                        <h4 class="name"><a href="~/medicoz/doctor-detail.html">Dr. Morila Wood</a></h4>
-                        <span class="designation">Senior Dr. at Delmont</span>
-                    </div>
-                </div>
-            </div>
+            }
 
-            <!-- Team Block -->
-            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div class="inner-box">
-                    <figure class="image"><img src="~/medicoz/images/resource/team-3.jpg" alt=""></figure>
-                    <ul class="social-links">
-                        <li><a href="~/medicoz/#"><span class="fab fa-facebook"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-pinterest"></span></a></li>
-                    </ul>
-                    <div class="info-box">
-                        <h4 class="name"><a href="~/medicoz/doctor-detail.html">Dr. Morila Wood</a></h4>
-                        <span class="designation">Senior Dr. at Delmont</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Block -->
-            <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div class="inner-box">
-                    <figure class="image"><img src="~/medicoz/images/resource/team-4.jpg" alt=""></figure>
-                    <ul class="social-links">
-                        <li><a href="~/medicoz/#"><span class="fab fa-facebook"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="~/medicoz/#"><span class="fab fa-pinterest"></span></a></li>
-                    </ul>
-                    <div class="info-box">
-                        <h4 class="name"><a href="~/medicoz/doctor-detail.html">Dr. Morila Wood</a></h4>
-                        <span class="designation">Senior Dr. at Delmont</span>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="sec-bottom-text">Don’t hesitate, contact us for better help and services <a href="~/medicoz/#">Explore all Dr. Team</a></div>

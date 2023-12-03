@@ -6,12 +6,9 @@ using Medicoz.Application.Features.OurServices.Commands.AddOurService;
 using Medicoz.Application.Features.OurServices.Commands.DeleteOurService;
 using Medicoz.Application.Features.OurServices.Commands.UpdateOurService;
 using Medicoz.Application.Features.OurServices.Queries.GetOurServices;
-using Medicoz.Application.Features.Slider.Commands.CreateSlider;
 using Medicoz.Domain;
 using Medicoz.MVC.Areas.Admin.ViewModels;
-using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
@@ -35,12 +32,8 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
             OurServicesListVM ourServicesListVM = new OurServicesListVM();
 
             var ourServices = await _ourServicesRepository.GetAllAsync();
-            var testModelTitle = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Title));
-            var testModelDesc = _localizationService.GetAllEntitiesLocalizedValues(nameof(OurService.Description));
-
             ourServicesListVM.OurServices = ourServices;
-            ourServicesListVM.Title = testModelTitle;
-            ourServicesListVM.Desc = testModelDesc;
+
             return View(ourServicesListVM);
         }
 

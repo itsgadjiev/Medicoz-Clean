@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Medicoz.Domain;
 
-namespace Medicoz.Application.Contracts.Percistance
+namespace Medicoz.Application.Contracts.Percistance;
+
+public interface IDoctorScheduleRepository : IGenericRepository<Domain.DoctorSchedule>
 {
-    public interface IDoctorScheduleRepository:IGenericRepository<Domain.DoctorSchedule>
-    {
-    }
+    Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAsync(int doctorId);
+ 
 }
