@@ -32,7 +32,7 @@ namespace Medicoz.Identity.Services
                 Id = employee.Id,
                 FirstName = employee.FirstName,
                 LastName = employee.LastName,
-                FirstRoleName = role.FirstOrDefault(),
+              
             };
         }
 
@@ -45,7 +45,6 @@ namespace Medicoz.Identity.Services
                 Email = q.Email,
                 FirstName = q.FirstName,
                 LastName = q.LastName,
-                FirstRoleName= q.FirstRoleName,
                 
             }).ToList();
         }
@@ -62,7 +61,7 @@ namespace Medicoz.Identity.Services
                 Email = employee.Email,
                 FirstName = employee.FirstName,
                 LastName = employee.LastName,
-                FirstRoleName = role.FirstOrDefault(),
+               
             };
         }
     }

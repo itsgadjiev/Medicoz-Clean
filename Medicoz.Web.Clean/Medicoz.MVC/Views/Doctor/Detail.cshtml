@@ -72,44 +72,31 @@
                     </div>
 
                     <!--Comment Form-->
-                    <form action="#" method="post" id="email-form">
+                    <form method="post" asp-action="MakeAnAppointment" asp-controller="doctor" asp-route-doctorId="@Model.Id">
+                        <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
                         <div class="row">
                             <div class="form-group col-lg-6 col-md-12">
-                                <input type="text" name="username" placeholder="Your Name">
+                                <input asp-for="MakeAnAppointmentCommand.PasentName" placeholder="Your Name">
                             </div>
 
                             <div class="form-group col-lg-6 col-md-12">
-                                <input type="text" name="phone" placeholder="Your Phone">
+                                <input asp-for="MakeAnAppointmentCommand.PasentPhone" placeholder="Your Phone">
                             </div>
 
                             <div class="form-group col-lg-12 col-md-12">
-                                <input type="email" name="email" placeholder="Your Email *">
+                                <input asp-for="MakeAnAppointmentCommand.PasentEmail" placeholder="Your Email *">
                             </div>
 
                             <div class="form-group col-lg-12 col-md-12">
-                                <textarea name="contact_message" placeholder="Tell us about Pasent"></textarea>
+                                <textarea asp-for="MakeAnAppointmentCommand.PasentNotes" placeholder="Tell us about Pasent"></textarea>
                             </div>
-                            @*      <div class="dropdown col-lg-12 col-md-12 ">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Select Options
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            @foreach (var item in Model.DoctorSchedules)
-                            {
-                            <a class="dropdown-item">
-                            <label>
-                            <input  type="radio" name="selectedSlot" class="mr-2"> @item.DayOfWeek @item.StartTime.ToString("T") - @item.EndTime.ToString("T")
-                            </label>
-                            </a>
-                            }
+                            <div class="form-group col-lg-12 col-md-12">
+                                <input asp-for="MakeAnAppointmentCommand.ReservationDate" class=" p-1" style="border:1px solid #e1e1e1ff;" value="now" />
                             </div>
+                            @*   <div class="form-group col-lg-12 col-md-12 mt-5">
+                            <button class="theme-btn btn-style-two" type="submit" >Submit<span class="btn-title">Submit Query</span></button>
                             </div> *@
-                            <div class="form-group col-lg-12 col-md-12">
-                                <input asp-for="DoctorDetailReservationViewModel.ReservationDate" class=" p-1" style="border:1px solid #e1e1e1ff;" value="now" />
-                            </div>
-                            <div class="form-group col-lg-12 col-md-12 mt-5">
-                                <button class="theme-btn btn-style-two" type="button" name="submit-form"><span class="btn-title">Submit Query</span></button>
-                            </div>
+                            <button type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

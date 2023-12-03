@@ -1,5 +1,4 @@
-﻿using Medicoz.Domain.Common;
-using Medicoz.Domain.Common.concrets;
+﻿using Medicoz.Domain.Common.concrets;
 
 namespace Medicoz.Domain;
 
@@ -16,7 +15,7 @@ public class Doctor : BaseEntity
     public string Email { get; set; }
     public string ImageURL { get; set; }
     public List<DoctorSchedule> DoctorSchedules { get; set; }
-    public List<DoctorReservation> DoctorReservations { get; set; }
+    public List<DoctorAppointment> DoctorReservations { get; set; }
 
 
 }

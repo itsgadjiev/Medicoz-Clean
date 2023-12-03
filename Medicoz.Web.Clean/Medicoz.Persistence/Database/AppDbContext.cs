@@ -1,6 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Domain;
-using Medicoz.Domain.Common;
 using Medicoz.Domain.Common.concrets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -20,6 +19,7 @@ public class AppDbContext : DbContext
     public DbSet<Slider> Sliders { get; set; }
     public DbSet<OurService> OurServices { get; set; }
     public DbSet<DoctorSchedule> DoctorSchedules { get; set; }
+    public DbSet<DoctorAppointment> DoctorAppointment { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -74,13 +74,13 @@ public class AppDbContext : DbContext
 
         #region DoctorReservations
 
-        modelBuilder.Entity<DoctorReservation>()
+        modelBuilder.Entity<DoctorAppointment>()
             .HasOne(dr => dr.Doctor)
             .WithMany(dr=>dr.DoctorReservations)
             .HasForeignKey(dr => dr.DoctorId)
             .OnDelete(DeleteBehavior.NoAction);
 
-        modelBuilder.Entity<DoctorReservation>()
+        modelBuilder.Entity<DoctorAppointment>()
             .HasOne(dr => dr.DoctorSchedule)
             .WithMany(dr => dr.DoctorReservations)
             .HasForeignKey(dr => dr.DoctorScheduleId)

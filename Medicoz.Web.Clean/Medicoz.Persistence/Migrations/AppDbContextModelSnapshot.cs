@@ -22,7 +22,7 @@ namespace Medicoz.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Medicoz.Domain.Common.DoctorReservation", b =>
+            modelBuilder.Entity("Medicoz.Domain.Common.DoctorAppointment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +69,7 @@ namespace Medicoz.Persistence.Migrations
 
                     b.HasIndex("DoctorScheduleId");
 
-                    b.ToTable("DoctorReservation");
+                    b.ToTable("DoctorAppointment");
                 });
 
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>
@@ -249,7 +249,7 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("Sliders");
                 });
 
-            modelBuilder.Entity("Medicoz.Domain.Common.DoctorReservation", b =>
+            modelBuilder.Entity("Medicoz.Domain.Common.DoctorAppointment", b =>
                 {
                     b.HasOne("Medicoz.Domain.Doctor", "Doctor")
                         .WithMany("DoctorReservations")

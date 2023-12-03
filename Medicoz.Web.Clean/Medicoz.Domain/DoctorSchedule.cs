@@ -1,5 +1,4 @@
-﻿using Medicoz.Domain.Common;
-using Medicoz.Domain.Common.concrets;
+﻿using Medicoz.Domain.Common.concrets;
 
 namespace Medicoz.Domain
 {
@@ -13,6 +12,6 @@ namespace Medicoz.Domain
         public Doctor Doctor { get; set; }
         public bool IsReserved { get; set; }
         public string ReservingUserID { get; set; }
-        public List<DoctorReservation> DoctorReservations { get; set; }
+        public List<DoctorAppointment> DoctorReservations { get; set; }
     }
 }
