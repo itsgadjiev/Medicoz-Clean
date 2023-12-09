@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Doctor.Commands.AddDoctor;
+using Medicoz.Application.Features.Doctor.Queries.GetDoctorsList;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
@@ -12,14 +13,18 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         private readonly IMediator _mediator;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public AdminDoctorController(IMediator mediator,IWebHostEnvironment webHostEnvironment)
+        public AdminDoctorController(IMediator mediator, IWebHostEnvironment webHostEnvironment)
         {
             _mediator = mediator;
             _webHostEnvironment = webHostEnvironment;
+
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var query = new GetDoctorsListQuery();
+            var doctorsList = await _mediator.Send(query);
+
+            return View(doctorsList);
         }
 
 

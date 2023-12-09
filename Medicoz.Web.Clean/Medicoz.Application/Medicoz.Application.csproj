@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Features\Doctor\Queries\" />
+    <Folder Include="ViewModels\Areas\Medicoz\" />
   </ItemGroup>
 
 </Project>

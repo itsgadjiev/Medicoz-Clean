@@ -30,7 +30,6 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             OurServicesListVM ourServicesListVM = new OurServicesListVM();
-
             var ourServices = await _ourServicesRepository.GetAllAsync();
             ourServicesListVM.OurServices = ourServices;
 
@@ -79,7 +78,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         }
 
         [HttpPost("update/{id}")]
-        public async Task<IActionResult> UpdateAsync(UpdateOurServiceCommand updateOurServiceCommand)
+        public async Task<IActionResult> Update(UpdateOurServiceCommand updateOurServiceCommand)
         {
             try
             {

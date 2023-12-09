@@ -60,11 +60,5 @@ namespace Medicoz.MVC.Controllers
             await _authService.SignOut();
             return RedirectToAction("Login");
         }
-
-
-
-
-
-
     }
 }
