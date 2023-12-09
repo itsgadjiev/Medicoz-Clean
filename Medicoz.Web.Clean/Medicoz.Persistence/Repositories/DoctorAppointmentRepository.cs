@@ -1,6 +1,7 @@
 ﻿using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Domain;
 using Medicoz.Persistence.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace Medicoz.Persistence.Repositories;
 
@@ -11,9 +12,17 @@ public class DoctorAppointmentRepository : GenericRepository<DoctorAppointment>,
 
     }
 
-    public bool IsReserved(DateTime reservationDate,int doctorScheduleId)
+    public async Task<List<DoctorAppointment>> GetAllReservedAppointmentsFromTodayByDoctorIdAsync(string doctorId)
     {
-        if (_context.DoctorAppointment.Any(x=>x.ReservationDate == reservationDate && x.DoctorScheduleId == doctorScheduleId))
+       return await _context.DoctorAppointment
+            .Where(x => x.DoctorId == doctorId && x.ReservationDate > DateTime.Now)
+            .Include(x=>x.DoctorSchedule)
+            .ToListAsync();
+    }
+
+    public bool IsReserved(DateTime reservationDate, string doctorScheduleId)
+    {
+        if (_context.DoctorAppointment.Any(x => x.ReservationDate == reservationDate && x.DoctorScheduleId == doctorScheduleId))
         {
             return true;
         }

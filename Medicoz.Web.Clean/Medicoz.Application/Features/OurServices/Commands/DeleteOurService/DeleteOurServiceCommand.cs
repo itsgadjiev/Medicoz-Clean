@@ -9,5 +9,5 @@ namespace Medicoz.Application.Features.OurServices.Commands.DeleteOurService;
 
 public class DeleteOurServiceCommand : IRequest<Unit>
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
 }

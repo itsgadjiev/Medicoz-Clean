@@ -7,6 +7,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor;
 public class AddDoctorCommand : IRequest<Unit>
 {
     public string Name { get; set; }
+    public double Fee { get; set; }
     public string Surname { get; set; }
     public string TitleAz { get; set; }
     public string TitleEn { get; set; }

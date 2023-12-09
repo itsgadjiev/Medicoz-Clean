@@ -61,6 +61,8 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 Name = request.Name,
                 Surname = request.Surname,
                 ImageURL = imgUrl,
+                Fee= request.Fee,
+                Id= Guid.NewGuid().ToString()
             };
 
             await _doctorRepository.AddAsync(doctor);
@@ -77,6 +79,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                         Doctor = doctor,
                         StartTime = interval,
                         EndTime = interval.AddHours(DoctorAcceptanceTime),
+                        Id = Guid.NewGuid().ToString()
                     };
                     await _doctorScheduleRepository.AddAsync(doctorSchedules);
                 }

@@ -4,7 +4,7 @@ namespace Medicoz.Domain
 {
     public class DoctorSchedule : BaseEntity
     {
-        public int DoctorId { get; set; }
+        public string DoctorId { get; set; }
         //public Dictionary<string, DayOfWeek> DayOfWeek { get; set; }
         public DayOfWeek DayOfWeek { get; set; }
         public DateTime StartTime { get; set; }

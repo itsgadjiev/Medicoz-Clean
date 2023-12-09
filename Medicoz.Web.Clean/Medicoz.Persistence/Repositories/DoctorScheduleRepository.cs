@@ -12,14 +12,13 @@ public class DoctorScheduleRepository : GenericRepository<DoctorSchedule>, IDoct
 
     }
 
-    public async Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAsync(int doctorId)
+    public async Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAsync(string doctorId)
     {
-        return await _context.DoctorSchedules.Where(x => x.DoctorId == doctorId).ToListAsync();
+        return await _context.DoctorSchedules.Where(x => x.DoctorId == doctorId).OrderBy(x=>x.DayOfWeek).OrderBy(x=>x.StartTime).ToListAsync();
     }
 
-    public async Task<int?> GetDoctorScheduleByStartAndEndTimeAsync(DateTime reservationDate, int doctorId)
+    public async Task<string> GetDoctorScheduleByStartAndEndTimeAsync(DateTime reservationDate, string doctorId)
     {
-
 
         var doctorSchedule = await _context.DoctorSchedules
            .Where(x => x.DoctorId == doctorId &&

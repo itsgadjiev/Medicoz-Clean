@@ -101,14 +101,17 @@ public class AppDbContext : DbContext
         {
             entry.Entity.UpdatedAt = DateTime.Now;
             entry.Entity.UpdatedBy = _userService.UserId;
+
             if (entry.State == EntityState.Added)
             {
+                entry.Entity.Id = Guid.NewGuid().ToString();
                 entry.Entity.CreatedAt = DateTime.Now;
-                entry.Entity.UpdatedBy = _userService.UserId;
             }
         }
 
         return base.SaveChangesAsync(cancellationToken);
     }
+
+    
 
 }

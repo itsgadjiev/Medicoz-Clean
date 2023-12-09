@@ -23,7 +23,7 @@ namespace Medicoz.Persistence.IntegrationTests
         {
             var ourService = new OurService
             {
-                Id = 1,
+                Id = "49aa37c5-47e1-4578-89b2-295aabcdb7f5",
                 Title = new Dictionary<string, string> { { "az", "Salam" }, { "en", "Hello" } },
                 Description = new Dictionary<string, string> { { "az", "Salam" }, { "en", "Hello" } },
                 Icon = Guid.NewGuid().ToString(),
@@ -41,7 +41,7 @@ namespace Medicoz.Persistence.IntegrationTests
         {
             var ourService = new OurService
             {
-                Id = 1,
+                Id = "49aa37c5-47e1-4578-89b2-29aaabcdb735",
                 Title = new Dictionary<string, string> { { "az", "Salam" }, { "en", "Hello" } },
                 Description = new Dictionary<string, string> { { "az", "Salam" }, { "en", "Hello" } },
                 Icon = Guid.NewGuid().ToString(),

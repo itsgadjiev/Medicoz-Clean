@@ -26,7 +26,7 @@ public class GetOurServiceByIdQueryHandlerTest
     public async Task GetOurServicesByIdTest()
     {
         var handler = new GetOurServiceByIdQueryHandler(_mockRepository.Object);
-        var result = await handler.Handle(new GetOurServiceByIdQuery { Id = 2 }, CancellationToken.None);
+        var result = await handler.Handle(new GetOurServiceByIdQuery { Id = "49aa37c5-47e1-4578-89b2-295aabcdb735" }, CancellationToken.None);
 
         result.ShouldBeOfType<UpdateOurServiceCommand>();
 

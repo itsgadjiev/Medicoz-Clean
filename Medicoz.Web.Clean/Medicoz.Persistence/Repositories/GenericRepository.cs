@@ -42,7 +42,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     //    return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(x => x.Culture == culture && x.Key == key);
     //}
 
-    public async Task<T> GetByIdAsync(int id)
+    public async Task<T> GetByIdAsync(string id)
     {
         return await _context.Set<T>()
             .AsNoTracking()

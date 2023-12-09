@@ -13,7 +13,7 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
         _context = context;
     }
 
-    public string GetLocalizedValue(int entityId, string propertyName)
+    public string GetLocalizedValue(string entityId, string propertyName)
     {
         var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
         var entity = _context.Set<T>().Find(entityId);
@@ -54,11 +54,11 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
         return null;
     }
 
-    public Dictionary<int, string> GetAllEntitiesLocalizedValues(string propertyName)
+    public Dictionary<string, string> GetAllEntitiesLocalizedValues(string propertyName)
     {
         var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
         var entities = _context.Set<T>().ToList();
-        var result = new Dictionary<int, string>();
+        var result = new Dictionary<string, string>();
 
         foreach (var entity in entities)
         {
@@ -68,7 +68,7 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
                 var localizedData = property.GetValue(entity) as Dictionary<string, string>;
                 if (localizedData != null && localizedData.ContainsKey(language))
                 {
-                    result.Add((int)entity.GetType().GetProperty("Id").GetValue(entity), localizedData[language]);
+                    result.Add((string)entity.GetType().GetProperty("Id").GetValue(entity), localizedData[language]);
                 }
             }
         }
@@ -76,7 +76,7 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
         return result;
     }
 
-    public void UpdateLocalizedValue(int entityId, string propertyName, string language, string newValue)
+    public void UpdateLocalizedValue(string entityId, string propertyName, string language, string newValue)
     {
         var entity = _context.Set<T>().Find(entityId);
         if (entity != null)

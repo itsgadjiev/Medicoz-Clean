@@ -62,7 +62,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         }
 
         [HttpGet("update/{id}")]
-        public async Task<IActionResult> Update(int id)
+        public async Task<IActionResult> Update(string id)
         {
             var query = new GetOurServiceByIdQuery { Id = id };
             var serviceViewModel = new UpdateOurServiceCommand();
@@ -100,7 +100,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         }
 
         [HttpGet("delete/{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             var command = new DeleteOurServiceCommand() { Id = id };
             try

@@ -1,75 +1,54 @@
 ﻿using MediatR;
 using Medicoz.Application.Contracts.Identity;
-using Medicoz.Application.Contracts.Localisation;
-using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
-using Medicoz.Application.Features.DoctorAppointment.Commands;
-using Medicoz.Domain;
-using Medicoz.MVC.ViewModels;
-using Microsoft.AspNetCore.Authorization;
+using Medicoz.Application.Features.DoctorDetail.Queries.GetDoctorDetail;
+using Medicoz.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Medicoz.MVC.Controllers
+namespace Medicoz.MVC.Controllers;
+
+[Route("medicoz/doctor")]
+public class DoctorController : Controller
 {
-    [Route("medicoz/doctor")]
-    public class DoctorController : Controller
+
+    private readonly IMediator _mediator;
+    private readonly IUserService _userService;
+
+
+    public DoctorController(IMediator mediator, IUserService userService)
     {
-        private readonly IDoctorRepository _doctorRepository;
-        private readonly ILocalizationService<Doctor> _localizationService;
-        private readonly IDoctorScheduleRepository _doctorScheduleRepository;
-        private readonly IMediator _mediator;
-        private readonly IUserService _userService;
+        _mediator = mediator;
+        _userService = userService;
+    }
 
-        public DoctorController(IDoctorRepository doctorRepository, ILocalizationService<Doctor> localizationService, IDoctorScheduleRepository doctorScheduleRepository,IMediator mediator,IUserService userService)
+    [HttpGet("{doctorId}")]
+    public async Task<IActionResult> Detail(string doctorId)
+    {
+        var query = new GetDoctorDetailQuery { DoctorId = doctorId };
+        var viewModel = await _mediator.Send(query);
+
+        return View(viewModel);
+    }
+
+    [HttpPost("{doctorId}")]
+    public async Task<IActionResult> Detail(string doctorId, DoctorDetailViewModel doctorDetailViewModel)
+    {
+        doctorDetailViewModel.MakeAnAppointmentCommand.DoctorId = doctorId;
+        doctorDetailViewModel.MakeAnAppointmentCommand.PasentId = _userService.UserId;
+
+        try
         {
-            _doctorRepository = doctorRepository;
-            _localizationService = localizationService;
-            _doctorScheduleRepository = doctorScheduleRepository;
-            _mediator = mediator;
-            _userService = userService;
+            await _mediator.Send(doctorDetailViewModel.MakeAnAppointmentCommand);
         }
-        
-        [HttpPost("appointment/{doctorId}")]
-        public async Task<IActionResult> MakeAnAppointment(int doctorId, MakeAnAppointmentCommand makeAnAppointmentCommand)
+        catch (BadRequestException ex)
         {
-            makeAnAppointmentCommand.DoctorId = doctorId;
-            makeAnAppointmentCommand.PasentId = _userService.UserId;
-            try
-            {
-                await _mediator.Send(makeAnAppointmentCommand);
-            }
-            catch (BadRequestException ex)
-            {
-                ModelState.AddModelError("",ex.Message);
-                return RedirectToAction("Detail", "Doctor", new { doctorId = doctorId });
-            }
+            var query = new GetDoctorDetailQuery { DoctorId = doctorId };
+            var viewModel = await _mediator.Send(query);
 
-            return RedirectToAction("Index", "Home");
-        }
-
-        [HttpGet("detail/{doctorId}")]
-        public async Task<IActionResult> Detail(int doctorId)
-        {
-            var doctor = await _doctorRepository.GetByIdAsync(doctorId);
-            if (doctor == null) { return NotFound(); }
-
-            DoctorDetailViewModel viewModel = new DoctorDetailViewModel
-            {
-                Id = doctor.Id,
-                Description = _localizationService.GetLocalizedValue(doctorId, nameof(DoctorDetailViewModel.Description)),
-                Education = _localizationService.GetLocalizedValue(doctorId, nameof(DoctorDetailViewModel.Education)),
-                Experience = _localizationService.GetLocalizedValue(doctorId, nameof(DoctorDetailViewModel.Experience)),
-                Title = _localizationService.GetLocalizedValue(doctorId, nameof(DoctorDetailViewModel.Title)),
-                Phone = doctor.Phone,
-                Email = doctor.Email,
-                ImageURL = doctor.ImageURL,
-                Name = doctor.Name,
-                Surname = doctor.Surname,
-                Fee = doctor.Fee,
-                DoctorSchedules = await _doctorScheduleRepository.GetDoctorSchedulesByDoctorIdAsync(doctorId),
-            };
-
+            ModelState.AddModelError("", ex.ErrorMessage);
             return View(viewModel);
         }
+
+        return RedirectToAction("Index", "Home");
     }
 }

@@ -5,6 +5,6 @@ namespace Medicoz.Application.Features.OurServices.Queries.GetOurServices
 {
     public class GetOurServiceByIdQuery : IRequest<UpdateOurServiceCommand>
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
     }
 }

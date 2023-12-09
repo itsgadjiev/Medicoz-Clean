@@ -12,7 +12,7 @@ namespace Medicoz.Application.Features.DoctorAppointment.Commands
         public string PasentPhone { get; set; }
         public string PasentEmail { get; set; }
         public string PasentNotes { get; set; }
-        public int DoctorScheduleId { get; set; }
-        public int DoctorId { get; set; }
+        public string DoctorScheduleId { get; set; }
+        public string DoctorId { get; set; }
     }
 }

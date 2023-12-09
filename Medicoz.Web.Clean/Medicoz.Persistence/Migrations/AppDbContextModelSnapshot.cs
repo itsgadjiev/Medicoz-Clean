@@ -22,63 +22,10 @@ namespace Medicoz.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Medicoz.Domain.Common.DoctorAppointment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DoctorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DoctorScheduleId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PasentEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasentId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasentName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasentNotes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasentPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ReservationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DoctorId");
-
-                    b.HasIndex("DoctorScheduleId");
-
-                    b.ToTable("DoctorAppointment");
-                });
-
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -124,13 +71,57 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("Doctors", (string)null);
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.DoctorAppointment", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DoctorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DoctorScheduleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("PasentEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentNotes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasentPhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ReservationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("DoctorScheduleId");
+
+                    b.ToTable("DoctorAppointment");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.DoctorSchedule", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -138,8 +129,8 @@ namespace Medicoz.Persistence.Migrations
                     b.Property<int>("DayOfWeek")
                         .HasColumnType("int");
 
-                    b.Property<int>("DoctorId")
-                        .HasColumnType("int");
+                    b.Property<string>("DoctorId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
@@ -168,11 +159,8 @@ namespace Medicoz.Persistence.Migrations
 
             modelBuilder.Entity("Medicoz.Domain.OurService", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -199,11 +187,8 @@ namespace Medicoz.Persistence.Migrations
 
             modelBuilder.Entity("Medicoz.Domain.Slider", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ButtonName")
                         .HasColumnType("nvarchar(max)");
@@ -249,19 +234,17 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("Sliders");
                 });
 
-            modelBuilder.Entity("Medicoz.Domain.Common.DoctorAppointment", b =>
+            modelBuilder.Entity("Medicoz.Domain.DoctorAppointment", b =>
                 {
                     b.HasOne("Medicoz.Domain.Doctor", "Doctor")
                         .WithMany("DoctorReservations")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("Medicoz.Domain.DoctorSchedule", "DoctorSchedule")
                         .WithMany("DoctorReservations")
                         .HasForeignKey("DoctorScheduleId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Doctor");
 
@@ -272,9 +255,7 @@ namespace Medicoz.Persistence.Migrations
                 {
                     b.HasOne("Medicoz.Domain.Doctor", "Doctor")
                         .WithMany("DoctorSchedules")
-                        .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DoctorId");
 
                     b.Navigation("Doctor");
                 });

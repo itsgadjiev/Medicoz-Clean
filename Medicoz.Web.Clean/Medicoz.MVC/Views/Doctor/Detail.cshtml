@@ -1,4 +1,5 @@
-﻿@using Medicoz.MVC.ViewModels
+﻿@using Medicoz.Application.ViewModels
+@using Medicoz.MVC.ViewModels
 @model DoctorDetailViewModel
 <!--End Main Header -->
 <!--Page Title-->
@@ -72,7 +73,7 @@
                     </div>
 
                     <!--Comment Form-->
-                    <form method="post" asp-action="MakeAnAppointment" asp-controller="doctor" asp-route-doctorId="@Model.Id">
+                    <form method="post" asp-action="detail" asp-controller="doctor" asp-route-doctorId="@Model.Id" >
                         <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
                         <div class="row">
                             <div class="form-group col-lg-6 col-md-12">
@@ -125,12 +126,12 @@
                                 <span class="sub-title">Fee</span>
                                 <h3>@Model.Fee$</h3>
                                 <span class="divider"></span>
-                                <div class="text">Suspendisse potenti. Maecenas dapibus ac tellus sed pulvinar. Vestibulum bib volutpat accumsan non laoreet nulla luctus.</div>
+                                <div class="text">Already Reserved Appointments </div>
                             </div>
                             <ul class="timing-list-two">
-                                @foreach (var item in Model.DoctorSchedules)
+                                @foreach (var item in Model.ReservedDoctorAppointments)
                                 {
-                                    <li>@item.DayOfWeek <span>  @item.StartTime.ToString("T") - @item.EndTime.ToString("T")</span></li>
+                                    <li>@item.ReservationDate.ToString("d") <span>  @item.DoctorSchedule.StartTime.ToString("T") - @item.DoctorSchedule.EndTime.ToString("T")</span></li>
                                 }
                             </ul>
                         </div>

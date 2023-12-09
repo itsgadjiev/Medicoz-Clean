@@ -4665,8 +4665,24 @@
       "PackagePath": "staticwebassets\\medicoz\\plugins\\revolution\\js\\jquery.themepunch.tools.min.js"
     },
     {
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\1d0abb83-c7ef-426c-a7a2-e77c0b092887.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\images\\1d0abb83-c7ef-426c-a7a2-e77c0b092887.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\30b2ecd3-f735-493c-97ad-1eb1df583451.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\images\\30b2ecd3-f735-493c-97ad-1eb1df583451.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\b2ea66e0-b197-47db-9971-2d21008b5df6.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\images\\b2ea66e0-b197-47db-9971-2d21008b5df6.jpeg"
+    },
+    {
       "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg",
       "PackagePath": "staticwebassets\\uploads\\images\\c105f960-e012-4090-b89b-e09ad4964dc0.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\d3e90f58-c8d1-4d5f-b533-b1258d625f3f.jfif",
+      "PackagePath": "staticwebassets\\uploads\\images\\d3e90f58-c8d1-4d5f-b533-b1258d625f3f.jfif"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Medicoz.MVC.Microsoft.AspNetCore.StaticWebAssets.props",

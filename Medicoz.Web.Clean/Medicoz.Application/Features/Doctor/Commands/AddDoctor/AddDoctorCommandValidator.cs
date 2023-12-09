@@ -20,6 +20,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
             RuleFor(x => x.Email).NotEmpty().EmailAddress().WithMessage("Invalid email address.");
             RuleFor(x => x.Phone).NotEmpty();
             RuleFor(x => x.Image).NotNull().WithMessage("Image is required.");
+            RuleFor(x=>x.Fee).NotEmpty().NotNull().WithMessage("Fee is required.");
 
         }
     }

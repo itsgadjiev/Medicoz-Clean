@@ -37,6 +37,7 @@ namespace Medicoz.Application.Features.OurServices.Commands.AddOurService
                     { LocalizationLanguages.EN, request.DescriptionEn }
                 },
                 Icon = request.Icon,
+                Id = Guid.NewGuid().ToString(),
             };
 
 
