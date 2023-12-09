@@ -32,18 +32,19 @@ namespace Medicoz.Application.Features.DoctorAppointment.Commands
                 throw new BadRequestException(doctorScheduleId.ToString(),"Doctor is not workign on this Time");
 
 
-            if (!_doctorAppointmentRepository.IsReserved(request.ReservationDate, doctorScheduleId.Value))
-            {
-                throw new AlreadyReservedException(request.ReservationDate.ToString("T"), "This date is already reserved");
-            }
-
+            if (_doctorAppointmentRepository.IsReserved(request.ReservationDate, doctorScheduleId.Value))
+                throw new BadRequestException(request.ReservationDate.ToString("T"), "This date is already reserved");
+            
             var doctorAppointment = new Domain.DoctorAppointment()
             {
+                DoctorId = request.DoctorId,
                 ReservationDate = request.ReservationDate,
-                DoctorScheduleId = request.DoctorScheduleId,
+                DoctorScheduleId = doctorScheduleId.Value,
                 PasentEmail = request.PasentEmail,
+                PasentName=request.PasentName,
                 PasentPhone = request.PasentPhone,
                 PasentNotes = request.PasentNotes,
+                PasentId = request.PasentId,
             };
 
             await _doctorAppointmentRepository.AddAsync(doctorAppointment);

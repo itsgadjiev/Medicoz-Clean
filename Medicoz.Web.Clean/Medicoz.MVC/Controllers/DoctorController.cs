@@ -28,7 +28,7 @@ namespace Medicoz.MVC.Controllers
             _mediator = mediator;
             _userService = userService;
         }
-
+        
         [HttpPost("appointment/{doctorId}")]
         public async Task<IActionResult> MakeAnAppointment(int doctorId, MakeAnAppointmentCommand makeAnAppointmentCommand)
         {
