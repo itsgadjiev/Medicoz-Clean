@@ -10,6 +10,7 @@ SQL Server
 XUnit
 Design principles & patterns
 Repository & Generic Repository
+Custom reflection based Localization
 ORM
 Unit testing
 Dependency Inversion principle

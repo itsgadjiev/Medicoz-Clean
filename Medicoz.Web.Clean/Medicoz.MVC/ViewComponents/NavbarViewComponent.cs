@@ -14,7 +14,7 @@ namespace Medicoz.MVC.ViewComponents
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var user = new Identity.Models.ApplicationUser();
+            var user = new User();
             if (User.Identity.IsAuthenticated)
             {
                 user = await _userService.GetCurrentUserAsync();

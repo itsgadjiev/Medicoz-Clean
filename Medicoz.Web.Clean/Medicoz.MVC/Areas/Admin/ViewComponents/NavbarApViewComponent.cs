@@ -15,14 +15,14 @@ namespace Medicoz.MVC.Areas.Admin.ViewComponents
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var user = new ApplicationUser();
+            var user = new User();
             if (User.Identity.IsAuthenticated)
             {
                 user = await _userService.GetCurrentUserAsync();
             }
             else
             {
-                user.FirstName = "Hele login olmamisham yetm";
+                user.Firstname = "Hele login olmamisham yetm";
             }
             return View(user);
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Medicoz.Application.Features.Doctor.Queries.GetDoctorByIdAp
 {
-    public class GetDoctorByIdAPQuery:IRequest</*DoctorViewModel*/>
+    public class GetDoctorByIdAPQuery
     {
     }
 }

@@ -19,48 +19,48 @@ namespace Medicoz.Identity.Services
         }
 
         public string UserId => _contextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        public async Task<ApplicationUser> GetEmployeeAsync(string userId)
+        public async Task<User> GetEmployeeAsync(string userId)
         {
 
             var employee = await _userManager.FindByIdAsync(userId);
             if (employee is null) { throw new Exception("User is not authenticated"); }
 
             var role = await _userManager.GetRolesAsync(employee);
-            return new ApplicationUser
+            return new User
             {
                 Email = employee.Email,
                 Id = employee.Id,
-                FirstName = employee.FirstName,
-                LastName = employee.LastName,
+                Firstname = employee.FirstName,
+                Lastname = employee.LastName,
               
             };
         }
 
-        public async Task<List<ApplicationUser>> GetEmployeesAsync()
+        public async Task<List<User>> GetEmployeesAsync()
         {
             var employees = await _userManager.GetUsersInRoleAsync("Employee");
-            return employees.Select(q => new ApplicationUser
+            return employees.Select(q => new User
             {
                 Id = q.Id,
                 Email = q.Email,
-                FirstName = q.FirstName,
-                LastName = q.LastName,
+                Firstname = q.FirstName,
+                Lastname = q.LastName,
                 
             }).ToList();
         }
 
-        public async Task<ApplicationUser> GetCurrentUserAsync()
+        public async Task<User> GetCurrentUserAsync()
         {
             var employee = await _userManager.FindByIdAsync(UserId);
             if (employee is null) { throw new Exception("User is not authenticated"); }
             var role = await _userManager.GetRolesAsync(employee);
 
-            return new ApplicationUser
+            return new User
             {
                 Id = employee.Id,
                 Email = employee.Email,
-                FirstName = employee.FirstName,
-                LastName = employee.LastName,
+                Firstname = employee.FirstName,
+                Lastname = employee.LastName,
                
             };
         }
