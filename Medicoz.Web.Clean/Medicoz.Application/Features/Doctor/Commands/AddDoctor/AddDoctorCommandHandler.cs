@@ -1,9 +1,12 @@
 ﻿using MediatR;
 using Medicoz.Application.Constants;
+using Medicoz.Application.Contracts.Email;
 using Medicoz.Application.Contracts.FileService;
+using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Doctor.Common;
+using Medicoz.Application.Models.Identity;
 using Medicoz.Domain;
 
 namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
@@ -14,14 +17,19 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
         private readonly IDoctorScheduleRepository _doctorScheduleRepository;
         private readonly IFileService _fileService;
         private readonly GetHourlyWorkingTimeIntervalsForDoctor _getHourlyWorkingTime;
-        private int DoctorAcceptanceTime = 1;
+        private readonly IAuthService _authService;
+        private readonly IEmailSender _emailSender;
 
-        public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository, IFileService fileService,GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime)
+        public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository, 
+            IFileService fileService,GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime,
+            IAuthService authService,IEmailSender emailSender)
         {
             _doctorRepository = doctorRepository;
             _doctorScheduleRepository = doctorScheduleRepository;
             _fileService = fileService;
             _getHourlyWorkingTime = getHourlyWorkingTime;
+            _authService = authService;
+            _emailSender = emailSender;
         }
         public async Task<Unit> Handle(AddDoctorCommand request, CancellationToken cancellationToken)
         {
@@ -87,9 +95,18 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 }
             }
 
+            RegistrationRequest registrationRequest = new RegistrationRequest
+            {
+                Email = request.Email,
+                FirstName = request.Name,
+                LastName = request.Surname,
+                Password = "123321",
+                UserName = String.Concat(request.Name, request.Surname),
+            };
+
+            await _authService.Register(registrationRequest);
+            _emailSender.SendEmail(request.Email, "Medicoz", $"Welcome to our Company Dear {request.Name + request.Surname}");
             return Unit.Value;
         }
-
-       
     }
 }
