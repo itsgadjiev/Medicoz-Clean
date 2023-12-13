@@ -3,6 +3,7 @@ using Medicoz.Application.Constants;
 using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
+using Medicoz.Application.Features.Doctor.Common;
 using Medicoz.Domain;
 
 namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
@@ -12,14 +13,15 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
         private readonly IDoctorRepository _doctorRepository;
         private readonly IDoctorScheduleRepository _doctorScheduleRepository;
         private readonly IFileService _fileService;
+        private readonly GetHourlyWorkingTimeIntervalsForDoctor _getHourlyWorkingTime;
         private int DoctorAcceptanceTime = 1;
 
-        public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository, IFileService fileService)
+        public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository, IFileService fileService,GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime)
         {
             _doctorRepository = doctorRepository;
             _doctorScheduleRepository = doctorScheduleRepository;
             _fileService = fileService;
-
+            _getHourlyWorkingTime = getHourlyWorkingTime;
         }
         public async Task<Unit> Handle(AddDoctorCommand request, CancellationToken cancellationToken)
         {
@@ -67,7 +69,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
 
             await _doctorRepository.AddAsync(doctor);
 
-            var intervals = GetHourlyIntervals(request.DoctorScheduleForAddDoctorCommand.StartTime, request.DoctorScheduleForAddDoctorCommand.EndTime);
+            var intervals = _getHourlyWorkingTime.Handle(request.DoctorScheduleForAddDoctorCommand.StartTime, request.DoctorScheduleForAddDoctorCommand.EndTime);
 
             foreach (var workingDay in request.DoctorScheduleForAddDoctorCommand.WorkingDaysOfDoctor)
             {
@@ -78,7 +80,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                         DayOfWeek = workingDay,
                         Doctor = doctor,
                         StartTime = interval,
-                        EndTime = interval.AddHours(DoctorAcceptanceTime),
+                        EndTime = interval.AddHours(_getHourlyWorkingTime.DoctorAcceptanceTime),
                         Id = Guid.NewGuid().ToString()
                     };
                     await _doctorScheduleRepository.AddAsync(doctorSchedules);
@@ -88,28 +90,6 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
             return Unit.Value;
         }
 
-        public List<DateTime> GetHourlyIntervals(DateTime startDateTime, DateTime endDateTime)
-        {
-            if (startDateTime >= endDateTime)
-            {
-                throw new ArgumentException("Start date should be earlier than end date.");
-            }
-
-            List<DateTime> intervals = new List<DateTime>();
-            intervals.Add(startDateTime);
-
-            DateTime currentInterval = startDateTime;
-
-            while (currentInterval < endDateTime)
-            {
-                currentInterval = currentInterval.AddHours(DoctorAcceptanceTime);
-                if (currentInterval <= endDateTime)
-                {
-                    intervals.Add(currentInterval);
-                }
-            }
-
-            return intervals;
-        }
+       
     }
 }

@@ -15,12 +15,12 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Icon</th>
-                                <th>Title</th>
-                                <th>Description </th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Fee </th>
+                                <th>Title </th>
                                 <th class="text-end">
-                                    Action
-                                    <a class="btn btn-success" asp-action="create" asp-controller="ourservices">Create</a>
+                                    <a class="btn btn-success" asp-action="create" asp-controller="AdminDoctor">Create</a>
                                 </th>
                             </tr>
                         </thead>
@@ -31,10 +31,11 @@
                                     <td>@(counter++)</td>
                                     <td>@item.Name</td>
                                     <td>@item.Surname</td>
-                                    <td>@_localService.GetLocalizedValueInsideView(item, nameof(item.Title))</td>
+                                    <td>@item.Fee</td>
+                                    <td>@item.Title</td>
                                     <td class="text-end">
-                                        <a asp-action="update" asp-controller="OurServices" asp-route-id="@item.Id"><i class="las la-pen text-secondary font-16"></i></a>
-                                        <a asp-action="delete" asp-controller="OurServices" asp-route-id="@item.Id"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                        <a asp-action="update" asp-controller="AdminDoctor" asp-route-id="@item.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a asp-action="delete" asp-controller="AdminDoctor" asp-route-id="@item.Id"><i class="las la-trash-alt text-secondary font-16"></i></a>
                                     </td>
                                 </tr>
                             }

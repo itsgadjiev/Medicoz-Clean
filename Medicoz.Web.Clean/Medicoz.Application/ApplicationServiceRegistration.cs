@@ -1,4 +1,5 @@
-﻿using Medicoz.Application.Localizer;
+﻿using Medicoz.Application.Features.Doctor.Common;
+using Medicoz.Application.Localizer;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -11,6 +12,7 @@ public static class ApplicationServiceRegistration
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
         services.AddScoped(typeof(DatabaseStringLocalizer<>));
+        services.AddScoped<GetHourlyWorkingTimeIntervalsForDoctor>();
 
         return services;
     }

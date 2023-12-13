@@ -37,8 +37,8 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> Create(AddDoctorCommand addDoctorCommand)
         {
-            var webRootPath = _webHostEnvironment.WebRootPath;
-            addDoctorCommand.WebRootPath = webRootPath;
+            addDoctorCommand.WebRootPath = _webHostEnvironment.WebRootPath;
+
             try
             {
                 await _mediator.Send(addDoctorCommand);
