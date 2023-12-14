@@ -1,0 +1,131 @@
+﻿@using Medicoz.Application.Features.Doctor.Commands.AddDoctor;
+@using Medicoz.Application.Features.Doctor.Commands.UpdateDoctor
+@model UpdateDoctorCommand
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="ourservices" asp-action="index">Services</a></li>
+                    <li class="breadcrumb-item active">Add Doctor</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Add Service</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="AdminDoctor" asp-action="create" enctype="multipart/form-data" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label asp-for="Name">Name</label>
+                                <input asp-for="Name" class="form-control">
+                                <span asp-validation-for="Name" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Surname">Surname</label>
+                                <input asp-for="Surname" class="form-control">
+                                <span asp-validation-for="Surname" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="TitleEn">Title En</label>
+                                <input asp-for="TitleEn" class="form-control">
+                                <span asp-validation-for="TitleEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="TitleAz">Title Az</label>
+                                <input asp-for="TitleAz" class="form-control">
+                                <span asp-validation-for="TitleAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DescriptionEn">Description En</label>
+                                <input asp-for="DescriptionEn" class="form-control">
+                                <span asp-validation-for="DescriptionEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DescriptionAz">Description Az</label>
+                                <input asp-for="DescriptionAz" class="form-control">
+                                <span asp-validation-for="DescriptionAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="EducationEn">EducationEn</label>
+                                <input asp-for="EducationEn" class="form-control">
+                                <span asp-validation-for="EducationEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="EducationAz">EducationAz</label>
+                                <input asp-for="EducationAz" class="form-control">
+                                <span asp-validation-for="EducationAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="ExperienceAz">ExperienceAz</label>
+                                <input asp-for="ExperienceAz" class="form-control">
+                                <span asp-validation-for="ExperienceAz" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="ExperienceEn">ExperienceEn</label>
+                                <input asp-for="ExperienceEn" class="form-control">
+                                <span asp-validation-for="ExperienceEn" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" class="form-control">
+                                <span asp-validation-for="Email" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Phone">Phone</label>
+                                <input asp-for="Phone" class="form-control">
+                                <span asp-validation-for="Phone" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Image">Image</label>
+                                <input asp-for="Image" class="form-control">
+                                <span asp-validation-for="Image" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+
+                            <select class="form-select" asp-for="DoctorScheduleForUpdateDoctorCommand.WorkingDaysOfDoctor" id="days-multiselect" multiple>
+                                @foreach (var day in Enum.GetValues(typeof(DayOfWeek)))
+                                {
+                                    <option value="@day">@day</option>
+                                }
+                            </select>
+
+                            <div class="mb-3">
+                                <label asp-for="DoctorScheduleForUpdateDoctorCommand.StartTime">StartTime</label>
+                                <input asp-for="DoctorScheduleForUpdateDoctorCommand.StartTime" class="form-control">
+                                <span asp-validation-for="DoctorScheduleForUpdateDoctorCommand.StartTime" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DoctorScheduleForUpdateDoctorCommand.EndTime">EndTime</label>
+                                <input asp-for="DoctorScheduleForUpdateDoctorCommand.EndTime" class="form-control">
+                                <span asp-validation-for="DoctorScheduleForUpdateDoctorCommand.EndTime" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mt-3 text-end">
+                    <button class="btn btn-success" type="submit" form="submit-form">Create</button>
+                    <a asp-controller="AdminDoctors" asp-action="index" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

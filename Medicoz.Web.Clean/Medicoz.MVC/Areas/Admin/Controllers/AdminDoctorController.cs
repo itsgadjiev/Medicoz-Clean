@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Doctor.Commands.AddDoctor;
+using Medicoz.Application.Features.Doctor.Commands.UpdateDoctor;
+using Medicoz.Application.Features.Doctor.Queries.GetDoctorByIdAp;
 using Medicoz.Application.Features.Doctor.Queries.GetDoctorsList;
 using Microsoft.AspNetCore.Mvc;
 
@@ -53,6 +55,36 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
             }
             return RedirectToAction(nameof(Index));
 
+        }
+
+        [HttpGet("update/{id}")]
+        public async Task<IActionResult> Update(string id)
+        {
+            var query = new GetDoctorByIdAPQuery(id);
+            var updateDoctorCommand = await _mediator.Send(query);
+
+            return View(updateDoctorCommand);
+        }
+
+        [HttpPost("update/{id}")]
+        public async Task<IActionResult> Update(UpdateDoctorCommand updateDoctorCommand)
+        {
+            try
+            {
+                await _mediator.Send(updateDoctorCommand);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex);
+            }
+            catch (CustomValidationException e)
+            {
+                foreach (var item in e.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }

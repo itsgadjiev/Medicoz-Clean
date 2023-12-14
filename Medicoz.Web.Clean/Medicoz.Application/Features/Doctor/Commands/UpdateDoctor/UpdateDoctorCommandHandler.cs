@@ -15,7 +15,7 @@ public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand, U
     private readonly IDoctorScheduleRepository _doctorScheduleRepository;
     private readonly GetHourlyWorkingTimeIntervalsForDoctor _getHourlyWorkingTime;
 
-    public UpdateDoctorCommandHandler(IDoctorRepository doctorRepository, IFileService fileService, IDoctorScheduleRepository doctorScheduleRepository,GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime)
+    public UpdateDoctorCommandHandler(IDoctorRepository doctorRepository, IFileService fileService, IDoctorScheduleRepository doctorScheduleRepository, GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime)
     {
         _doctorRepository = doctorRepository;
         _fileService = fileService;
@@ -24,13 +24,17 @@ public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand, U
     }
     public async Task<Unit> Handle(UpdateDoctorCommand request, CancellationToken cancellationToken)
     {
-
         var doctor = await _doctorRepository.GetByIdAsync(request.DoctorId);
-
         if (doctor == null)
-        {
             throw new NotFoundException(nameof(Doctor), request.DoctorId);
-        }
+
+
+        var validator = new UpdateDoctorCommandValidator();
+        var validationResult = await validator.ValidateAsync(request, cancellationToken);
+
+        if (!validationResult.IsValid)
+            throw new CustomValidationException(validationResult.Errors);
+
 
         doctor.Title[LocalizationLanguages.AZ] = request.TitleAz;
         doctor.Title[LocalizationLanguages.EN] = request.TitleEn;

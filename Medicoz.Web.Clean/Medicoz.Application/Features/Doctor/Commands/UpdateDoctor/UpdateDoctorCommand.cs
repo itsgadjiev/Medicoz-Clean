@@ -20,6 +20,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.UpdateDoctor
         public string Name { get; set; }
         public string Surname { get; set; }
         public IFormFile Image { get; set; }
+        public string ImageUrl { get; set; }
         public double Fee { get; set; }
         public DoctorScheduleForUpdateDoctorCommand DoctorScheduleForUpdateDoctorCommand { get; set; }
         public string WebRootPath { get; set; }
