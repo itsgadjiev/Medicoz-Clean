@@ -111,6 +111,15 @@
                         </div>
                     </div>
                 </form>
+                <div>
+                    <h4>Previous Doctor Schedules</h4>
+                    <ul>
+                        @foreach (var item in Model.PreviousDoctorSchedules)
+                        {
+                            <li>@item.DayOfWeek @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay</li>
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -11,6 +11,6 @@ namespace Medicoz.Application.Contracts.FileService
     {
         string Upload(IFormFile file, string path);
         void RemoveFile(IFormFile file, string path, string folderName, string fileName);
-        void RemoveFile(string path, string folderName, string fileName);
+        void RemoveFile(string path, string fileName);
     }
 }

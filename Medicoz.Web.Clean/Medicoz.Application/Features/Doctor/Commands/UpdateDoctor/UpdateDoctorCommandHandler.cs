@@ -53,37 +53,45 @@ public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand, U
         if (request.Image != null)
         {
             var path = Path.Combine(request.WebRootPath, "uploads/images");
+
+            _fileService.RemoveFile(path, doctor.ImageURL);
             var imgUrl = _fileService.Upload(request.Image, path);
+
             doctor.ImageURL = imgUrl;
         }
 
         await _doctorRepository.UpdateAsync(doctor);
 
-        var existingSchedules = await _doctorScheduleRepository.GetDoctorSchedulesByDoctorIdAsync(request.DoctorId);
-
-        foreach (var existingSchedule in existingSchedules)
+        if (request.DoctorScheduleForUpdateDoctorCommand.WorkingDaysOfDoctor != null && 
+            request.DoctorScheduleForUpdateDoctorCommand.EndTime != DateTime.MinValue &&
+            request.DoctorScheduleForUpdateDoctorCommand.StartTime != DateTime.MinValue)
         {
-            await _doctorScheduleRepository.DeleteAsync(existingSchedule);
-        }
+            var existingSchedules = await _doctorScheduleRepository.GetDoctorSchedulesByDoctorIdAsync(request.DoctorId);
 
-
-        var intervals = _getHourlyWorkingTime.Handle(request.DoctorScheduleForUpdateDoctorCommand.StartTime, request.DoctorScheduleForUpdateDoctorCommand.EndTime);
-
-        foreach (var workingDay in request.DoctorScheduleForUpdateDoctorCommand.WorkingDaysOfDoctor)
-        {
-            foreach (var interval in intervals)
+            foreach (var existingSchedule in existingSchedules)
             {
-                var doctorSchedule = new DoctorSchedule
+                await _doctorScheduleRepository.DeleteAsync(existingSchedule);
+            }
+
+            var intervals = _getHourlyWorkingTime.Handle(request.DoctorScheduleForUpdateDoctorCommand.StartTime, request.DoctorScheduleForUpdateDoctorCommand.EndTime);
+
+            foreach (var workingDay in request.DoctorScheduleForUpdateDoctorCommand.WorkingDaysOfDoctor)
+            {
+                foreach (var interval in intervals)
                 {
-                    DayOfWeek = workingDay,
-                    Doctor = doctor,
-                    StartTime = interval,
-                    EndTime = interval.AddHours(_getHourlyWorkingTime.DoctorAcceptanceTime),
-                    Id = Guid.NewGuid().ToString()
-                };
-                await _doctorScheduleRepository.AddAsync(doctorSchedule);
+                    var doctorSchedule = new DoctorSchedule
+                    {
+                        DayOfWeek = workingDay,
+                        Doctor = doctor,
+                        StartTime = interval,
+                        EndTime = interval.AddHours(_getHourlyWorkingTime.DoctorAcceptanceTime),
+                        Id = Guid.NewGuid().ToString()
+                    };
+                    await _doctorScheduleRepository.AddAsync(doctorSchedule);
+                }
             }
         }
+  
         await _doctorRepository.SaveChangesAsync();
 
         return Unit.Value;

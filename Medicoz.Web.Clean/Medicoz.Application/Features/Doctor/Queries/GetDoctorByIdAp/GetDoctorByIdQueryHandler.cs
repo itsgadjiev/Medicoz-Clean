@@ -13,10 +13,12 @@ namespace Medicoz.Application.Features.Doctor.Queries.GetDoctorByIdAp;
 public class GetDoctorByIdQueryHandler : IRequestHandler<GetDoctorByIdAPQuery, UpdateDoctorCommand>
 {
     private readonly IDoctorRepository _doctorRepository;
+    private readonly IDoctorScheduleRepository _doctorScheduleRepository;
 
-    public GetDoctorByIdQueryHandler(IDoctorRepository doctorRepository)
+    public GetDoctorByIdQueryHandler(IDoctorRepository doctorRepository,IDoctorScheduleRepository doctorScheduleRepository)
     {
         _doctorRepository = doctorRepository;
+        _doctorScheduleRepository = doctorScheduleRepository;
     }
     public async Task<UpdateDoctorCommand> Handle(GetDoctorByIdAPQuery request, CancellationToken cancellationToken)
     {
@@ -39,6 +41,7 @@ public class GetDoctorByIdQueryHandler : IRequestHandler<GetDoctorByIdAPQuery, U
             Phone = doctor.Phone,
             Email = doctor.Email,
             ImageUrl = doctor.ImageURL,
+            PreviousDoctorSchedules = await _doctorScheduleRepository.GetDoctorSchedulesByDoctorIdAsync(request.DoctorId),
         };
 
         return updateDoctorCommand;

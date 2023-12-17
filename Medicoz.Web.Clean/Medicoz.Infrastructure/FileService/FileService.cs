@@ -29,9 +29,9 @@ namespace Medicoz.Infrastructure.FileService
             }
         }
 
-        public void RemoveFile(string path, string folderName, string fileName)
+        public void RemoveFile(string path, string fileName)
         {
-            string fullPath = Path.Combine(path, folderName, fileName);
+            string fullPath = Path.Combine(path, fileName);
             if (System.IO.File.Exists(fullPath)) { System.IO.File.Delete(fullPath); }
         }
     }

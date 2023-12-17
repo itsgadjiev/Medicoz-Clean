@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Medicoz.Domain;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
@@ -23,6 +24,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.UpdateDoctor
         public string ImageUrl { get; set; }
         public double Fee { get; set; }
         public DoctorScheduleForUpdateDoctorCommand DoctorScheduleForUpdateDoctorCommand { get; set; }
+        public List<DoctorSchedule> PreviousDoctorSchedules { get; set; }
         public string WebRootPath { get; set; }
 
     }
