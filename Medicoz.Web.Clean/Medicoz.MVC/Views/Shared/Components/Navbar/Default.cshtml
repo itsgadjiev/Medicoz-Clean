@@ -2,7 +2,7 @@
 @using Medicoz.Application.Models.Identity;
 @using Medicoz.Identity.Models;
 @using Medicoz.Identity.Services;
-@model User
+@model ApplicationUser
 
 <header class="main-header header-style-one">
 
@@ -21,7 +21,7 @@
                 <div class="dropdown">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <span>@Model.Firstname</span>   <span>@Model.Lastname</span>
+                        <span>@Model.FirstName</span>   <span>@Model.LastName</span>
                     }
                     
                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

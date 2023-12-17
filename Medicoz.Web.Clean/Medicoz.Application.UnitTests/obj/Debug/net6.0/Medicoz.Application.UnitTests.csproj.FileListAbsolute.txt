@@ -169,3 +169,11 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\ref\Medicoz.Application.UnitTests.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\obj\Debug\net6.0\Medicoz.Application.UnitTests.sourcelink.json
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

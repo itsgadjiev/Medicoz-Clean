@@ -1,12 +1,12 @@
 ﻿using Medicoz.Application.Models.Identity;
+using Medicoz.Identity.Models;
 
 namespace Medicoz.Application.Contracts.Identity
 {
     public interface IUserService
     {
-        Task<List<User>> GetEmployeesAsync();
-        Task<User> GetEmployeeAsync(string userId);
+        Task<ApplicationUser> GetUserAsync(string userId);
         public string UserId { get; }
-        Task<User> GetCurrentUserAsync();
+        Task<ApplicationUser> GetCurrentUserAsync();
     }
 }

@@ -1,6 +1,6 @@
 ﻿@using Medicoz.Application.Models.Identity;
 @using Medicoz.Identity.Models;
-@model User
+@model ApplicationUser
 <div class="topbar">
     <!-- Navbar -->
     <nav class="navbar-custom" id="navbar-custom">
@@ -193,7 +193,7 @@
                         <div>
                             <small class="d-none d-md-block font-11"></small>
                             <span class="d-none d-md-block fw-semibold font-12">
-                               @Model.Firstname @Model.Lastname <i class="mdi mdi-chevron-down"></i>
+                               @Model.FirstName @Model.LastName <i class="mdi mdi-chevron-down"></i>
                             </span>
                         </div>
                     </div>

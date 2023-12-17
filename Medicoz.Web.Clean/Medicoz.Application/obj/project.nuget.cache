@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sNmeqnuN+0CKO8v0y2tZwMoezUG6Sm+21sGPdjH4ajrZM4zCXjlhrQy/7nm1VY2XNCxK/UyNk1w6t84GjNhfbA==",
+  "dgSpecHash": "XjxTll0MU64FtPcSeKnhsmvl5BPUqdPC8/NFPB7Tkl5UVji3cQw5OAxaPvpZ8jF26YadPbFwmrRujANjPY20ug==",
   "success": true,
   "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Application\\Medicoz.Application.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\ceyhu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.24\\microsoft.aspnetcore.cryptography.internal.6.0.24.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.24\\microsoft.aspnetcore.cryptography.keyderivation.6.0.24.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -25,6 +27,8 @@
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.24\\microsoft.extensions.identity.core.6.0.24.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.24\\microsoft.extensions.identity.stores.6.0.24.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\6.0.24\\microsoft.extensions.localization.abstractions.6.0.24.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",

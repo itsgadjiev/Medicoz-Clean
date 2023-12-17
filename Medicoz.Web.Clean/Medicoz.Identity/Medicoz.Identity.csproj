@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Medicoz.Application\Medicoz.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

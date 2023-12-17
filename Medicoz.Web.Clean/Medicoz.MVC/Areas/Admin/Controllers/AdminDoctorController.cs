@@ -53,6 +53,12 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
                 }
                 return View(addDoctorCommand);
             }
+            catch (BadRequestException e)
+            {
+                ModelState.AddModelError("", e.ErrorMessage);
+                return View(addDoctorCommand);
+            }
+
             return RedirectToAction(nameof(Index));
 
         }

@@ -20,9 +20,9 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
         private readonly IAuthService _authService;
         private readonly IEmailSender _emailSender;
 
-        public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository, 
-            IFileService fileService,GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime,
-            IAuthService authService,IEmailSender emailSender)
+        public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository,
+            IFileService fileService, GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime,
+            IAuthService authService, IEmailSender emailSender)
         {
             _doctorRepository = doctorRepository;
             _doctorScheduleRepository = doctorScheduleRepository;
@@ -71,8 +71,8 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 Name = request.Name,
                 Surname = request.Surname,
                 ImageURL = imgUrl,
-                Fee= request.Fee,
-                Id= Guid.NewGuid().ToString()
+                Fee = request.Fee,
+                Id = Guid.NewGuid().ToString()
             };
 
             await _doctorRepository.AddAsync(doctor);
@@ -100,12 +100,13 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 Email = request.Email,
                 FirstName = request.Name,
                 LastName = request.Surname,
-                Password = "123321",
+                Password = "123321Ab!",
                 UserName = String.Concat(request.Name, request.Surname),
             };
 
-            await _authService.Register(registrationRequest);
-            _emailSender.SendEmail(request.Email, "Medicoz", $"Welcome to our Company Dear {request.Name + request.Surname}");
+            await _authService.Register(registrationRequest, "Doctor");
+            await _doctorRepository.SaveChangesAsync();
+            //_emailSender.SendEmail(request.Email, "Medicoz", $"Welcome to our Company Dear {request.Name + request.Surname} ");
             return Unit.Value;
         }
     }

@@ -59,6 +59,13 @@ public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand, U
 
         await _doctorRepository.UpdateAsync(doctor);
 
+        var existingSchedules = await _doctorScheduleRepository.GetDoctorSchedulesByDoctorIdAsync(request.DoctorId);
+
+        foreach (var existingSchedule in existingSchedules)
+        {
+            await _doctorScheduleRepository.DeleteAsync(existingSchedule);
+        }
+
 
         var intervals = _getHourlyWorkingTime.Handle(request.DoctorScheduleForUpdateDoctorCommand.StartTime, request.DoctorScheduleForUpdateDoctorCommand.EndTime);
 
@@ -77,6 +84,7 @@ public class UpdateDoctorCommandHandler : IRequestHandler<UpdateDoctorCommand, U
                 await _doctorScheduleRepository.AddAsync(doctorSchedule);
             }
         }
+        await _doctorRepository.SaveChangesAsync();
 
         return Unit.Value;
 

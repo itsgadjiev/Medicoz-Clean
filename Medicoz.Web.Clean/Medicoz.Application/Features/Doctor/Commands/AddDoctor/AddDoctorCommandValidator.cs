@@ -21,7 +21,9 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
             RuleFor(x => x.Phone).NotEmpty();
             RuleFor(x => x.Image).NotNull().WithMessage("Image is required.");
             RuleFor(x=>x.Fee).NotEmpty().NotNull().WithMessage("Fee is required.");
-
+            RuleFor(x => x.DoctorScheduleForAddDoctorCommand.WorkingDaysOfDoctor).NotNull();
+            RuleFor(x=>x.DoctorScheduleForAddDoctorCommand.StartTime).NotNull();
+            RuleFor(x=>x.DoctorScheduleForAddDoctorCommand.EndTime).NotNull();
         }
     }
 }

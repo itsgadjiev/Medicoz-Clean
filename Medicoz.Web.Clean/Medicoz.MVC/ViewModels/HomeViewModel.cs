@@ -1,11 +1,12 @@
 ﻿using Medicoz.Application.Models.Identity;
 using Medicoz.Domain;
+using Medicoz.Identity.Models;
 
 namespace Medicoz.MVC.ViewModels
 {
     public class HomeViewModel
     {
-        public User User { get; set; }
+        public ApplicationUser User { get; set; }
         public List<Slider> Sliders { get; set; }
         public Dictionary<string,string> EntitiesLocalizedValuesTitle { get; set; }
         public Dictionary<string,string> EntitiesLocalizedValuesDesc { get; set; }

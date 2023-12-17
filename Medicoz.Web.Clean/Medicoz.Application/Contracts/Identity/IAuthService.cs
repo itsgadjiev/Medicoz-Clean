@@ -5,8 +5,8 @@ namespace Medicoz.Application.Contracts.Identity
     public interface IAuthService
     {
         Task<AuthResponse> Login(AuthRequest authRequest);
-        Task<RegistrationResponse> Register(RegistrationRequest registartionRequest);
+        Task<RegistrationResponse> Register(RegistrationRequest registartionRequest,string role);
         Task SignOut();
-
+       
     }
 }
