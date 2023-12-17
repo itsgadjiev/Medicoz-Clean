@@ -45,7 +45,7 @@
                                     See Doctor Schedule
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    @foreach (var item in Model.DoctorSchedules)
+                                    @foreach (var item in Model.DoctorSchedulesOnMonday)
                                     {
                                         <a class="dropdown-item">
                                             @item.DayOfWeek @item.StartTime.ToString("T") - @item.EndTime.ToString("T")
@@ -73,8 +73,8 @@
                     </div>
 
                     <!--Comment Form-->
-                    <form method="post" asp-action="detail" asp-controller="doctor" asp-route-doctorId="@Model.Id" >
-                        <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
+                    <form method="post" asp-action="detail" asp-controller="doctor" asp-route-doctorId="@Model.Id">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="row">
                             <div class="form-group col-lg-6 col-md-12">
                                 <input asp-for="MakeAnAppointmentCommand.PasentName" placeholder="Your Name">
@@ -142,6 +142,146 @@
     </div>
 </section>
 <!-- End Doctor Detail Section -->
+<!-- Time Table Section -->
+
+<section class="time-table-section">
+    <div class="auto-container">
+        <div class="table-outer">
+            <!-- Doctors Time Table -->
+            <table class="doctors-time-table">
+                <thead>
+                    <tr>
+                        <th class="dark">Time Table</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thrusday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.DoctorSchedulesOnMonday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.DoctorSchedulesOnTuesday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.DoctorSchedulesOnWednesday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.DoctorSchedulesOnThursday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.DoctorSchedulesOnFriday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.DoctorSchedulesOnSaturday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var item in Model.DoctorSchedulesOnSunday)
+                    {
+                        <tr>
+                            <th>@item.StartTime.TimeOfDay</th>
+                            @* <td class="empty"></td> *@
+                            <td>
+                                <strong>Dental Care</strong>
+                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
+                                <div class="doctor-info">
+                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
+                                    <h4 class="name">Dr. Tania Riham</h4>
+                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- End Time Table Section -->
 <!-- Team Section -->
 <section class="team-section">
     <div class="auto-container">

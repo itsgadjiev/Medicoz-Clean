@@ -22,6 +22,37 @@ namespace Medicoz.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Medicoz.Domain.Department", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Detail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Department");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>
                 {
                     b.Property<string>("Id")
@@ -116,6 +147,33 @@ namespace Medicoz.Persistence.Migrations
                     b.HasIndex("DoctorScheduleId");
 
                     b.ToTable("DoctorAppointment");
+                });
+
+            modelBuilder.Entity("Medicoz.Domain.DoctorDepartment", b =>
+                {
+                    b.Property<string>("DoctorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("DepartmentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DoctorId", "DepartmentId");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.ToTable("DoctorDepartments");
                 });
 
             modelBuilder.Entity("Medicoz.Domain.DoctorSchedule", b =>
@@ -251,6 +309,25 @@ namespace Medicoz.Persistence.Migrations
                     b.Navigation("DoctorSchedule");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.DoctorDepartment", b =>
+                {
+                    b.HasOne("Medicoz.Domain.Department", "Department")
+                        .WithMany("DoctorDepartments")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Medicoz.Domain.Doctor", "Doctor")
+                        .WithMany("DoctorDepartments")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+
+                    b.Navigation("Doctor");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.DoctorSchedule", b =>
                 {
                     b.HasOne("Medicoz.Domain.Doctor", "Doctor")
@@ -260,8 +337,15 @@ namespace Medicoz.Persistence.Migrations
                     b.Navigation("Doctor");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.Department", b =>
+                {
+                    b.Navigation("DoctorDepartments");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>
                 {
+                    b.Navigation("DoctorDepartments");
+
                     b.Navigation("DoctorReservations");
 
                     b.Navigation("DoctorSchedules");

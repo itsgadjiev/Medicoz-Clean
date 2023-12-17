@@ -6,4 +6,5 @@ public interface IDoctorScheduleRepository : IGenericRepository<Domain.DoctorSch
 {
     Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAsync(string doctorId);
     Task<string> GetDoctorScheduleByStartAndEndTimeAsync(DateTime reservationDate, string doctorId);
+    Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAndDayAsync(string doctorId, DayOfWeek dayOfWeek);
 }

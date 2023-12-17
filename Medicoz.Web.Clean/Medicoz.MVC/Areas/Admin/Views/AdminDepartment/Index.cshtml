@@ -1,0 +1,44 @@
+﻿@using Medicoz.Domain
+@{
+    int counter = 1;
+}
+@model List<Department>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Icon</th>
+                                <th>Title</th>
+                                <th>Description </th>
+                                <th class="text-end">
+                                    Action
+                                    <a class="btn btn-success" asp-action="create" asp-controller="ourservices">Create</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@(counter++)</td>
+                                    <td>@Html.Raw(item.Icon)</td>
+                                    <td>@_localService.GetLocalizedValueInsideView(item, nameof(item.Title))</td>
+                                    <td>@_localService.GetLocalizedValueInsideView(item, nameof(item.Description))</td>
+                                    <td class="text-end">
+                                        <a asp-action="update" asp-controller="OurServices" asp-route-id="@item.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                        <a asp-action="delete" asp-controller="OurServices" asp-route-id="@item.Id"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table><!--end /table-->
+                </div><!--end /tableresponsive-->
+            </div><!--end card-body-->
+        </div><!--end card-->
+    </div> <!-- end col -->
+</div> <!-- end row -->

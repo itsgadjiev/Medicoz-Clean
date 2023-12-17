@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="ViewModels\Areas\Medicoz\" />
+    <Folder Include="Features\Departments\Commands\" />
   </ItemGroup>
 
 </Project>

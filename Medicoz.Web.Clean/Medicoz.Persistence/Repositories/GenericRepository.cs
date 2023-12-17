@@ -35,11 +35,6 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         return await _context.Set<T>().AsNoTracking().ToListAsync();
     }
 
-    //public async Task<T> GetLocalizedEntity(string culture, string key)
-    //{
-    //    return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(x => x.Culture == culture && x.Key == key);
-    //}
-
     public async Task<T> GetByIdAsync(string id)
     {
         return await _context.Set<T>()
@@ -52,9 +47,4 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         _context.Set<T>().Attach(entity);
         _context.Entry(entity).State = EntityState.Modified;
     }
-
-    //Task<List<T>> IGenericRepository<T>.GetAllAsync()
-    //{
-    //    throw new NotImplementedException();
-    //}
 }

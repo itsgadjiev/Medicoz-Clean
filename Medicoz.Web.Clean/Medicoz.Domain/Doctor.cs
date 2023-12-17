@@ -16,6 +16,6 @@ public class Doctor : BaseEntity
     public string ImageURL { get; set; }
     public List<DoctorSchedule> DoctorSchedules { get; set; }
     public List<DoctorAppointment> DoctorReservations { get; set; }
-
+    public List<DoctorDepartment> DoctorDepartments { get; set; }
 
 }

@@ -20,6 +20,7 @@ public class AppDbContext : DbContext
     public DbSet<OurService> OurServices { get; set; }
     public DbSet<DoctorSchedule> DoctorSchedules { get; set; }
     public DbSet<DoctorAppointment> DoctorAppointment { get; set; }
+    public DbSet<DoctorDepartment> DoctorDepartments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -88,11 +89,24 @@ public class AppDbContext : DbContext
 
         #endregion
 
+        #region DoctorDepartments
+        modelBuilder.Entity<DoctorDepartment>()
+       .HasKey(dd => new { dd.DoctorId, dd.DepartmentId });
+
+        modelBuilder.Entity<DoctorDepartment>()
+            .HasOne(dd => dd.Doctor)
+            .WithMany(d => d.DoctorDepartments)
+            .HasForeignKey(dd => dd.DoctorId);
+
+        modelBuilder.Entity<DoctorDepartment>()
+            .HasOne(dd => dd.Department)
+            .WithMany(d => d.DoctorDepartments)
+            .HasForeignKey(dd => dd.DepartmentId);
+        #endregion
+
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         base.OnModelCreating(modelBuilder);
     }
-
-
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
@@ -111,7 +125,4 @@ public class AppDbContext : DbContext
 
         return base.SaveChangesAsync(cancellationToken);
     }
-
-    
-
 }

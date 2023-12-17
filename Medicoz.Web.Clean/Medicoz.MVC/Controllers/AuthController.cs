@@ -2,14 +2,7 @@
 using Medicoz.Application.Contracts.Logging;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Models.Identity;
-using Medicoz.Identity.Services;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualBasic;
-using Org.BouncyCastle.Asn1.Ocsp;
-using System.Security.Claims;
 
 namespace Medicoz.MVC.Controllers
 {

@@ -16,11 +16,15 @@ namespace Medicoz.Application.ViewModels
         public string Email { get; set; }
         public string ImageURL { get; set; }
         public double Fee { get; set; }
-        public List<DoctorSchedule> DoctorSchedules { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnMonday { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnTuesday { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnWednesday { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnThursday { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnFriday { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnSaturday { get; set; }
+        public List<DoctorSchedule> DoctorSchedulesOnSunday { get; set; }
+        public List<DoctorSchedule> AllDoctorSchedules { get; set; }
         public List<DoctorAppointment> ReservedDoctorAppointments { get; set; }
         public MakeAnAppointmentCommand MakeAnAppointmentCommand { get; set; }
-
-
-
     }
 }

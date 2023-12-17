@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/AdminDepartment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EZXBhcnRtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/AdminDoctor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Eb2N0b3JcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

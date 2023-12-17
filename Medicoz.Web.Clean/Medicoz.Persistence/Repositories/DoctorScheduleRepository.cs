@@ -14,7 +14,11 @@ public class DoctorScheduleRepository : GenericRepository<DoctorSchedule>, IDoct
 
     public async Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAsync(string doctorId)
     {
-        return await _context.DoctorSchedules.Where(x => x.DoctorId == doctorId).OrderBy(x=>x.DayOfWeek).OrderBy(x=>x.StartTime).ToListAsync();
+        return await _context.DoctorSchedules
+            .Where(x => x.DoctorId == doctorId)
+            .OrderBy(x=>x.DayOfWeek)
+            .OrderBy(x=>x.StartTime)
+            .ToListAsync();
     }
 
     public async Task<string> GetDoctorScheduleByStartAndEndTimeAsync(DateTime reservationDate, string doctorId)
@@ -26,9 +30,19 @@ public class DoctorScheduleRepository : GenericRepository<DoctorSchedule>, IDoct
            x.StartTime.TimeOfDay == reservationDate.TimeOfDay)
            .FirstOrDefaultAsync();
 
-        if (doctorSchedule is null) return null;
+        if (doctorSchedule is null) 
+            return null;
 
         return doctorSchedule.Id;
+    }
+
+    public async Task<List<DoctorSchedule>> GetDoctorSchedulesByDoctorIdAndDayAsync(string doctorId,DayOfWeek dayOfWeek) 
+    {
+        return await _context.DoctorSchedules
+            .Where(x => x.DoctorId == doctorId)
+            .Where(x => x.DayOfWeek ==dayOfWeek)
+            .OrderBy(x => x.StartTime)
+            .ToListAsync();
     }
 
 }

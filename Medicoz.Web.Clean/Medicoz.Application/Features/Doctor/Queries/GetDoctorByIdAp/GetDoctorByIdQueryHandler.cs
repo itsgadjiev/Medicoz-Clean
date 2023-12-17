@@ -42,6 +42,7 @@ public class GetDoctorByIdQueryHandler : IRequestHandler<GetDoctorByIdAPQuery, U
             Email = doctor.Email,
             ImageUrl = doctor.ImageURL,
             PreviousDoctorSchedules = await _doctorScheduleRepository.GetDoctorSchedulesByDoctorIdAsync(request.DoctorId),
+
         };
 
         return updateDoctorCommand;
