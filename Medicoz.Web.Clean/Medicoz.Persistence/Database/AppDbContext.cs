@@ -21,6 +21,7 @@ public class AppDbContext : DbContext
     public DbSet<DoctorSchedule> DoctorSchedules { get; set; }
     public DbSet<DoctorAppointment> DoctorAppointment { get; set; }
     public DbSet<DoctorDepartment> DoctorDepartments { get; set; }
+    public DbSet<Department> Departments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -90,6 +91,21 @@ public class AppDbContext : DbContext
         #endregion
 
         #region DoctorDepartments
+        modelBuilder.Entity<Department>()
+            .ToTable("Departments")
+            .HasKey(d => d.Id);
+
+
+        modelBuilder.Entity<Department>()
+        .Property(d => d.Name)
+        .HasConversion(jsonConverter)
+        .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Department>()
+       .Property(d => d.Detail)
+       .HasConversion(jsonConverter)
+       .HasColumnType("nvarchar(MAX)");
+
         modelBuilder.Entity<DoctorDepartment>()
        .HasKey(dd => new { dd.DoctorId, dd.DepartmentId });
 

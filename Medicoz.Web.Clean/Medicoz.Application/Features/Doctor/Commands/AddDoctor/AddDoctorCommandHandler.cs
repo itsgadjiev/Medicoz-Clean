@@ -13,19 +13,22 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
 {
     public class AddDoctorCommandHandler : IRequestHandler<AddDoctorCommand, Unit>
     {
-        private readonly IDoctorRepository _doctorRepository;
-        private readonly IDoctorScheduleRepository _doctorScheduleRepository;
         private readonly IFileService _fileService;
-        private readonly GetHourlyWorkingTimeIntervalsForDoctor _getHourlyWorkingTime;
         private readonly IAuthService _authService;
         private readonly IEmailSender _emailSender;
+        private readonly IDoctorRepository _doctorRepository;
+        private readonly IDoctorScheduleRepository _doctorScheduleRepository;
+        private readonly IDoctorDepartmentRepository _doctorDepartmentRepository;
+        private readonly GetHourlyWorkingTimeIntervalsForDoctor _getHourlyWorkingTime;
 
         public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository,
+            IDoctorDepartmentRepository doctorDepartmentRepository,
             IFileService fileService, GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime,
             IAuthService authService, IEmailSender emailSender)
         {
             _doctorRepository = doctorRepository;
             _doctorScheduleRepository = doctorScheduleRepository;
+            _doctorDepartmentRepository = doctorDepartmentRepository;
             _fileService = fileService;
             _getHourlyWorkingTime = getHourlyWorkingTime;
             _authService = authService;
@@ -43,6 +46,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
 
             var path = Path.Combine(request.WebRootPath, "uploads/images");
             var imgUrl = _fileService.Upload(request.Image, path);
+
 
             var doctor = new Domain.Doctor
             {
@@ -103,6 +107,19 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 Password = "123321Ab!",
                 UserName = String.Concat(request.Name, request.Surname),
             };
+
+
+            foreach (var selectedDoctorDepartmentId in request.SelectedDoctorDepartmentIds)
+            {
+                var doctorDepartment = new Domain.DoctorDepartment
+                {
+                    DepartmentId = selectedDoctorDepartmentId,
+                    Doctor = doctor
+                };
+
+                await _doctorDepartmentRepository.AddAsync(doctorDepartment);
+            };
+
 
             await _authService.Register(registrationRequest, "Doctor");
             await _doctorRepository.SaveChangesAsync();

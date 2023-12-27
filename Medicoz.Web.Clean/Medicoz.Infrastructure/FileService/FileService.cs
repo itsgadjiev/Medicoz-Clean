@@ -5,7 +5,7 @@ namespace Medicoz.Infrastructure.FileService
 {
     public class FileService : IFileService
     {
-       
+
         public string Upload(IFormFile file, string path)
         {
             if (!Directory.Exists(path))
@@ -20,11 +20,11 @@ namespace Medicoz.Infrastructure.FileService
             return uniqueFileName;
         }
 
-        public void RemoveFile(IFormFile file, string path, string folderName, string fileName)
+        public void RemoveFile(IFormFile file, string path, string fileName)
         {
             if (file != null)
             {
-                string fullPath = Path.Combine(path, folderName, fileName);
+                string fullPath = Path.Combine(path, fileName);
                 if (System.IO.File.Exists(fullPath)) { System.IO.File.Delete(fullPath); }
             }
         }

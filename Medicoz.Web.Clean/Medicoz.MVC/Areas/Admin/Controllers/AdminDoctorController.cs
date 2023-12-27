@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Medicoz.Application.Exceptions;
+using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
 using Medicoz.Application.Features.Doctor.Commands.AddDoctor;
 using Medicoz.Application.Features.Doctor.Commands.UpdateDoctor;
 using Medicoz.Application.Features.Doctor.Queries.GetDoctorByIdAp;
@@ -31,9 +32,14 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
 
 
         [HttpGet("create")]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var addDoctorCommand = new AddDoctorCommand()
+            {
+                DepartmentListDTO = await _mediator.Send(new GetAllDepartmentsQuery())
+            };
+
+            return View(addDoctorCommand);
         }
 
         [HttpPost("create")]

@@ -31,7 +31,7 @@ namespace Medicoz.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Detail")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("Icon")
                         .HasColumnType("nvarchar(max)");
@@ -40,7 +40,7 @@ namespace Medicoz.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -50,7 +50,7 @@ namespace Medicoz.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Department");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("Medicoz.Domain.Doctor", b =>

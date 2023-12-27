@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Medicoz.Application.Features.Departments.Queries.GetAllDepartments
 {
-    public class GetAllDepartmentsQuery : IRequest<List<Department>>
+    public class GetAllDepartmentsQuery : IRequest<List<DepartmentListDTO>>
     {
     }
 }

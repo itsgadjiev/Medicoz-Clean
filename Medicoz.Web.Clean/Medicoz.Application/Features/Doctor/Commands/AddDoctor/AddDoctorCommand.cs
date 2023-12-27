@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
+using Medicoz.Domain;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
@@ -22,6 +24,8 @@ public class AddDoctorCommand : IRequest<Unit>
     public IFormFile Image { get; set; }
     public DoctorScheduleForAddDoctorCommand DoctorScheduleForAddDoctorCommand { get; set; }
     public string WebRootPath { get; set; }
+    public List<DepartmentListDTO> DepartmentListDTO { get; set; }
+    public string[] SelectedDoctorDepartmentIds { get; set; }
 
 }
 public class DoctorScheduleForAddDoctorCommand

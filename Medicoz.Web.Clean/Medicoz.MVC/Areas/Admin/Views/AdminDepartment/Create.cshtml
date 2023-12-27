@@ -1,0 +1,76 @@
+﻿@using Medicoz.Application.Features.Departments.Commands.AddDepartment
+@model AddDepartmentCommand
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="ourservices" asp-action="index">Services</a></li>
+                    <li class="breadcrumb-item active">Add Doctor</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Add Service</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="AdminDepartment" asp-action="create" enctype="multipart/form-data" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label asp-for="NameAZ">NameAZ</label>
+                                <input asp-for="NameAZ" class="form-control">
+                                <span asp-validation-for="NameAZ" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="NameEN">NameEN</label>
+                                <input asp-for="NameEN" class="form-control">
+                                <span asp-validation-for="NameEN" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DetailAZ"></label>
+                                <input asp-for="DetailAZ" class="form-control">
+                                <span asp-validation-for="DetailAZ" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="DetailEN"></label>
+                                <input asp-for="DetailEN" class="form-control">
+                                <span asp-validation-for="DetailEN" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Icon">Icon </label>
+                                <input asp-for="Icon" class="form-control">
+                                <span asp-validation-for="Icon" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Image">Image</label>
+                                <input asp-for="Image" class="form-control">
+                                <span asp-validation-for="Image" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mt-3 text-end">
+                    <button class="btn btn-success" type="submit" form="submit-form">Create</button>
+                    <a asp-controller="AdminDepartment" asp-action="index" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

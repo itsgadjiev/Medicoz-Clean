@@ -102,6 +102,13 @@
                                 }
                             </select>
 
+                            <select class="form-select" asp-for="SelectedDoctorDepartmentIds" id="days-multiselect" multiple>
+                                @foreach (var doctorDepartment in Model.DepartmentListDTO)
+                                {
+                                    <option value="@doctorDepartment.Id">@doctorDepartment.Name</option>
+                                }
+                            </select>
+
                             <div class="mb-3">
                                 <label asp-for="DoctorScheduleForAddDoctorCommand.StartTime">StartTime</label>
                                 <input asp-for="DoctorScheduleForAddDoctorCommand.StartTime" class="form-control">
