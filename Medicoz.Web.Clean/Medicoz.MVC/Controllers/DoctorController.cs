@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Exceptions;
+using Medicoz.Application.Features.Doctor.Queries.GetDoctorsList;
 using Medicoz.Application.Features.DoctorDetail.Queries.GetDoctorDetail;
 using Medicoz.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,14 @@ public class DoctorController : Controller
     {
         _mediator = mediator;
         _userService = userService;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var query = new GetDoctorsListQuery();
+        var list = await _mediator.Send(query);
+        return View(list);
     }
 
     [HttpGet("{doctorId}")]

@@ -27,6 +27,7 @@ namespace Medicoz.Application.Features.Doctor.Queries.GetDoctorsList
                 Title = _localizationService.GetLocalizedValue(doctor.Id,nameof(doctor.Title)),
                 Fee = doctor.Fee,
                 Id = doctor.Id,
+                ImageUrl = doctor.ImageURL
 
             }).ToList();
 

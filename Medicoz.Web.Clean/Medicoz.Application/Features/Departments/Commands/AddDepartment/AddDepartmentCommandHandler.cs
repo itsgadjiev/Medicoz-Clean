@@ -32,6 +32,7 @@ namespace Medicoz.Application.Features.Departments.Commands.AddDepartment
 
             Department department = new()
             {
+                Id = Guid.NewGuid().ToString(),
                 Detail = new Dictionary<string, string>
                 {
                     { LocalizationLanguages.AZ, request.DetailAZ },

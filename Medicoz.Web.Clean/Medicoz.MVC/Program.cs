@@ -1,14 +1,13 @@
 using Medicoz.Application;
 using Medicoz.Identity;
 using Medicoz.Infrastructure;
-using Medicoz.MVC.Middlewares;
 using Medicoz.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<GlobalExceptionHandlingMiddleware>();
+//builder.Services.AddSingleton<GlobalExceptionHandlingMiddleware>();
 
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddApplicationServices();

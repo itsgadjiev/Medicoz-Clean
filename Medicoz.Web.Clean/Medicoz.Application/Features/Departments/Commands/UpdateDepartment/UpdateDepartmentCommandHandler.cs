@@ -4,11 +4,6 @@ using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
 using Medicoz.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Medicoz.Application.Features.Departments.Commands.UpdateDepartment
 {

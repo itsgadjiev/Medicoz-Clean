@@ -44,9 +44,6 @@ namespace Medicoz.MVC.Controllers
 
             return View(homeViewModel);
         }
-        public async Task<IActionResult> Create()
-        {
-            return View();
-        }
+     
     }
 }

@@ -1,11 +1,9 @@
 ﻿using MediatR;
-using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Departments.Commands.AddDepartment;
 using Medicoz.Application.Features.Departments.Commands.UpdateDepartment;
 using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
 using Medicoz.Application.Features.Departments.Queries.GetDepartmentById;
-using Medicoz.Application.Features.Doctor.Commands.UpdateDoctor;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
@@ -14,13 +12,11 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
     [Route("admin/departments")]
     public class AdminDepartmentController : Controller
     {
-        private readonly IDepartmentRepository _departmentRepository;
         private readonly IMediator _mediator;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public AdminDepartmentController(IDepartmentRepository departmentRepository, IMediator mediator, IWebHostEnvironment webHostEnvironment)
+        public AdminDepartmentController(IMediator mediator, IWebHostEnvironment webHostEnvironment)
         {
-            _departmentRepository = departmentRepository;
             _mediator = mediator;
             _webHostEnvironment = webHostEnvironment;
         }

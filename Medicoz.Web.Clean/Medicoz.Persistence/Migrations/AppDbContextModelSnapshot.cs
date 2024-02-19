@@ -243,6 +243,73 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("OurServices");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.Product", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Point")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Medicoz.Domain.ProductComment", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PostingUserEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostingUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Review")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductComment");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.Slider", b =>
                 {
                     b.Property<string>("Id")
@@ -337,6 +404,15 @@ namespace Medicoz.Persistence.Migrations
                     b.Navigation("Doctor");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.ProductComment", b =>
+                {
+                    b.HasOne("Medicoz.Domain.Product", "Product")
+                        .WithMany("ProductComments")
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.Department", b =>
                 {
                     b.Navigation("DoctorDepartments");
@@ -354,6 +430,11 @@ namespace Medicoz.Persistence.Migrations
             modelBuilder.Entity("Medicoz.Domain.DoctorSchedule", b =>
                 {
                     b.Navigation("DoctorReservations");
+                });
+
+            modelBuilder.Entity("Medicoz.Domain.Product", b =>
+                {
+                    b.Navigation("ProductComments");
                 });
 #pragma warning restore 612, 618
         }

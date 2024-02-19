@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Medicoz.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a78b49aafcc9b68f9e376f262003fc3c2b0d9539")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9acbb0464f42b978bd58c6b870de6345e32b1b77")]
 [assembly: System.Reflection.AssemblyProductAttribute("Medicoz.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Medicoz.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

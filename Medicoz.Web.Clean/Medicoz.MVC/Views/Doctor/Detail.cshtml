@@ -38,7 +38,7 @@
                             <strong>Experience</strong>
                             <p>@Model.Experience</p>
                         </li>
-                        <li>
+                        @* <li>
                             <strong>Timing</strong>
                             <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,7 +53,7 @@
                                     }
                                 </div>
                             </div>
-                        </li>
+                        </li> *@
                         <li>
                             <strong>Phone</strong>
                             <p><a href="#">@Model.Phone</a></p>
@@ -150,132 +150,112 @@
             <!-- Doctors Time Table -->
             <table class="doctors-time-table">
                 <thead>
+                    
                     <tr>
-                        <th class="dark">Time Table</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thrusday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                        <th>Sunday</th>
+                        <th class="dark" style="">Time Table</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    @foreach (var item in Model.DoctorSchedulesOnMonday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+                    <tr>
+                        <th>Monday</th>
+                        @if (Model.DoctorSchedulesOnMonday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnMonday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    @foreach (var item in Model.DoctorSchedulesOnTuesday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+
+                        }
+                    </tr>
+                     <tr>
+                        <th>Tuesday</th>
+                        @if (Model.DoctorSchedulesOnTuesday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnTuesday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    @foreach (var item in Model.DoctorSchedulesOnWednesday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+
+                        }
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        @if (Model.DoctorSchedulesOnWednesday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnWednesday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    @foreach (var item in Model.DoctorSchedulesOnThursday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+
+                        }
+                    </tr>
+                    <tr>
+                        <th>Thursday</th>
+                        @if (Model.DoctorSchedulesOnThursday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnThursday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    @foreach (var item in Model.DoctorSchedulesOnFriday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+
+                        }
+                    </tr>
+                    <tr>
+                        <th>Friday</th>
+                        @if (Model.DoctorSchedulesOnFriday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnFriday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    @foreach (var item in Model.DoctorSchedulesOnSaturday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+
+                        }
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
+                        @if (Model.DoctorSchedulesOnSaturday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnSaturday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    @foreach (var item in Model.DoctorSchedulesOnSunday)
-                    {
-                        <tr>
-                            <th>@item.StartTime.TimeOfDay</th>
-                            @* <td class="empty"></td> *@
+
+                        }
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
+                        @if (Model.DoctorSchedulesOnSunday.Count == 0)
+                        {
+                            <td>Not Working</td>
+                        }
+                        @foreach (var item in Model.DoctorSchedulesOnSunday)
+                        {
                             <td>
-                                <strong>Dental Care</strong>
-                                <p> @item.StartTime.TimeOfDay - @item.EndTime.TimeOfDay </p>
-                                <div class="doctor-info">
-                                    <figure class="thumb"><img src="images/resource/doctor-thumb.jpg" alt=""></figure>
-                                    <h4 class="name">Dr. Tania Riham</h4>
-                                    <a href="#" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
-                                </div>
+                                @item.StartTime.TimeOfDay
                             </td>
-                        </tr>
-                    }
-                    
+
+                        }
+                    </tr>
+                
                 </tbody>
             </table>
         </div>

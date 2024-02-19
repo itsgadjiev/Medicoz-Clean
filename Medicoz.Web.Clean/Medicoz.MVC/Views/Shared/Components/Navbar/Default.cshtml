@@ -23,7 +23,7 @@
                     {
                         <span>@Model.FirstName</span>   <span>@Model.LastName</span>
                     }
-                    
+
                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa-solid fa-globe text-secondary"></i>
                     </button>
@@ -49,25 +49,13 @@
                 <div class="nav-outer">
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
-                            <li class="current dropdown">
-                                 @* <span>@Localiser["home"]</span>  *@
-                            </li>
+                            <li><a asp-action="hospital" asp-controller="dashboard" asp-area="admin">Home</a></li>
+                            <li><a asp-action="get" asp-controller="doctor" >Doctors</a></li>
+                            <li><a asp-action="hospital" asp-controller="dashboard" asp-area="admin">Departments</a></li>
+                            <li><a asp-action="hospital" asp-controller="dashboard" asp-area="admin">Blogs</a></li>
+                            <li><a asp-action="hospital" asp-controller="dashboard" asp-area="admin">Shop</a></li>
 
-                            <li class="dropdown">
-                                <span>Pages</span>
-                                <ul>
-                                    <li><a href="~/medicoz/about-us.html">About Us</a></li>
-                                    <li><a href="~/medicoz/services.html">Services</a></li>
-                                    <li><a href="~/medicoz/services.html">Gallery</a></li>
-                                    <li><a href="~/medicoz/pricing-table.html">Pricing Table</a></li>
-                                    <li><a href="~/medicoz/elements.html">UI Elements</a></li>
-                                    <li><a href="~/medicoz/coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="~/medicoz/error-page.html">Error 404</a></li>
-                                    <li><a href="~/medicoz/terms-and-condition.html">Terms and Condition</a></li>
-                                    <li><a asp-action="create" asp-controller="slider">Slider</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
+                            @* <li class="dropdown">
                                 <span>Doctors</span>
                                 <ul>
                                     <li><a href="~/medicoz/doctors.html">Doctors</a></li>
@@ -118,7 +106,7 @@
                                     <li><a href="~/medicoz/checkout.html">Checkout</a></li>
                                     <li><a href="~/medicoz/login.html">Login</a></li>
                                 </ul>
-                            </li>
+                            </li> *@
                             <li><a asp-action="hospital" asp-controller="dashboard" asp-area="admin">Admin</a></li>
                         </ul>
                     </nav>
