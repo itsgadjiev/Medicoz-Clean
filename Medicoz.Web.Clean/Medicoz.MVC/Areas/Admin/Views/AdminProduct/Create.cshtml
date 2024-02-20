@@ -1,0 +1,66 @@
+﻿@using Medicoz.Application.Features.Products.Commands.AddCommand
+@model AddProductCommand
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="AdminProducts" asp-action="index" asp-area="admin">Products</a></li>
+                    <li class="breadcrumb-item active">Add Product</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Add Product</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="AdminProduct" asp-action="create" enctype="multipart/form-data" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label asp-for="Name">Name</label>
+                                <input asp-for="Name" class="form-control">
+                                <span asp-validation-for="Name" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Description">Description</label>
+                                <input asp-for="Description" class="form-control">
+                                <span asp-validation-for="Description" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Price"></label>
+                                <input asp-for="Price" class="form-control">
+                                <span asp-validation-for="Price" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Image"></label>
+                                <input asp-for="Image" class="form-control">
+                                <span asp-validation-for="Image" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mt-3 text-end">
+                    <button class="btn btn-success" type="submit" form="submit-form">Create</button>
+                    <a asp-controller="AdminDepartment" asp-action="index" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

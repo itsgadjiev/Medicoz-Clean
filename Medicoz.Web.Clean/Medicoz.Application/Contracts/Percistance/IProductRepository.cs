@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Medicoz.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Medicoz.Application.Contracts.Percistance
 {
     public interface IProductRepository : IGenericRepository<Domain.Product>
     {
+        IQueryable<Product> GetAllAsQueryable();
     }
 }

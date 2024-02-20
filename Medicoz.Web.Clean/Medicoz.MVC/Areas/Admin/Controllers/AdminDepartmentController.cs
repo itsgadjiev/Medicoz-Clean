@@ -63,7 +63,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
             var departmentVM = await _mediator.Send(new GetDepartmentByIdQuery { DepartmentId = id });
             return View(departmentVM);
         }
-
+         
         [HttpPost("update/{id}")]
         public async Task<IActionResult> Update(UpdateDepartmentCommand updateDepartmentCommand)
         {

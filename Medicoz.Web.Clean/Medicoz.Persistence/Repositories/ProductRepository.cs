@@ -8,6 +8,11 @@ namespace Medicoz.Persistence.Repositories
     {
         public ProductRepository(AppDbContext context) : base(context)
         {
+
+        }
+        public IQueryable<Product> GetAllAsQueryable()
+        {
+            return _context.Products.AsQueryable();
         }
     }
 }

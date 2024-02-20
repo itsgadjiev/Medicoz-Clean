@@ -1,5 +1,9 @@
 ﻿using MediatR;
+using Medicoz.Application.Exceptions;
+using Medicoz.Application.Features.Departments.Commands.UpdateDepartment;
+using Medicoz.Application.Features.Departments.Queries.GetDepartmentById;
 using Medicoz.Application.Features.Products.Commands.AddCommand;
+using Medicoz.Application.Features.Products.Queries.GetAllProducts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
@@ -9,33 +13,74 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
     public class AdminProductController : Controller
     {
         private readonly IMediator _mediator;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public AdminProductController(IMediator mediator)
+        public AdminProductController(IMediator mediator, IWebHostEnvironment webHostEnvironment)
         {
             _mediator = mediator;
+            _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _mediator.Send(new GetAllProductsQuery(string.Empty)));
         }
 
-        [HttpGet]
+        [HttpGet("create")]
         public IActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> Create(AddProductCommand addProductCommand)
         {
+            addProductCommand.WebRootPath = _webHostEnvironment.WebRootPath;
             try
             {
-               await _mediator.Send(addProductCommand);
+                await _mediator.Send(addProductCommand);
             }
-            catch (Exception)
+            catch (CustomValidationException e)
             {
+                foreach (var item in e.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                return View(addProductCommand);
+            }
+            catch (BadRequestException e)
+            {
+                ModelState.AddModelError("", e.ErrorMessage);
+                return View(addProductCommand);
+            }
+            return RedirectToAction(nameof(Index));
+        }
 
-                throw;
+        [HttpGet("update/{id}")]
+        public async Task<IActionResult> Update(string id)
+        {
+            var departmentVM = await _mediator.Send(new GetDepartmentByIdQuery { DepartmentId = id });
+            return View(departmentVM);
+        }
+
+        [HttpPost("update/{id}")]
+        public async Task<IActionResult> Update(UpdateDepartmentCommand updateDepartmentCommand)
+        {
+            updateDepartmentCommand.WebRootPath = _webHostEnvironment.WebRootPath;
+            try
+            {
+                await _mediator.Send(updateDepartmentCommand);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex);
+            }
+            catch (CustomValidationException e)
+            {
+                foreach (var item in e.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
             }
             return RedirectToAction(nameof(Index));
         }

@@ -1,0 +1,193 @@
+﻿@using Medicoz.Application.Features.Products.Queries.GetAllProducts
+@model List<ProductListDTO>
+
+<!--Page Title-->
+<section class="page-title" style="background-image: url(images/background/8.jpg);">
+    <div class="auto-container">
+        <div class="title-outer">
+            <h1>Our Shop</h1>
+            <ul class="page-breadcrumb">
+                <li><a href="index-2.html">Home</a></li>
+                <li>Shop</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Content Side-->
+            <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                <div class="our-shop">
+                    <div class="shop-upper-box">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort Options
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index">Default Sorting</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="rating">Sort by average rating</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="newness">Sort by newness</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="price">Sort by price: low to high</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="priceDesc">Sort by price: high to low</a>
+                            </div>
+                        </div>
+
+                        <div class="items-label">Showing all @Model.Count results</div>
+                    </div>
+
+                    <div class="row">
+
+                        @foreach (var item in Model)
+                        {
+                            <!-- Shop Item -->
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a href="shop-single.html"><img src="./uploads/images/@item.ImageUrl" alt=""></a></figure>
+                                    </div>
+                                    <div class="lower-content">
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star light"></span>
+                                        </div>
+                                        <h4 class="name"><a href="shop-single.html">@item.Name</a></h4>
+                                        <div class="price"> $@item.Price</div>
+                                        <a href="shopping-cart.html" class="theme-btn add-to-cart">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Sidebar Side-->
+            <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                <aside class="sidebar">
+                    <!--search box-->
+                    <div class="sidebar-widget search-box">
+                        <form method="post" action="https://smallcharge.ml/blog.html">
+                            <div class="form-group">
+                                <input type="search" name="search-field" value="" placeholder="Search....." required="">
+                                <button type="submit"><span class="icon fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget category-list">
+                        <div class="sidebar-title"><h3>Categories</h3></div>
+                        <ul class="cat-list">
+                            <li><a href="#">Procedures <span>(06)</span></a></li>
+                            <li><a href="#">Transplantation <span>(02)</span></a></li>
+                            <li class="active"><a href="#">Management <span>(05)</span></a></li>
+                            <li><a href="#">Healthcare Tips <span>(25)</span></a></li>
+                            <li><a href="#">Uncategorized <span>(04)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Latest News -->
+                    <div class="sidebar-widget latest-news">
+                        <div class="sidebar-title"><h3>Popular Products</h3></div>
+                        <div class="widget-content">
+                            <article class="post">
+                                <div class="post-thumb"><a href="shop-single.html"><img src="images/resource/products/product-thumb-1.jpg" alt=""></a></div>
+                                <h5><a href="shop-single.html">First Aid Kit</a></h5>
+                                <div class="price">$9.00</div>
+                                <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            </article>
+
+                            <article class="post">
+                                <div class="post-thumb"><a href="shop-single.html"><img src="images/resource/products/product-thumb-2.jpg" alt=""></a></div>
+                                <h5><a href="shop-single.html">Vitamin C+</a></h5>
+                                <div class="price">$20.00</div>
+                                <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            </article>
+
+                            <article class="post">
+                                <div class="post-thumb"><a href="shop-single.html"><img src="images/resource/products/product-thumb-3.jpg" alt=""></a></div>
+                                <h5><a href="shop-single.html">Zinc Tablet</a></h5>
+                                <div class="price">$ 18.00</div>
+                                <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Newslatters-->
+                    <div class="sidebar-widget newslatters">
+                        <div class="sidebar-title"><h3><span class="icon flaticon-rss-symbol"></span>Newsletter</h3></div>
+                        <div class="text">Enter your email address below to subscribe to our newsletter</div>
+                        <form method="post" action="https://smallcharge.ml/blog-sidebar.html">
+                            <div class="form-group">
+                                <input type="text" name="input" value="" placeholder="Your email address..." required="">
+                                <button type="submit" class="theme-btn"><span class="btn-title">Subscribe</span></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Instagram Widget -->
+                    <div class="sidebar-widget instagram-widget">
+                        <div class="sidebar-title"> <h3>Instagram</h3> </div>
+                        <div class="widget-content">
+                            <div class="clearfix">
+                                <figure class="post-thumb"><img src="images/resource/instagram-1.jpg" alt=""><a href="blog-single.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                                <figure class="post-thumb"><img src="images/resource/instagram-2.jpg" alt=""><a href="blog-single.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                                <figure class="post-thumb"><img src="images/resource/instagram-3.jpg" alt=""><a href="blog-single.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                                <figure class="post-thumb"><img src="images/resource/instagram-4.jpg" alt=""><a href="blog-single.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                                <figure class="post-thumb"><img src="images/resource/instagram-5.jpg" alt=""><a href="blog-single.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                                <figure class="post-thumb"><img src="images/resource/instagram-6.jpg" alt=""><a href="blog-single.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget tags">
+                        <div class="sidebar-title"><h3>Tag Cloud</h3></div>
+                        <ul class="popular-tags clearfix">
+                            <li><a href="#">Ideas</a></li>
+                            <li><a href="#">Doctor</a></li>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Department</a></li>
+                            <li><a href="#">Nurse</a></li>
+                            <li><a href="#">Growth</a></li>
+                            <li><a href="#">Expert</a></li>
+                            <li><a href="#">Tips</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Medical</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Sidebar Container -->
+<!-- Clients Section -->
+<section class="clients-section alternate">
+    <div class="auto-container">
+
+        <!-- Sponsors Outer -->
+        <div class="sponsors-outer">
+            <!--clients carousel-->
+            <ul class="clients-carousel owl-carousel owl-theme">
+                <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Clients Section -->

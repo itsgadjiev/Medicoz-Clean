@@ -1,6 +1,9 @@
-﻿namespace Medicoz.Application.Contracts.Percistance
+﻿using Medicoz.Domain;
+
+namespace Medicoz.Application.Contracts.Percistance
 {
     public interface IDepartmentRepository : IGenericRepository<Domain.Department>
     {
+        
     }
 }

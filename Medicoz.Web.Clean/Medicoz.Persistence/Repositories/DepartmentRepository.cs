@@ -9,5 +9,7 @@ namespace Medicoz.Persistence.Repositories
         public DepartmentRepository(AppDbContext context) : base(context)
         {
         }
+
+        
     }
 }
