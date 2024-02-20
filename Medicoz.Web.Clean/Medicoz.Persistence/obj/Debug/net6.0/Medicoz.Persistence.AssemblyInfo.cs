@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Medicoz.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dabbd849919ccff74d2f91be240c6f9a38c20148")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a7353cf646a65512d45c0fdc25e97e2d140fc47")]
 [assembly: System.Reflection.AssemblyProductAttribute("Medicoz.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Medicoz.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
