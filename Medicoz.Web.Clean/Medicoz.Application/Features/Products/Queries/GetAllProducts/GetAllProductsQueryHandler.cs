@@ -26,7 +26,14 @@ namespace Medicoz.Application.Features.Products.Queries.GetAllProducts
         public async Task<List<ProductListDTO>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
         {
             var sortField = request.SortField;
+            var filterField = request.FilterField;
+
             var query = _productRepository.GetAllAsQueryable();
+
+            if (!string.IsNullOrEmpty(filterField))
+            {
+                query = query.Where(x => x.Name.Contains(filterField));
+            }
 
             if (!string.IsNullOrEmpty(sortField))
             {
@@ -35,11 +42,11 @@ namespace Medicoz.Application.Features.Products.Queries.GetAllProducts
                     case "price":
                         query = query.OrderBy(e => e.Price);
                         break;
-                    case "priceDesc":
+                    case "pricedesc":
                         query = query.OrderByDescending(e => e.Price);
                         break;
                     case "newness":
-                        query = query.OrderByDescending(e => e.CreatedAt);
+                        query = query.OrderBy(e => e.CreatedAt);
                         break;
                     case "rating":
                         query = query.OrderByDescending(e => e.Point);

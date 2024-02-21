@@ -5,6 +5,7 @@ using Medicoz.Application.Features.Products.Queries.GetAllProducts;
 using Medicoz.Application.Features.Products.Queries.GetProductById;
 using Medicoz.Application.Features.Products.Queries.GetProductByIdDetail;
 using Medicoz.Domain;
+using Medicoz.MVC.ViewModels;
 using Medicoz.Persistence.Database;
 using Medicoz.Persistence.Repositories;
 using Microsoft.AspNetCore.Http;
@@ -29,9 +30,15 @@ namespace Medicoz.MVC.Controllers
             _basketRepository = basketRepository;
             _basketItemRepository = basketItemRepository;
         }
-        public async Task<IActionResult> Index([FromQuery(Name = "sort")] string? sortField)
+        public async Task<IActionResult> Index([FromQuery(Name = "sort")] string? sortField, string search)
         {
-            return View(await _mediator.Send(new GetAllProductsQuery(sortField)));
+            var list = await _mediator.Send(new GetAllProductsQuery("newness", string.Empty));
+            var shopVM = new ShopViewModel
+            {
+                NewProductDetailDTOs = list.Take(3).ToList(),
+                ProductDetailDTOs = await _mediator.Send(new GetAllProductsQuery(sortField, search)),
+            };
+            return View(shopVM);
         }
 
         public async Task<IActionResult> Detail(string id)

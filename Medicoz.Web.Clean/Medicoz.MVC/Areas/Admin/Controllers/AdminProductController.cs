@@ -23,7 +23,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _mediator.Send(new GetAllProductsQuery(string.Empty)));
+            return View(await _mediator.Send(new GetAllProductsQuery(string.Empty,string.Empty)));
         }
 
         [HttpGet("create")]

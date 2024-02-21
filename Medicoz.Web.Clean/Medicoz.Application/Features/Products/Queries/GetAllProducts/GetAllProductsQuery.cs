@@ -9,12 +9,14 @@ namespace Medicoz.Application.Features.Products.Queries.GetAllProducts
 {
     public class GetAllProductsQuery :IRequest<List<ProductListDTO>>
     {
-        public GetAllProductsQuery(string sortField)
+        public GetAllProductsQuery(string sortField,string filterField)
         {
             SortField = sortField;
+            FilterField = filterField;
         }
 
         public string SortField { get; set; }
-        
+        public string FilterField { get; set; }
+
     }
 }
