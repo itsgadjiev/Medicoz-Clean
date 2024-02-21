@@ -1,4 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Cart;
+using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Domain;
 using Microsoft.AspNetCore.Http;
 
@@ -6,7 +7,13 @@ namespace Medicoz.Infrastructure.CartService
 {
     public class BasketService : IBasketService
     {
-        public Basket GetBasketFromCookies(HttpContext context)
+        private readonly IProductRepository _productRepository;
+
+        public BasketService(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+        public async Task<Basket> GetBasketFromCookies(HttpContext context)
         {
             var basketString = context.Request.Cookies["basket"];
             if (string.IsNullOrEmpty(basketString))
@@ -17,7 +24,13 @@ namespace Medicoz.Infrastructure.CartService
             }
             else
             {
-                var basket = Newtonsoft.Json.JsonConvert.DeserializeObject<Basket>(basketString); ;
+                var basket = Newtonsoft.Json.JsonConvert.DeserializeObject<Basket>(basketString);
+                foreach (var basketItem in basket.BasketItems)
+                {
+                    Product product =await _productRepository.GetByIdAsync(basketItem.ProductId);
+                    basketItem.Product = product;
+                }
+
                 return basket;
             }
         }

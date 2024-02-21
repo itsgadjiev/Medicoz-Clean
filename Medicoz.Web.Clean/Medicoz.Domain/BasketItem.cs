@@ -14,5 +14,6 @@ namespace Medicoz.Domain
         public int ProductCount { get; set; }
         public Basket Basket { get; set; }
         public string BasketId { get; set; }
+        public double BasketItemTotal { get; set; }
     }
 }

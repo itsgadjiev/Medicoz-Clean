@@ -10,7 +10,7 @@ namespace Medicoz.Application.Contracts.Cart
 {
     public interface IBasketService
     {
-        Basket GetBasketFromCookies(HttpContext context);
+        Task<Basket> GetBasketFromCookies(HttpContext context);
         void SaveBasketToCookies(HttpContext context, Basket basket);
     }
 }

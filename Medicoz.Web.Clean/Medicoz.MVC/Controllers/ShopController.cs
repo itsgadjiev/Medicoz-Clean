@@ -17,18 +17,14 @@ namespace Medicoz.MVC.Controllers
         private readonly IMediator _mediator;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IProductRepository _productRepository;
-        private readonly IBasketRepository _basketRepository;
-        private readonly IBasketItemRepository _basketItemRepository;
         private readonly IBasketService _basketService;
 
-        public ShopController(IMediator mediator, IHttpContextAccessor httpContextAccessor, IProductRepository productRepository, 
-            IBasketRepository basketRepository, IBasketItemRepository basketItemRepository,IBasketService basketService)
+        public ShopController(IMediator mediator, IHttpContextAccessor httpContextAccessor, IProductRepository productRepository,
+             IBasketService basketService)
         {
             _mediator = mediator;
             _httpContextAccessor = httpContextAccessor;
             _productRepository = productRepository;
-            _basketRepository = basketRepository;
-            _basketItemRepository = basketItemRepository;
             _basketService = basketService;
         }
 
@@ -50,7 +46,7 @@ namespace Medicoz.MVC.Controllers
         [HttpPost("product/{id}")]
         public async Task<IActionResult> AddToBasket(ProductDetailDTO productDetailDTO, string id)
         {
-            var basket = _basketService.GetBasketFromCookies(Request.HttpContext);
+            Basket basket = await _basketService.GetBasketFromCookies(Request.HttpContext);
             Product product = null;
 
             if (productDetailDTO.ProductId is null)
@@ -61,27 +57,32 @@ namespace Medicoz.MVC.Controllers
             if (product == null)
                 return NotFound();
 
-
-            BasketItem basketItem = _basketItemRepository
-               .FirstOrDefault(x =>
-               x.ProductId == product.Id
-               && x.Basket == basket);
+            BasketItem basketItem = basket.BasketItems.FirstOrDefault(x => x.ProductId == product.Id);
 
             if (basketItem == null)
             {
                 basketItem = new BasketItem()
                 {
+                    //ProductCount = 1,
                     ProductCount = (productDetailDTO.Count != 0 ? productDetailDTO.Count : 1),
-                    ProductId = product.Id
+                    ProductId = product.Id,
                 };
                 basket.BasketItems.Add(basketItem);
             }
             else
             {
-                basketItem.ProductCount += (basketItem.ProductCount != 0 ? basketItem.ProductCount : 1);
+                //basketItem.ProductCount += (basketItem.ProductCount != 0 ? basketItem.ProductCount : 1);
+                basketItem.ProductCount += 1;
+            }
+            basketItem.BasketItemTotal = basketItem.ProductCount * product.Price;
+
+            basket.BasketTotal = 0;
+            foreach (var item in basket.BasketItems)
+            {
+                basket.BasketTotal += item.BasketItemTotal;
             }
 
-            _basketService.SaveBasketToCookies(Request.HttpContext,basket);
+            _basketService.SaveBasketToCookies(Request.HttpContext, basket);
 
             return RedirectToAction("Index", "Home");
         }

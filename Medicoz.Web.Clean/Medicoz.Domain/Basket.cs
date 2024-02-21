@@ -10,5 +10,6 @@ namespace Medicoz.Domain
     public class Basket : BaseEntity
     {
         public List<BasketItem> BasketItems { get; set; }
+        public double BasketTotal { get; set; }
     }
 }

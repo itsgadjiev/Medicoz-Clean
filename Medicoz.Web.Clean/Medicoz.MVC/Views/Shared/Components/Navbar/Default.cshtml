@@ -2,7 +2,8 @@
 @using Medicoz.Application.Models.Identity;
 @using Medicoz.Identity.Models;
 @using Medicoz.Identity.Services;
-@model ApplicationUser
+@using Medicoz.MVC.ViewModels
+@model NavbarViewModel
 
 <header class="main-header header-style-one">
 
@@ -21,7 +22,7 @@
                 <div class="dropdown">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <span>@Model.FirstName</span>   <span>@Model.LastName</span>
+                        <span>@Model.ApplicationUser.FirstName</span>   <span>@Model.ApplicationUser.LastName</span>
                     }
 
                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -113,7 +114,7 @@
                     <!-- Main Menu End-->
 
                     <div class="outer-box">
-                        <a class="cart-btn" style="color:black;"><i class="icon flaticon-shopping-cart"></i><span class="count">3</span></a>
+                        <a asp-action="index" asp-controller="basket" class="cart-btn" style="color:black;"><i class="icon flaticon-shopping-cart"></i><span class="count">@Model.Basket.BasketItems.Count</span></a>
                         <a href="~/medicoz/appointment.html" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
                     </div>
                 </div>
