@@ -107,7 +107,10 @@
                     <li><h3>Cart Totals</h3></li>
                     <li class="clearfix total"><span class="col">Sub Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
                     <li class="clearfix total"><span class="col">Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
-                    <li class="text-right"><button type="submit" class="theme-btn proceed-btn">Proceed to Checkout</button></li>
+                    <li class="text-right"><a asp-action="CreateCheckoutSession" asp-controller="Payment" theme-btn proceed-btn">Proceed to Checkout</a></li>
+                    <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
+                        <button type="submit">Elvin yaxshi oglandi</button>
+                    </form>
                 </ul>
             </div>
         </div>
