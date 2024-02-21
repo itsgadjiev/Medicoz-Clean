@@ -8,6 +8,6 @@ namespace Medicoz.Application.Contracts.Payment
 {
     public interface IPaymentService
     {
-        void Charge(string stripeEmail, string stripeToken);
+        void Charge(string stripeEmail, long amount);
     }
 }

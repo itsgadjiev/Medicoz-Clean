@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Medicoz.Application.Contracts.Cart;
+using Medicoz.Application.Contracts.Payment;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Features.Products.Queries.GetAllProducts;
 using Medicoz.Application.Features.Products.Queries.GetProductById;
@@ -18,14 +19,16 @@ namespace Medicoz.MVC.Controllers
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IProductRepository _productRepository;
         private readonly IBasketService _basketService;
+        private readonly IPaymentService _paymentService;
 
         public ShopController(IMediator mediator, IHttpContextAccessor httpContextAccessor, IProductRepository productRepository,
-             IBasketService basketService)
+             IBasketService basketService,IPaymentService paymentService)
         {
             _mediator = mediator;
             _httpContextAccessor = httpContextAccessor;
             _productRepository = productRepository;
             _basketService = basketService;
+            _paymentService = paymentService;
         }
 
         public async Task<IActionResult> Index([FromQuery(Name = "sort")] string? sortField, string search)
@@ -85,6 +88,12 @@ namespace Medicoz.MVC.Controllers
             _basketService.SaveBasketToCookies(Request.HttpContext, basket);
 
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public IActionResult Pay()
+        {
+          return View();
         }
     }
 }

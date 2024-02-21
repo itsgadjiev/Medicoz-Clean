@@ -2891,7 +2891,8 @@
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "MimeKit": "4.2.0",
           "NETCore.MailKit": "2.1.0",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "Stripe.net": "43.15.0"
         },
         "runtime": {
           "Medicoz.Infrastructure.dll": {}

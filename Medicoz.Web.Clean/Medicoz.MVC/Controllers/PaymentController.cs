@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Medicoz.Application.Contracts.Payment;
+using Microsoft.AspNetCore.Mvc;
 using Stripe;
 
 namespace Medicoz.MVC.Controllers
@@ -6,40 +7,22 @@ namespace Medicoz.MVC.Controllers
     public class PaymentController : Controller
     {
         private readonly IConfiguration _configuration;
+        private readonly IPaymentService _paymentService;
 
-        public PaymentController(IConfiguration configuration)
+        public PaymentController(IConfiguration configuration,IPaymentService paymentService)
         {
             _configuration = configuration;
+            _paymentService = paymentService;
         }
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Charge(string stripeEmail, string stripeToken)
+        public IActionResult Charge(string stripeEmail, string stripeToken, long amount)
         {
-            StripeConfiguration.ApiKey = _configuration.GetSection("Stripe")["SecretKey"];
-
-            var options = new ChargeCreateOptions
-            {
-                Amount = 2000,
-                Currency = "usd",
-                Description = "Example charge",
-                Source = stripeToken, 
-                ReceiptEmail = stripeEmail
-            };
-
-            var service = new ChargeService();
-            try
-            {
-                var charge = service.Create(options);
-                return RedirectToAction("PaymentSuccess");
-            }
-            catch (StripeException ex)
-            {
-                ViewBag.Error = ex.Message;
-                return View("PaymentError");
-            }
+            _paymentService.Charge("ceyhun100203@gmail.com", 2000);
+            return RedirectToAction("Index","home");
         }
 
         public IActionResult PaymentSuccess()
