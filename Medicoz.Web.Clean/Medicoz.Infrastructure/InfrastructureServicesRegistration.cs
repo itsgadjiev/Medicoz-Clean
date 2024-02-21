@@ -1,8 +1,10 @@
-﻿using Medicoz.Application.Contracts.Email;
+﻿using Medicoz.Application.Contracts.Cart;
+using Medicoz.Application.Contracts.Email;
 using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Logging;
 using Medicoz.Application.Localizer;
+using Medicoz.Infrastructure.CartService;
 using Medicoz.Infrastructure.EmailService;
 using Medicoz.Infrastructure.LocalizationService;
 using Medicoz.Infrastructure.Logging;
@@ -19,6 +21,7 @@ public static class InfrastructureServicesRegistration
         serviceDescriptors
             .AddScoped<IEmailSender, EmailSender>()
             .AddScoped<IFileService, FileService.FileService>()
+            .AddScoped<IBasketService, BasketService>()
             .AddScoped(typeof(IDatabaseLocalizationService<>), typeof(LocalizationService<>))
             .AddScoped(typeof(IStringLocalizer<>), typeof(DatabaseStringLocalizer<>))
             .AddScoped(typeof(ILocalizationService<>), typeof(LocalizationService<>))

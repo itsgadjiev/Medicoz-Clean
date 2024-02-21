@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k41wPuBwK9K8dxC959euLYstakOxYs2MkauK2sodIJ9e+LkVKzDPrzgz+8W79XV+2S7W3/eCBf4JaEfcxkiXiw==",
+  "dgSpecHash": "xej0+VZEqmmLZEtUUuOEyqr787Kz0tTQgBJfds9LQpZRFuRWd9uSyN6jQO2Z1KXW+UfxM/jzGJLB01vFgLcSJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\Medicoz.MVC.csproj",
   "expectedPackageFiles": [
@@ -150,7 +150,7 @@
     "C:\\Users\\ceyhu\\.nuget\\packages\\mimekit\\4.2.0\\mimekit.4.2.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\netcore.mailkit\\2.1.0\\netcore.mailkit.2.1.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\ceyhu\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

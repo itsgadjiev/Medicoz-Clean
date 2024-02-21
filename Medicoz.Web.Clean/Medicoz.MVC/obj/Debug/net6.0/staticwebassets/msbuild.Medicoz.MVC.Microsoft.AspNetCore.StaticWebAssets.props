@@ -18928,21 +18928,5 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\c1fae8c6-e950-4682-acc9-0c4b3c35b2df.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\d3e90f58-c8d1-4d5f-b533-b1258d625f3f.jfif))">
-      <SourceType>Package</SourceType>
-      <SourceId>Medicoz.MVC</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Medicoz.MVC</BasePath>
-      <RelativePath>uploads/images/d3e90f58-c8d1-4d5f-b533-b1258d625f3f.jfif</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\images\d3e90f58-c8d1-4d5f-b533-b1258d625f3f.jfif))</OriginalItemSpec>
-    </StaticWebAsset>
   </ItemGroup>
 </Project>

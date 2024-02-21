@@ -8,7 +8,7 @@
         <div class="title-outer">
             <h1>Our Shop</h1>
             <ul class="page-breadcrumb">
-                <li><a href="index-2.html">Home</a></li>
+                <li><a asp-action="index" asp-controller="home">Home</a></li>
                 <li>Shop</li>
             </ul>
         </div>
@@ -47,7 +47,7 @@
                             <div class="shop-item col-lg-4 col-md-6 col-sm-12">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><a href="shop-single.html"><img src="./uploads/images/@item.ImageUrl" alt=""></a></figure>
+                                        <figure class="image"><a asp-action="detail" asp-route-id="@item.Id" asp-controller="shop"><img src="~/uploads/images/@item.ImageUrl" alt=""></a></figure>
                                     </div>
                                     <div class="lower-content">
                                         <div class="rating">
@@ -57,9 +57,11 @@
                                             <span class="fa fa-star"></span>
                                             <span class="fa fa-star light"></span>
                                         </div>
-                                        <h4 class="name"><a href="shop-single.html">@item.Name</a></h4>
+                                        <h4 class="name"><a asp-action="detail" asp-route-id="@item.Id" asp-controller="shop">@item.Name</a></h4>
                                         <div class="price"> $@item.Price</div>
-                                        <a href="shopping-cart.html" class="theme-btn add-to-cart">Add to cart</a>
+                                        <form method="post" asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@item.Id">
+                                            <button type="submit" class="theme-btn add-to-cart">Add to cart</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -68,39 +70,10 @@
                 </div>
             </div>
 
+
+            @await Component.InvokeAsync("Sidebar", false)
             <!--Sidebar Side-->
-            <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
-                <aside class="sidebar">
-                    <!--search box-->
-                    <div class="sidebar-widget search-box">
-                        <form method="post" asp-action="index" asp-controller="shop">
-                            <div class="form-group">
-                                <input type="search" name="search" placeholder="Search....." required="">
-                                <button type="submit"><span class="icon fa fa-search"></span></button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Latest News -->
-                    <div class="sidebar-widget latest-news">
-                        <div class="sidebar-title"><h3>Newest Products</h3></div>
-                        <div class="widget-content">
-                            @foreach (var item in Model.NewProductDetailDTOs)
-                            {
-                                <article class="post">
-                                    <div class="post-thumb"><a href="shop-single.html"><img src="images/resource/products/product-thumb-1.jpg" alt=""></a></div>
-                                    <h5><a href="shop-single.html">@item.Name</a></h5>
-                                    <div class="price">$@item.Price</div>
-                                    <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                                </article>
-                            }
-                         
-                        </div>
-                    </div>
-
-
-                </aside>
-            </div>
+            
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ohwh6Rt7RG23b/ddhlOTLYEG3FyOzLbBWMgvmyxvrcHn7RmQkjfJyCulgGzPXIFLAx3lIwF2onVSyr1UaWa4mA==",
+  "dgSpecHash": "4/fLrwVwijAqayelSFUVsc71oUfceGUJu1LMll0hc3fQMAJ7EZfMJF4pKYpA/6yVukVJmxMMuRl7SJhU6gS4cg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Infrastructure\\Medicoz.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,7 @@
     "C:\\Users\\ceyhu\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\mimekit\\4.2.0\\mimekit.4.2.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\netcore.mailkit\\2.1.0\\netcore.mailkit.2.1.0.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
