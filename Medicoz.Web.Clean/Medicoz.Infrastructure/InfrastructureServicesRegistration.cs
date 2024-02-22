@@ -1,6 +1,7 @@
 ﻿using Medicoz.Application.Contracts.Cart;
 using Medicoz.Application.Contracts.Email;
 using Medicoz.Application.Contracts.FileService;
+using Medicoz.Application.Contracts.Invoice;
 using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Logging;
 using Medicoz.Application.Contracts.Payment;
@@ -23,6 +24,7 @@ public static class InfrastructureServicesRegistration
             .AddScoped<IEmailSender, EmailSender>()
             .AddScoped<IFileService, FileService.FileService>()
             .AddScoped<IBasketService, BasketService>()
+            .AddSingleton<IInvoiceCreator,InvoiceService.InvoiceService>()
             .AddScoped<IPaymentService, PaymentService.PaymentService>()
             .AddScoped(typeof(IDatabaseLocalizationService<>), typeof(LocalizationService<>))
             .AddScoped(typeof(IStringLocalizer<>), typeof(DatabaseStringLocalizer<>))

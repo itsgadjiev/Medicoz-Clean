@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,7 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
     {
         public HttpContext HttpContext { get; set; }
         public Domain.Order Order { get; set; }
+        public IWebHost IWebHost { get; set; }
+
     }
 }

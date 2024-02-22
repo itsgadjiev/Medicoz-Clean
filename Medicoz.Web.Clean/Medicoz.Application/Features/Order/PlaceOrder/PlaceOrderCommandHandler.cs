@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Medicoz.Application.Contracts.Cart;
 using Medicoz.Application.Contracts.Email;
+using Medicoz.Application.Contracts.Invoice;
 using Medicoz.Application.Contracts.Payment;
 using Medicoz.Application.Exceptions;
 using Medicoz.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.Application.Features.Order.PlaceOrder
 {
@@ -12,12 +14,14 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
         private readonly IPaymentService _paymentService;
         private readonly IBasketService _basketService;
         private readonly IEmailSender _emailService;
+        private readonly IInvoiceCreator _invoiceCreator;
 
-        public PlaceOrderCommandHandler(IPaymentService paymentService, IBasketService basketService, IEmailSender emailService)
+        public PlaceOrderCommandHandler(IPaymentService paymentService, IBasketService basketService, IEmailSender emailService,IInvoiceCreator invoiceCreator)
         {
             _paymentService = paymentService;
             _basketService = basketService;
             _emailService = emailService;
+            _invoiceCreator = invoiceCreator;
         }
         public async Task<Unit> Handle(PlaceOrderCommand request, CancellationToken cancellationToken)
         {
@@ -39,6 +43,17 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
                 Phone = request.Order.Phone,
                 OrderStatus = Enums.OrderStatus.Success
             };
+
+            var fileContentResult = _invoiceCreator.GenerateInvoice(order);
+
+            byte[] fileContents = fileContentResult.FileContents;
+
+            string desktopFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            string filePath = Path.Combine(desktopFolderPath, $"Medicoz Invoice{DateTime.Now.ToString("d")+Guid.NewGuid().ToString().Substring(0,5)}.pdf");
+
+            System.IO.File.WriteAllBytes(filePath, fileContents);
+
+        
             return Unit.Value;
         }
     }

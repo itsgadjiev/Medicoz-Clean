@@ -320,6 +320,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.2, )"
