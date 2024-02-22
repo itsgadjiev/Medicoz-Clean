@@ -1,0 +1,76 @@
+﻿@using Medicoz.Application.Features.Slider.Commands.CreateSlider;
+@model CreateSliderCommand
+<form enctype="multipart/form-data" asp-action="create" asp-controller="adminslider">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input class="form-control" asp-for="Image">
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">RedirectUrl1</label>
+        <input class="form-control" asp-for="RedirectUrl1">
+        <span asp-validation-for="RedirectUrl1" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">RedirectUrl2</label>
+        <input class="form-control" asp-for="RedirectUrl2">
+        <span asp-validation-for="RedirectUrl2"></span>
+    </div>
+     <div class="mb-3">
+        <label class="form-label">TitleAZ</label>
+        <input class="form-control" asp-for="TitleAZ">
+        <span asp-validation-for="TitleAZ"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">TitleEN</label>
+        <input class="form-control" asp-for="TitleEN">
+        <span asp-validation-for="TitleEN"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">DescAZ</label>
+        <input class="form-control" asp-for="DescAZ">
+        <span asp-validation-for="DescAZ"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">DescEN</label>
+        <input class="form-control" asp-for="DescEN">
+        <span asp-validation-for="DescEN"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">QuoteAZ</label>
+        <input class="form-control" asp-for="QuoteAZ">
+        <span asp-validation-for="QuoteAZ"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">QuoteEN</label>
+        <input class="form-control" asp-for="QuoteEN">
+        <span asp-validation-for="QuoteEN"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BtnNameAZ1</label>
+        <input class="form-control" asp-for="BtnNameAZ1">
+        <span asp-validation-for="BtnNameAZ1"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BtnNameEN1</label>
+        <input class="form-control" asp-for="BtnNameEN1">
+        <span asp-validation-for="BtnNameEN1"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BtnNameAZ2</label>
+        <input class="form-control" asp-for="BtnNameAZ2">
+        <span asp-validation-for="BtnNameAZ2"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BtnNameEN2</label>
+        <input class="form-control" asp-for="BtnNameEN2">
+        <span asp-validation-for="BtnNameEN2"></span>
+    </div>
+
+
+    
+
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

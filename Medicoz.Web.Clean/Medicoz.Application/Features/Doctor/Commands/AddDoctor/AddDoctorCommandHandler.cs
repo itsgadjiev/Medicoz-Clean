@@ -3,8 +3,10 @@ using Medicoz.Application.Constants;
 using Medicoz.Application.Contracts.Email;
 using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Identity;
+using Medicoz.Application.Contracts.Localisation;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
+using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
 using Medicoz.Application.Features.Doctor.Common;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Domain;
@@ -16,6 +18,8 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
         private readonly IFileService _fileService;
         private readonly IAuthService _authService;
         private readonly IEmailSender _emailSender;
+        private readonly Contracts.Localisation.ILocalizationService<Domain.Department> _localizationService;
+        private readonly IDepartmentRepository _departmentRepository;
         private readonly IDoctorRepository _doctorRepository;
         private readonly IDoctorScheduleRepository _doctorScheduleRepository;
         private readonly IDoctorDepartmentRepository _doctorDepartmentRepository;
@@ -24,7 +28,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
         public AddDoctorCommandHandler(IDoctorRepository doctorRepository, IDoctorScheduleRepository doctorScheduleRepository,
             IDoctorDepartmentRepository doctorDepartmentRepository,
             IFileService fileService, GetHourlyWorkingTimeIntervalsForDoctor getHourlyWorkingTime,
-            IAuthService authService, IEmailSender emailSender)
+            IAuthService authService, IEmailSender emailSender,ILocalizationService<Domain.Department> localizationService,IDepartmentRepository departmentRepository)
         {
             _doctorRepository = doctorRepository;
             _doctorScheduleRepository = doctorScheduleRepository;
@@ -33,6 +37,8 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
             _getHourlyWorkingTime = getHourlyWorkingTime;
             _authService = authService;
             _emailSender = emailSender;
+            _localizationService = localizationService;
+            _departmentRepository = departmentRepository;
         }
         public async Task<Unit> Handle(AddDoctorCommand request, CancellationToken cancellationToken)
         {
@@ -105,7 +111,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 FirstName = request.Name,
                 LastName = request.Surname,
                 Password = "123321Ab!",
-                UserName = String.Concat(request.Name, request.Surname),
+                UserName = String.Concat(request.Name, request.Surname,request.Email,Guid.NewGuid().ToString().Substring(0,5)),
             };
 
 
@@ -120,7 +126,17 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 await _doctorDepartmentRepository.AddAsync(doctorDepartment);
             };
 
+            var departments = await _departmentRepository.GetAllAsync();
+            var departmetsListDto = departments.Select(x => new DepartmentListDTO
+            {
+                Detail = _localizationService.GetLocalizedValue(x.Id, nameof(x.Detail)),
+                Icon = x.Icon,
+                Id = x.Id,
+                ImageURL = x.ImageURL,
+                Name = _localizationService.GetLocalizedValue(x.Id, nameof(x.Name))
 
+            }).ToList();
+            request.DepartmentListDTO = departmetsListDto;
             await _authService.Register(registrationRequest, "Doctor");
             await _doctorRepository.SaveChangesAsync();
             //_emailSender.SendEmail(request.Email, "Medicoz", $"Welcome to our Company Dear {request.Name + request.Surname} ");

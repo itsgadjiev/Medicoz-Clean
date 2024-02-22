@@ -1,0 +1,118 @@
+﻿using MediatR;
+using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Exceptions;
+using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
+using Medicoz.Application.Features.Slider.Commands.CreateSlider;
+using Medicoz.Application.Features.Slider.Commands.UpdateSlider;
+using Medicoz.Application.Features.Slider.Queries.GetAllSliders;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Medicoz.MVC.Areas.Admin.Controllers
+{
+    [Route("admin/slider")]
+    [Area("admin")]
+    public class AdminSliderController : Controller
+    {
+        private readonly IMediator _mediator;
+    
+
+        public AdminSliderController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var sliders = await _mediator.Send(new GetAllSlidersQuery());
+            return View(sliders);
+        }
+
+
+        [HttpGet("create")]
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+        [HttpPost("create")]
+        public async Task<IActionResult> Create(CreateSliderCommand createSliderCommand)
+        {
+            try
+            {
+                var response = await _mediator.Send(createSliderCommand);
+            }
+            catch (CustomValidationException e)
+            {
+                foreach (var item in e.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                return View(createSliderCommand);
+            }
+            return RedirectToAction("index", "home");
+        }
+
+        //[HttpGet("update/{id}")]
+        //public async Task<IActionResult> Update(string id)
+        //{
+        //    var request = await _mediator.Send(handler);
+
+        //    return View(request);
+        //}
+
+        //[HttpGet("update/{code}")]
+        //public async Task<IActionResult> Update(UpdateSliderCommand request, string code)
+        //{
+        //    var sliders = await _sliderRepository.GetByUniqueCode(code);
+        //    request.EnglishContent = new();
+        //    request.AzerbaijaniContent = new();
+
+        //    foreach (var slider in sliders)
+        //    {
+        //        if (slider.Culture == "az")
+        //        {
+        //            request.EnglishContent.Quote = slider.Quote;
+        //            request.RedirectUrl1 = slider.RedirectUrl;
+        //            request.RedirectUrl2 = slider.RedirectUrl2;
+        //            request.AzerbaijaniContent.ButtonName1 = slider.ButtonName;
+        //            request.AzerbaijaniContent.ButtonName2 = slider.ButtonName2;
+        //            request.AzerbaijaniContent.Description = slider.Description;
+        //            request.AzerbaijaniContent.Quote = slider.Quote;
+        //            request.AzerbaijaniContent.Title = slider.Title;
+        //        }
+
+        //        if (slider.Culture == "en-US")
+        //        {
+        //            request.EnglishContent.Quote = slider.Quote;
+        //            request.RedirectUrl1 = slider.RedirectUrl;
+        //            request.RedirectUrl2 = slider.RedirectUrl2;
+        //            request.EnglishContent.ButtonName1 = slider.ButtonName;
+        //            request.EnglishContent.ButtonName2 = slider.ButtonName2;
+        //            request.EnglishContent.Description = slider.Description;
+        //            request.EnglishContent.Quote = slider.Quote;
+        //            request.EnglishContent.Title = slider.Title;
+        //        }
+        //    }
+        //    return View(request);
+        //}
+
+        [HttpPost("update/{UniqueCodeForLocalisation}")]
+        public async Task<IActionResult> Update(UpdateSliderCommand request)
+        {
+            try
+            {
+                var response = await _mediator.Send(request);
+            }
+            catch (CustomValidationException e)
+            {
+                foreach (var item in e.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                return View(request);
+            }
+            return RedirectToAction("index", "home");
+        }
+
+    }
+}

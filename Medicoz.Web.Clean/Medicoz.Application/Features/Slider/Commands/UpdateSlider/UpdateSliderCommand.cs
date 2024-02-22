@@ -10,22 +10,15 @@ namespace Medicoz.Application.Features.Slider.Commands.UpdateSlider
 {
     public class UpdateSliderCommand : IRequest<Unit>
     {
-        public SliderContent EnglishContent { get; set; }
-        public SliderContent AzerbaijaniContent { get; set; }
-        public IFormFile Image { get; set; }
-        public string RedirectUrl1 { get; set; }
+        public Dictionary<string, string> Title { get; set; }
+        public Dictionary<string, string> Description { get; set; }
+        public Dictionary<string, string> Quote { get; set; }
+        public Dictionary<string, string> ButtonName { get; set; }
+        public Dictionary<string, string> ButtonName2 { get; set; }
+        public string RedirectUrl { get; set; }
         public string RedirectUrl2 { get; set; }
-        public string UniqueCodeForLocalisation { get; set; }
+        public string ImageUrl { get; set; }
+        public IFormFile NewImage{ get; set; }
 
-        public class SliderContent
-        {
-            public string Culture { get; set; }
-            public string Title { get; set; }
-            public string Description { get; set; }
-            public string Quote { get; set; }
-            public string ButtonName1 { get; set; }
-            public string ButtonName2 { get; set; }
-
-        }
     }
 }

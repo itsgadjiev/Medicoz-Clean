@@ -7,77 +7,42 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
     {
         public CreateSliderCommandValidator()
         {
-            RuleFor(command => command.EnglishContent)
-                .SetValidator(new SliderContentValidator());
 
-            RuleFor(command => command.AzerbaijaniContent)
-                .SetValidator(new SliderContentValidator());
+            RuleFor(content => content.TitleAZ)
+                .NotNull().WithMessage("TitleEN is required.")
+               .NotEmpty().WithMessage("TitleAZ is required.")
+               .MinimumLength(2)
+               .MaximumLength(100);
 
-            RuleFor(x => x.Image)
-             .NotNull()
-             .WithMessage("Cant be null");
+            RuleFor(content => content.TitleEN)
+               .NotNull().WithMessage("TitleEN is required.")
+               .NotEmpty().WithMessage("TitleEN is required.")
+               .MinimumLength(2)
+               .MaximumLength(100);
 
-             RuleFor(x => x.Image)
-             .Must(IsValidImage)
-             .WithMessage("Not valid image");
-        }
+            RuleFor(content => content.DescAZ)
+              .NotNull().WithMessage("DescAZ is required.")
+              .NotEmpty().WithMessage("DescAZ is required.")
+              .MinimumLength(2)
+              .MaximumLength(100);
 
-        public bool IsValidImage(IFormFile file)
-        {
-            if (file != null)
-            {
-                if (file.ContentType != "image/jpeg" && file.ContentType != "image/png")
-                {
-                    return false;
-                }
-                if (file.Length > 2097152)
-                {
-                    return false;
-                }
-                return true;
-            }
-            return false;
-        }
-    }
+            RuleFor(content => content.DescEN)
+             .NotNull().WithMessage("DescEN is required.")
+             .NotEmpty().WithMessage("DescEN is required.")
+             .MinimumLength(2)
+             .MaximumLength(100);
 
-    public class SliderContentValidator : AbstractValidator<SliderContent>
-    {
-        public SliderContentValidator()
-        {
-            RuleFor(content => content.Title)
-                .NotEmpty().WithMessage("Title is required.")
-                .MinimumLength(5)
-                .MaximumLength(300);
+            RuleFor(content => content.QuoteEN)
+              .NotNull().WithMessage("QuoteENon is required.")
+              .NotEmpty().WithMessage("QuoteEN is required.")
+              .MinimumLength(2)
+              .MaximumLength(100);
 
-            RuleFor(content => content.Description)
-                .NotNull()
-                .NotEmpty().WithMessage("Description is required.")
-                .MinimumLength(5)
-                .MaximumLength(300);
-
-            RuleFor(content => content.Quote)
-                .NotNull()
-                .NotEmpty().WithMessage("Quote is required.")
-                .MinimumLength(5)
-                .MaximumLength(300);
-
-            RuleFor(content => content.ButtonName1)
-                .NotNull()
-                .NotEmpty().WithMessage("ButtonName1 is required.")
-                .MinimumLength(2)
-                .MaximumLength(30);
-
-            RuleFor(content => content.ButtonName2)
-                .NotNull()
-                .NotEmpty().WithMessage("ButtonName2 is required.")
-                .MinimumLength(2)
-                .MaximumLength(30);
-
-            RuleFor(content => content.Quote)
-                .NotNull()
-                .NotEmpty().WithMessage("Title is required.")
-                .MinimumLength(5)
-                .MaximumLength(300);
+            RuleFor(content => content.QuoteAZ)
+              .NotEmpty().WithMessage("Icon is required.")
+              .NotNull().WithMessage("Icon is required.")
+              .MinimumLength(2)
+              .MaximumLength(100);
         }
     }
 }

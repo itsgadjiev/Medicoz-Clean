@@ -6,22 +6,22 @@ namespace Medicoz.Application.Features.Slider.Commands.CreateSlider
 {
     public class CreateSliderCommand : IRequest<Unit>
     {
-        public SliderContent EnglishContent { get; set; }
-        public SliderContent AzerbaijaniContent { get; set; }
+
+        public string TitleAZ { get; set; }
+        public string TitleEN{ get; set; }
+        public string DescEN{ get; set; }
+        public string DescAZ{ get; set; }
+        public string QuoteAZ{ get; set; }
+        public string QuoteEN{ get; set; }
+        public string BtnNameEN1{ get; set; }
+        public string BtnNameAZ1{ get; set; }
+        public string BtnNameAZ2{ get; set; }
+        public string BtnNameEN2{ get; set; }
         public IFormFile Image { get; set; }
         public string RedirectUrl1 { get; set; }
         public string RedirectUrl2 { get; set; }
 
     }
 
-    public class SliderContent
-    {
-        public string Culture { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Quote { get; set; }
-        public string ButtonName1 { get; set; }
-        public string ButtonName2 { get; set; }
-        public JsonDocument Content { get; set; }
-    }
+    
 }

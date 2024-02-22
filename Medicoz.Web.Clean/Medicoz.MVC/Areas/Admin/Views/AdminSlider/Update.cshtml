@@ -1,0 +1,43 @@
+﻿@using Medicoz.Application.Constants
+@using Medicoz.Application.Features.Slider.Commands.UpdateSlider;
+@model UpdateSliderCommand
+<form enctype="multipart/form-data" asp-action="update" asp-controller="slider">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input class="form-control" asp-for="NewImage">
+        <span asp-validation-for="NewImage" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title[LocalizationLanguages.EN]">Title En</label>
+        <input asp-for="Title[LocalizationLanguages.EN]" class=" form-control">
+        <span asp-validation-for="Title[LocalizationLanguages.EN]" class="invalid-feedback text-danger" style="display:block"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title[LocalizationLanguages.AZ]">Title AZ</label>
+        <input asp-for="Title[LocalizationLanguages.AZ]" class=" form-control">
+        <span asp-validation-for="Title[LocalizationLanguages.AZ]" class="invalid-feedback text-danger" style="display:block"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description[LocalizationLanguages.EN]">Description En</label>
+        <input asp-for="Description[LocalizationLanguages.EN]" class=" form-control">
+        <span asp-validation-for="Description[LocalizationLanguages.EN]" class="invalid-feedback text-danger" style="display:block"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description[LocalizationLanguages.AZ]">Description az</label>
+        <input asp-for="Description[LocalizationLanguages.AZ]" class=" form-control">
+        <span asp-validation-for="Description[LocalizationLanguages.AZ]" class="invalid-feedback text-danger" style="display:block"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Title[LocalizationLanguages.EN]">Title En</label>
+        <input asp-for="Title[LocalizationLanguages.EN]" class=" form-control">
+        <span asp-validation-for="Title[LocalizationLanguages.EN]" class="invalid-feedback text-danger" style="display:block"></span>
+    </div>
+    
+    <hr>
+
+    
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

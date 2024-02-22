@@ -50,6 +50,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/AdminSlider/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/AdminSlider/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/AdminSlider/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Dashboard/Hospital.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEhvc3BpdGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,14 +84,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Slider/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/Slider/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Areas/Admin/Views/_ViewImports.cshtml]
@@ -108,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ceyhu/OneDrive/Рабочий стол/uje bilmire/Medicoz-Clean/Medicoz.Web.Clean/Medicoz.MVC/Views/Doctor/Detail.cshtml]
