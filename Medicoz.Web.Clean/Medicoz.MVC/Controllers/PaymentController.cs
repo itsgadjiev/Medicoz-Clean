@@ -26,7 +26,7 @@ namespace Medicoz.MVC.Controllers
                 Order = basketViewModel.Order,
                 HttpContext = HttpContext
             });
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","shop");
         }
     }
 }

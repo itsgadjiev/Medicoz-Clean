@@ -36,11 +36,8 @@ namespace Medicoz.Infrastructure.InvoiceService
 
             var invoicePdfBytes = GenerateInvoicePdf(invoice, _webHostEnvironment);
 
-            
-            return new FileContentResult(invoicePdfBytes, "application/pdf")
-            {
-                FileDownloadName = "invoice.pdf123"
-            };
+            return new FileContentResult(invoicePdfBytes, "application/pdf");
+          
         }
 
         private byte[] GenerateInvoicePdf(Domain.Invoice invoice, IWebHostEnvironment hostingEnvironment)
@@ -65,7 +62,7 @@ namespace Medicoz.Infrastructure.InvoiceService
             {
                 gfx.DrawString($"{item.Name}: ${item.Price}", font, XBrushes.Black, 20, y);
 
-                string imagePath = Path.Combine(hostingEnvironment.ContentRootPath, item.ImageUrl.TrimStart('~', '/'));
+                string imagePath = Path.Combine(hostingEnvironment.ContentRootPath,"wwwroot", item.ImageUrl.TrimStart('~', '/'));
                 if (System.IO.File.Exists(imagePath))
                 {
                     XImage image = XImage.FromFile(imagePath);
