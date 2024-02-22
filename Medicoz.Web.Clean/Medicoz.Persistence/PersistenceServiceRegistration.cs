@@ -29,6 +29,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IBasketItemRepository, BasketItemRepository>();
         services.AddScoped<IBasketRepository, BasketRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
 
         return services;
     }

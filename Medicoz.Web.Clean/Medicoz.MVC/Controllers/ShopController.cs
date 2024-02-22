@@ -8,7 +8,6 @@ using Medicoz.Application.Features.Products.Queries.GetProductByIdDetail;
 using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Medicoz.MVC.Controllers
 {
@@ -22,7 +21,7 @@ namespace Medicoz.MVC.Controllers
         private readonly IPaymentService _paymentService;
 
         public ShopController(IMediator mediator, IHttpContextAccessor httpContextAccessor, IProductRepository productRepository,
-             IBasketService basketService,IPaymentService paymentService)
+             IBasketService basketService, IPaymentService paymentService)
         {
             _mediator = mediator;
             _httpContextAccessor = httpContextAccessor;
@@ -93,7 +92,7 @@ namespace Medicoz.MVC.Controllers
         [HttpGet]
         public IActionResult Pay()
         {
-          return View();
+            return View();
         }
     }
 }

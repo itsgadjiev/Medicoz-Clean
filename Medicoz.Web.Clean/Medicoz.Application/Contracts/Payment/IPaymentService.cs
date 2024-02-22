@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.Application.Contracts.Payment
 {
     public interface IPaymentService
     {
-        void Charge(string stripeEmail, long amount);
+        StatusCodeResult Charge(HttpContext httpContext, long? amount, string orderDetail);
     }
 }

@@ -52,7 +52,7 @@
                 </table>
             </div>
 
-            <div class="cart-options clearfix">
+           @*  <div class="cart-options clearfix">
                 <div class="pull-left">
                     <div class="apply-coupon clearfix">
                         <div class="form-group clearfix">
@@ -67,7 +67,7 @@
                 <div class="pull-right">
                     <button type="button" class="theme-btn cart-btn">update cart</button>
                 </div>
-            </div>
+            </div> *@
         </div>
 
         <div class="row justify-content-between">
@@ -83,16 +83,13 @@
                             <form method="post" action="https://smallcharge.ml/contact.html">
                                 <div class="row clearfix">
                                     <div class="form-group col-md-6 col-sm-12">
-                                        <input type="text" name="text" placeholder="Pakistan" required>
+                                        <input asp-for="Order.FullName" type="text" name="text" placeholder="Fullname" required>
                                     </div>
                                     <div class="form-group col-md-6 col-sm-12">
-                                        <input type="text" name="text" placeholder="Postcode / ZIP" required>
+                                        <input asp-for="Order.FullName" type="text" name="text" placeholder="Phone" required>
                                     </div>
                                     <div class="form-group col-md-12 col-sm-12">
-                                        <input type="text" name="text" placeholder="State / County" required>
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12">
-                                        <button class="theme-btn totals-btn" type="submit" name="submit-form">Update Totals</button>
+                                        <input asp-for="Order.FullName" type="email" name="text" placeholder="Email" required>
                                     </div>
                                 </div>
                             </form>
@@ -107,10 +104,12 @@
                     <li><h3>Cart Totals</h3></li>
                     <li class="clearfix total"><span class="col">Sub Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
                     <li class="clearfix total"><span class="col">Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
-                    <li class="text-right"><a asp-action="CreateCheckoutSession" asp-controller="Payment" theme-btn proceed-btn">Proceed to Checkout</a></li>
-                    <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
-                        <button type="submit">Elvin yaxshi oglandi</button>
-                    </form>
+                    <li class="text-right">
+                        <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
+                            <button class="theme-btn coupon-btn" type="submit">Place Order</button>
+                        </form>
+                    </li>
+                   
                 </ul>
             </div>
         </div>

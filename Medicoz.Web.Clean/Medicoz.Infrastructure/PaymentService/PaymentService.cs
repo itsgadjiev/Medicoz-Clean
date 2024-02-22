@@ -1,59 +1,56 @@
 ﻿using Medicoz.Application.Contracts.Payment;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using NETCore.MailKit.Core;
 using Stripe;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Stripe.Checkout;
 
 namespace Medicoz.Infrastructure.PaymentService
 {
     public class PaymentService : IPaymentService
     {
         private readonly IConfiguration _configuration;
+        private readonly IEmailService _emailService;
 
         public PaymentService(IConfiguration configuration)
         {
             _configuration = configuration;
         }
-     
-        public void Charge(string stripeEmail,long amount)
+
+        public StatusCodeResult Charge(HttpContext httpContext, long? amount, string orderDetail)
         {
-            try
+            StripeConfiguration.ApiKey = _configuration.GetSection("Stripe")["SecretKey"];
+            var domain = "https://localhost:7000";
+
+            var options = new Stripe.Checkout.SessionCreateOptions
             {
-                string stripeSecretKey = _configuration.GetSection("Stripe")["SecretKey"];
-                if (string.IsNullOrEmpty(stripeSecretKey))
+                SuccessUrl = "https://example.com/success",
+                LineItems = new List<Stripe.Checkout.SessionLineItemOptions>
                 {
-                    throw new ApplicationException("Stripe secret key not found in configuration.");
-                }
+                  new Stripe.Checkout.SessionLineItemOptions
+                  {
+                      PriceData = new SessionLineItemPriceDataOptions
+                       {
+                            UnitAmount = amount,
+                            Currency = "usd",
+                            ProductData = new SessionLineItemPriceDataProductDataOptions
+                            {
+                               Name = orderDetail,
+                            }
+                       },
+                      Quantity=1
+                  },
+                },
+                Mode = "payment",
+                CancelUrl = domain + "/cancel",
+            };
 
-                StripeConfiguration.ApiKey = stripeSecretKey;
+            var service = new Stripe.Checkout.SessionService();
+            Stripe.Checkout.Session session = service.Create(options);
 
-                var options = new ChargeCreateOptions
-                {
-                    Amount = amount,
-                    Currency = "usd",
-                    Description = "Example charge",
-                    Source = "4242424242424242",
-                    ReceiptEmail = stripeEmail
-                };
-
-                var service = new ChargeService();
-
-                var charge = service.Create(options);
-
-            }
-            catch (StripeException ex)
-            {
-                
-                throw;
-            }
-            catch (Exception ex)
-            {
-                
-                throw;
-            }
+            httpContext.Response.Headers.Add("Location", session.Url);
+            return new StatusCodeResult(303);
         }
     }
 }

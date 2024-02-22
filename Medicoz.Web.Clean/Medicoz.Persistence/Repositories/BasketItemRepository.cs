@@ -13,7 +13,7 @@ namespace Medicoz.Persistence.Repositories
 
         public BasketItem FirstOrDefault(Expression<Func<BasketItem, bool>> predicate)
         {
-            return _context.BasketItems.FirstOrDefault();
+            return new BasketItem();
         }
     }
 }
