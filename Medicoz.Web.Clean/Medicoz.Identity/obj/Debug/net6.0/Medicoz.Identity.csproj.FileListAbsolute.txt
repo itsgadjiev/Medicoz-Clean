@@ -30,10 +30,10 @@ C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medico
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.AssemblyInfoInputs.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.AssemblyInfo.cs
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.csproj.CoreCompileInputs.cache
+C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.sourcelink.json
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.csproj.CopyComplete
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\refint\Medicoz.Identity.dll
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.pdb
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.genruntimeconfig.cache
 C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\ref\Medicoz.Identity.dll
-C:\Users\ceyhu\OneDrive\Рабочий стол\uje bilmire\Medicoz-Clean\Medicoz.Web.Clean\Medicoz.Identity\obj\Debug\net6.0\Medicoz.Identity.sourcelink.json

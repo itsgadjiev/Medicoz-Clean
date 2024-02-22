@@ -2,7 +2,12 @@
 using Medicoz.Application.Contracts.Email;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
-
+using System.Net.Mail;
+using System.Net;
+using SmtpClient = MailKit.Net.Smtp.SmtpClient;
+using System.Reflection.Metadata;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace Medicoz.Infrastructure.EmailService;
 
@@ -15,24 +20,23 @@ public class EmailSender : IEmailSender
         _configuration = configuration;
     }
 
-    public void SendEmail(string toEmail, string subject, string messageText)
+    public async Task SendEmailAsync(string toEmail, string subject, string messageText)
     {
         var emailSettings = _configuration.GetSection("EmailSettings");
 
-        var message = new MimeMessage();
-        message.From.Add(new MailboxAddress("Medicoz", emailSettings["Username"]));
-
-        message.Subject = subject;
-        message.Body = new TextPart("plain") { Text = messageText };
-
-        message.To.Add(new MailboxAddress("", toEmail));
-
-        using (var client = new SmtpClient())
+        string apiKey = Environment.GetEnvironmentVariable("ApiKey");
+        var client = new SendGridClient(apiKey);
+        var msg = new SendGridMessage()
         {
-            client.Connect(emailSettings["SmtpServer"], int.Parse(emailSettings["SmtpPort"]), false);
-            client.Authenticate(emailSettings["Username"], emailSettings["Password"]);
-            client.Send(message);
-            client.Disconnect(true);
-        }
+            From = new EmailAddress(emailSettings["Username"], "Medicoz"),
+            Subject = $"Medicoz",
+            PlainTextContent = $"salam",
+        };
+        msg.AddTo(new EmailAddress($"{toEmail}"));
+
+        var response = await client.SendEmailAsync(msg);
+
+       
+
     }
 }

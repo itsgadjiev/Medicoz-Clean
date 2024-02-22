@@ -49,7 +49,7 @@ public class MakeAnAppointmentCommandHandler : IRequestHandler<MakeAnAppointment
         };
 
         await _doctorAppointmentRepository.AddAsync(doctorAppointment);
-        _emailSender.SendEmail(request.PasentEmail, "Medicoz Doctor Appointment", $"Doctor Appointment on:{request.ReservationDate.ToShortTimeString()}");
+        _emailSender.SendEmailAsync(request.PasentEmail, "Medicoz Doctor Appointment", $"Doctor Appointment on:{request.ReservationDate.ToShortTimeString()}");
 
         return Unit.Value;
     }

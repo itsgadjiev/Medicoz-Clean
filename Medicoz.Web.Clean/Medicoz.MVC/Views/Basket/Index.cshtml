@@ -52,21 +52,21 @@
                 </table>
             </div>
 
-           @*  <div class="cart-options clearfix">
-                <div class="pull-left">
-                    <div class="apply-coupon clearfix">
-                        <div class="form-group clearfix">
-                            <input type="text" name="coupon-code" value="" placeholder="Coupon Code">
-                        </div>
-                        <div class="form-group clearfix">
-                            <button type="button" class="theme-btn coupon-btn">Apply Coupon</button>
-                        </div>
-                    </div>
-                </div>
+            @*  <div class="cart-options clearfix">
+            <div class="pull-left">
+            <div class="apply-coupon clearfix">
+            <div class="form-group clearfix">
+            <input type="text" name="coupon-code" value="" placeholder="Coupon Code">
+            </div>
+            <div class="form-group clearfix">
+            <button type="button" class="theme-btn coupon-btn">Apply Coupon</button>
+            </div>
+            </div>
+            </div>
 
-                <div class="pull-right">
-                    <button type="button" class="theme-btn cart-btn">update cart</button>
-                </div>
+            <div class="pull-right">
+            <button type="button" class="theme-btn cart-btn">update cart</button>
+            </div>
             </div> *@
         </div>
 
@@ -76,22 +76,22 @@
                     <div class="inner-box">
                         <h3>Free Shipping</h3>
                         <h4>Calculate Shipping</h4>
-
                         <!-- Shipping Form -->
                         <div class="shipping-form">
                             <!--Shipping Form-->
-                            <form method="post" action="https://smallcharge.ml/contact.html">
+                            <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
                                 <div class="row clearfix">
                                     <div class="form-group col-md-6 col-sm-12">
-                                        <input asp-for="Order.FullName" type="text" name="text" placeholder="Fullname" required>
+                                        <input asp-for="Order.FullName" placeholder="Fullname" required>
                                     </div>
                                     <div class="form-group col-md-6 col-sm-12">
-                                        <input asp-for="Order.FullName" type="text" name="text" placeholder="Phone" required>
+                                        <input asp-for="Order.Phone" placeholder="Phone" required>
                                     </div>
                                     <div class="form-group col-md-12 col-sm-12">
-                                        <input asp-for="Order.FullName" type="email" name="text" placeholder="Email" required>
+                                        <input asp-for="Order.Email" placeholder="Email" required>
                                     </div>
                                 </div>
+                                <button class="theme-btn coupon-btn" type="submit">Place Order</button>
                             </form>
                         </div>
                     </div>
@@ -105,11 +105,7 @@
                     <li class="clearfix total"><span class="col">Sub Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
                     <li class="clearfix total"><span class="col">Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
                     <li class="text-right">
-                        <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
-                            <button class="theme-btn coupon-btn" type="submit">Place Order</button>
-                        </form>
                     </li>
-                   
                 </ul>
             </div>
         </div>
@@ -135,7 +131,7 @@
 </section>
 <!--End Clients Section -->
 <style>
-    .preloader{
-        position:unset !important;
+    .preloader {
+        position: unset !important;
     }
 </style>

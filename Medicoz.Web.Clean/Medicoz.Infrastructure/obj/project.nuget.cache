@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+z6PK+0EGUffZQ4Q37XwF9xg7UuqhzUc/c98OjTe1RcNJr5JEYmY/wnvxBtCIpvOf6xkM+5+CKOwSLkLc0Vdjg==",
+  "dgSpecHash": "sm34CRF3xnEy+OWUquc+E9p67EO5uxMK3OuiAL3YBBthnWvZVaaNLFfWP3LCfZU7jTQpf6pcs/APFgqKjFxjFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.Infrastructure\\Medicoz.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -80,6 +80,8 @@
     "C:\\Users\\ceyhu\\.nuget\\packages\\netcore.mailkit\\2.1.0\\netcore.mailkit.2.1.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\sendgrid\\9.29.2\\sendgrid.9.29.2.nupkg.sha512",
+    "C:\\Users\\ceyhu\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\stripe.net\\43.15.0\\stripe.net.43.15.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\ceyhu\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

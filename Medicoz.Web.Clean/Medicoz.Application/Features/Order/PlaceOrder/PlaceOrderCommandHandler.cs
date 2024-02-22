@@ -3,6 +3,7 @@ using Medicoz.Application.Contracts.Cart;
 using Medicoz.Application.Contracts.Email;
 using Medicoz.Application.Contracts.Payment;
 using Medicoz.Application.Exceptions;
+using Medicoz.Domain;
 
 namespace Medicoz.Application.Features.Order.PlaceOrder
 {
@@ -27,6 +28,17 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
             }
 
             _paymentService.Charge(request.HttpContext, (long)basket.BasketTotal, "Medicoz");
+
+            await _emailService.SendEmailAsync(request.Order.Email, "MEdicoz", "Sallam");
+
+            Domain.Order order = new Domain.Order
+            {
+                Basket = basket,
+                Email = request.Order.Email,
+                FullName = request.Order.FullName,  
+                Phone = request.Order.Phone,
+                OrderStatus = Enums.OrderStatus.Success
+            };
             return Unit.Value;
         }
     }
