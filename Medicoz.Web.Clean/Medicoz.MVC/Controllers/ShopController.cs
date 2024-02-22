@@ -30,6 +30,7 @@ namespace Medicoz.MVC.Controllers
             _paymentService = paymentService;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index([FromQuery(Name = "sort")] string? sortField, string search)
         {
             var shopVM = new ShopViewModel
@@ -89,10 +90,6 @@ namespace Medicoz.MVC.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpGet]
-        public IActionResult Pay()
-        {
-            return View();
-        }
     }
 }
+

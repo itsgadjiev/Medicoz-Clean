@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Medicoz.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5fb178fdcfda848592e9a488d1981b0d399f130")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+768282730fe2cdabb7b6a9c06aeddbb7a437f5c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Medicoz.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Medicoz.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

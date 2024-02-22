@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Medicoz.Application.Enums
+namespace Medicoz.Domain.Common.Enums
 {
     public enum OrderStatus
     {

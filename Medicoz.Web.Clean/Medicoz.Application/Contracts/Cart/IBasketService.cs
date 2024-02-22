@@ -12,5 +12,6 @@ namespace Medicoz.Application.Contracts.Cart
     {
         Task<Basket> GetBasketFromCookies(HttpContext context);
         void SaveBasketToCookies(HttpContext context, Basket basket);
+        void DeleteBasket(HttpContext httpContext);
     }
 }

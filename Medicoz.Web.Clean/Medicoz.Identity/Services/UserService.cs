@@ -1,5 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Identity;
-using Medicoz.Identity.Models;
+using Medicoz.Application.Models.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;

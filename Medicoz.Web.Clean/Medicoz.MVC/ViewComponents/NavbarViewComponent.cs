@@ -11,7 +11,7 @@ namespace Medicoz.MVC.ViewComponents
         private readonly IUserService _userService;
         private readonly IBasketService _basketService;
 
-        public NavbarViewComponent(IUserService userService,IBasketService basketService)
+        public NavbarViewComponent(IUserService userService, IBasketService basketService)
         {
             _userService = userService;
             _basketService = basketService;
@@ -19,7 +19,7 @@ namespace Medicoz.MVC.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             NavbarViewModel navbarViewModel = new NavbarViewModel();
-            var user = new Identity.Models.ApplicationUser();
+            var user = new ApplicationUser();
             if (User.Identity.IsAuthenticated)
             {
                 navbarViewModel.ApplicationUser = await _userService.GetCurrentUserAsync();

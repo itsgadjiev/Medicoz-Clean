@@ -2,7 +2,6 @@
 using Medicoz.Application.Contracts.FileService;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
-using Medicoz.Application.Features.Products.Commands.AddCommand;
 using Medicoz.Domain;
 
 namespace Medicoz.Application.Features.Products.Commands.AddProduct

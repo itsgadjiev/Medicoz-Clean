@@ -21,7 +21,7 @@ namespace Medicoz.Infrastructure.InvoiceService
 
             var invoice = new Domain.Invoice
             {
-                InvoiceNumber = Guid.NewGuid().ToString(),
+                InvoiceNumber = order.Id,
                 InvoiceDate = DateTime.Now,
                 CustomerName = order.FullName,
                 InvoiceItems = order.Basket.BasketItems.Select(x => new Domain.InvoiceItem
@@ -37,7 +37,7 @@ namespace Medicoz.Infrastructure.InvoiceService
             var invoicePdfBytes = GenerateInvoicePdf(invoice, _webHostEnvironment);
 
             return new FileContentResult(invoicePdfBytes, "application/pdf");
-          
+
         }
 
         private byte[] GenerateInvoicePdf(Domain.Invoice invoice, IWebHostEnvironment hostingEnvironment)
@@ -47,7 +47,6 @@ namespace Medicoz.Infrastructure.InvoiceService
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
             GlobalFontSettings.FontResolver = new FileFontResolver();
-
             XFont font = new XFont(GlobalFontSettings.DefaultFontName, 12);
 
             int y = 20;
@@ -62,7 +61,7 @@ namespace Medicoz.Infrastructure.InvoiceService
             {
                 gfx.DrawString($"{item.Name}: ${item.Price}", font, XBrushes.Black, 20, y);
 
-                string imagePath = Path.Combine(hostingEnvironment.ContentRootPath,"wwwroot", item.ImageUrl.TrimStart('~', '/'));
+                string imagePath = Path.Combine(hostingEnvironment.ContentRootPath, "wwwroot", item.ImageUrl.TrimStart('~', '/'));
                 if (System.IO.File.Exists(imagePath))
                 {
                     XImage image = XImage.FromFile(imagePath);
@@ -94,9 +93,9 @@ namespace Medicoz.Infrastructure.InvoiceService
         public string DefaultFontName => "Roboto-Black";
         public byte[] GetFont(string faceName)
         {
-            
+
             string desktopFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            string fontFileName = "Roboto-Black.ttf"; 
+            string fontFileName = "Roboto-Black.ttf";
             string fontFilePath = Path.Combine(desktopFolderPath, fontFileName);
 
             if (File.Exists(fontFilePath))
@@ -111,10 +110,8 @@ namespace Medicoz.Infrastructure.InvoiceService
 
         public FontResolverInfo ResolveTypeface(string familyName, bool isBold, bool isItalic)
         {
-            
-            
             string desktopFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            string fontFileName = "Roboto-Black.ttf"; 
+            string fontFileName = "Roboto-Black.ttf";
             string fontFilePath = Path.Combine(desktopFolderPath, fontFileName);
 
             if (File.Exists(fontFilePath))
@@ -123,7 +120,7 @@ namespace Medicoz.Infrastructure.InvoiceService
             }
             else
             {
-                return null; 
+                return null;
             }
         }
     }

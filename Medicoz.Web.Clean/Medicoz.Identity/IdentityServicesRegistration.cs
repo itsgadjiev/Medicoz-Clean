@@ -1,7 +1,6 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Models.Identity;
 using Medicoz.Identity.DbContext;
-using Medicoz.Identity.Models;
 using Medicoz.Identity.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;

@@ -1,10 +1,9 @@
 ﻿using MediatR;
 using Medicoz.Application.Contracts.Percistance;
 using Medicoz.Application.Exceptions;
-using Medicoz.Application.Features.Products.Queries.GetProductByIdDetail;
 using Medicoz.Domain;
 
-namespace Medicoz.Application.Features.Products.Queries.GetProductById
+namespace Medicoz.Application.Features.Products.Queries.GetProductByIdDetail
 {
     public class GetProductByIdQueryDetailHandler : IRequestHandler<GetProductByIdQueryDetail, ProductDetailDTO>
     {

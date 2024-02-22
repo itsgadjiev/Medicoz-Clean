@@ -2,7 +2,7 @@
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Departments.Commands.UpdateDepartment;
 using Medicoz.Application.Features.Departments.Queries.GetDepartmentById;
-using Medicoz.Application.Features.Products.Commands.AddCommand;
+using Medicoz.Application.Features.Products.Commands.AddProduct;
 using Medicoz.Application.Features.Products.Queries.GetAllProducts;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,7 +23,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _mediator.Send(new GetAllProductsQuery(string.Empty,string.Empty)));
+            return View(await _mediator.Send(new GetAllProductsQuery(string.Empty, string.Empty)));
         }
 
         [HttpGet("create")]

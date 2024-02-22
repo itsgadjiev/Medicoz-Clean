@@ -2,8 +2,8 @@
 
 namespace Medicoz.Application.Contracts.Percistance
 {
-    public interface ISliderRepository : IDatabaseLocalisationRepository<Slider>
+    public interface ISliderRepository : IGenericRepository<Slider>
     {
-        Task<List<Slider>> GetByUniqueCode(string code);
+       
     }
 }

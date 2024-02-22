@@ -18,7 +18,6 @@ public static class PersistenceServiceRegistration
         });
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-        services.AddScoped(typeof(IDatabaseLocalisationRepository<>), typeof(DatabaseLocalisationRepository<>));
         services.AddScoped<ISliderRepository, SliderRepository>();
         services.AddScoped<IOurServicesRepository, OurServicesRepository>();
         services.AddScoped<IDoctorRepository, DoctorRepository>();
@@ -30,6 +29,7 @@ public static class PersistenceServiceRegistration
         services.AddScoped<IBasketItemRepository, BasketItemRepository>();
         services.AddScoped<IBasketRepository, BasketRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IBlogRepository, BlogRepository>();
 
         return services;
     }

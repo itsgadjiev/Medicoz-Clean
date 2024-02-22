@@ -1,4 +1,4 @@
-﻿using Medicoz.Identity.Models;
+﻿using Medicoz.Application.Models.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,7 +1,6 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Exceptions;
 using Medicoz.Application.Models.Identity;
-using Medicoz.Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -15,7 +14,7 @@ namespace Medicoz.Identity.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-      
+
         private readonly JwtSettings _jwtSettings;
 
         public AuthService(UserManager<ApplicationUser> userManager,
@@ -26,7 +25,7 @@ namespace Medicoz.Identity.Services
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
             _signInManager = signInManager;
-            
+
         }
 
         public async Task<AuthResponse> Login(AuthRequest request)
@@ -60,7 +59,7 @@ namespace Medicoz.Identity.Services
         }
 
 
-        public async Task<RegistrationResponse> Register(RegistrationRequest request,string role)
+        public async Task<RegistrationResponse> Register(RegistrationRequest request, string role)
         {
             var user = new ApplicationUser
             {

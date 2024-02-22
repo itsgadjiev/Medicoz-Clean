@@ -1,6 +1,5 @@
 ﻿using Medicoz.Application.Contracts.Identity;
 using Medicoz.Application.Models.Identity;
-using Medicoz.Identity.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.ViewComponents

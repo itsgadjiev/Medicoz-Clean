@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Medicoz.Identity.Models
+namespace Medicoz.Application.Models.Identity
 {
     public class ApplicationUser : IdentityUser
     {

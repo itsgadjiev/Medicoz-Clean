@@ -1,0 +1,98 @@
+﻿@using Medicoz.Application.Features.Products.Queries.GetAllProducts
+@using Medicoz.MVC.ViewModels
+@model ShopViewModel
+
+<!--Page Title-->
+<section class="page-title" style="background-image: url(images/background/8.jpg);">
+    <div class="auto-container">
+        <div class="title-outer">
+            <h1>Our Shop</h1>
+            <ul class="page-breadcrumb">
+                <li><a asp-action="index" asp-controller="home">Home</a></li>
+                <li>Shop</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+<!-- Sidebar Page Container -->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Content Side-->
+            <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                <div class="our-shop">
+                    <div class="shop-upper-box">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sort Options
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index">Default Sorting</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="rating">Sort by average rating</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="newness">Sort by newness</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="price">Sort by price: low to high</a>
+                                <a class="dropdown-item" asp-controller="Shop" asp-action="Index" asp-route-sort="priceDesc">Sort by price: high to low</a>
+                            </div>
+                        </div>
+
+                        <div class="items-label">Showing all @Model.ProductDetailDTOs.Count results</div>
+                    </div>
+
+                    <div class="row">
+
+                        @foreach (var item in Model.ProductDetailDTOs)
+                        {
+                            <!-- Shop Item -->
+                            <div class="shop-item col-lg-4 col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><a asp-action="detail" asp-route-id="@item.Id" asp-controller="shop"><img src="~/uploads/images/@item.ImageUrl" alt=""></a></figure>
+                                    </div>
+                                    <div class="lower-content">
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star light"></span>
+                                        </div>
+                                        <h4 class="name"><a asp-action="detail" asp-route-id="@item.Id" asp-controller="shop">@item.Name</a></h4>
+                                        <div class="price"> $@item.Price</div>
+                                        <form method="post" asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@item.Id">
+                                            <button type="submit" class="theme-btn add-to-cart">Add to cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+            @await Component.InvokeAsync("Sidebar", false)
+            <!--Sidebar Side-->
+
+        </div>
+    </div>
+</div>
+<!-- End Sidebar Container -->
+<!-- Clients Section -->
+<section class="clients-section alternate">
+    <div class="auto-container">
+
+        <!-- Sponsors Outer -->
+        <div class="sponsors-outer">
+            <!--clients carousel-->
+            <ul class="clients-carousel owl-carousel owl-theme">
+                <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
+                <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Clients Section -->

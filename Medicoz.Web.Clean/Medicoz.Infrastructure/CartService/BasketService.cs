@@ -43,5 +43,10 @@ namespace Medicoz.Infrastructure.CartService
                 Expires = DateTimeOffset.Now.AddDays(7)
             });
         }
+
+        public void DeleteBasket(HttpContext httpContext)
+        {
+            httpContext.Response.Cookies.Delete("basket");
+        }
     }
 }

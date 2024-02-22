@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 
-namespace Medicoz.Application.Features.Products.Commands.AddCommand
+namespace Medicoz.Application.Features.Products.Commands.AddProduct
 {
     public class AddProductCommand : IRequest<Unit>
     {

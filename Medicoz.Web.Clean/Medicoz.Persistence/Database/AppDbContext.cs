@@ -25,6 +25,7 @@ public class AppDbContext : DbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductComment> ProductComment { get; set; }
     public DbSet<Order> Orders { get; set; }
+    public DbSet<Blog> Blogs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -121,6 +122,48 @@ public class AppDbContext : DbContext
             .HasOne(dd => dd.Department)
             .WithMany(d => d.DoctorDepartments)
             .HasForeignKey(dd => dd.DepartmentId);
+        #endregion
+
+        #region sliders
+
+        modelBuilder.Entity<Slider>()
+           .Property(e => e.Title)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Slider>()
+           .Property(e => e.Description)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Slider>()
+           .Property(e => e.Quote)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Slider>()
+           .Property(e => e.ButtonName2)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Slider>()
+           .Property(e => e.ButtonName)
+           .HasConversion(jsonConverter)
+           .HasColumnType("nvarchar(MAX)");
+        #endregion
+
+        #region Blogs
+        modelBuilder.Entity<Blog>()
+          .Property(e => e.Title)
+          .HasConversion(jsonConverter)
+          .HasColumnType("nvarchar(MAX)");
+
+        modelBuilder.Entity<Blog>()
+          .Property(e => e.Detail)
+          .HasConversion(jsonConverter)
+          .HasColumnType("nvarchar(MAX)");
+
+
         #endregion
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);

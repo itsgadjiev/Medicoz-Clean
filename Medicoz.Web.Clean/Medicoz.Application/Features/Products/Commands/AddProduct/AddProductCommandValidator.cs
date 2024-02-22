@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Medicoz.Application.Features.Products.Commands.AddCommand;
 
 namespace Medicoz.Application.Features.Products.Commands.AddProduct
 {

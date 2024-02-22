@@ -27,6 +27,9 @@ namespace Medicoz.Persistence.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<double>("BasketTotal")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -38,7 +41,7 @@ namespace Medicoz.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Baskets");
+                    b.ToTable("Basket");
                 });
 
             modelBuilder.Entity("Medicoz.Domain.BasketItem", b =>
@@ -48,6 +51,9 @@ namespace Medicoz.Persistence.Migrations
 
                     b.Property<string>("BasketId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<double>("BasketItemTotal")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -70,7 +76,47 @@ namespace Medicoz.Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("BasketItems");
+                    b.ToTable("BasketItem");
+                });
+
+            modelBuilder.Entity("Medicoz.Domain.Blog", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatorName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatorRole")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatorSurname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Detail")
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("Medicoz.Domain.Department", b =>
@@ -266,6 +312,42 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("DoctorSchedules");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.Order", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("BasketId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OrderStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.OurService", b =>
                 {
                     b.Property<string>("Id")
@@ -367,25 +449,22 @@ namespace Medicoz.Persistence.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ButtonName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("ButtonName2")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Culture")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Quote")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("RedirectUrl")
                         .HasColumnType("nvarchar(max)");
@@ -394,10 +473,7 @@ namespace Medicoz.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UniqueCodeForLocalisation")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -468,6 +544,15 @@ namespace Medicoz.Persistence.Migrations
                         .HasForeignKey("DoctorId");
 
                     b.Navigation("Doctor");
+                });
+
+            modelBuilder.Entity("Medicoz.Domain.Order", b =>
+                {
+                    b.HasOne("Medicoz.Domain.Basket", "Basket")
+                        .WithMany()
+                        .HasForeignKey("BasketId");
+
+                    b.Navigation("Basket");
                 });
 
             modelBuilder.Entity("Medicoz.Domain.ProductComment", b =>

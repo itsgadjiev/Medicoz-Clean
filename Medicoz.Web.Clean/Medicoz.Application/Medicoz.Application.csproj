@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Blogs\Queries\" />
     <Folder Include="Features\DoctorDepartment\Commands\" />
     <Folder Include="Features\DoctorDepartment\Queries\" />
   </ItemGroup>

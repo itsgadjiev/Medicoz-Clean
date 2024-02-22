@@ -11,7 +11,6 @@ namespace Medicoz.Infrastructure.PaymentService
     public class PaymentService : IPaymentService
     {
         private readonly IConfiguration _configuration;
-        private readonly IEmailService _emailService;
 
         public PaymentService(IConfiguration configuration)
         {
@@ -32,7 +31,7 @@ namespace Medicoz.Infrastructure.PaymentService
                   {
                       PriceData = new SessionLineItemPriceDataOptions
                        {
-                            UnitAmount = amount,
+                            UnitAmount = amount*100,
                             Currency = "usd",
                             ProductData = new SessionLineItemPriceDataProductDataOptions
                             {

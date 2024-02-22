@@ -1,5 +1,5 @@
-﻿using Medicoz.Application.Enums;
-using Medicoz.Domain.Common.concrets;
+﻿using Medicoz.Domain.Common.concrets;
+using Medicoz.Domain.Common.Enums;
 
 namespace Medicoz.Domain
 {

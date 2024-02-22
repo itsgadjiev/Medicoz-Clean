@@ -1,12 +1,7 @@
 ﻿using MediatR;
-using Medicoz.Application.Contracts.Payment;
 using Medicoz.Application.Features.Order.PlaceOrder;
-using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Stripe;
-using Stripe.BillingPortal;
-using Stripe.Checkout;
 
 namespace Medicoz.MVC.Controllers
 {
@@ -21,12 +16,12 @@ namespace Medicoz.MVC.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateCheckoutSession(BasketViewModel basketViewModel)
         {
-            await _mediator.Send(new PlaceOrderCommand
+
+            return await _mediator.Send(new PlaceOrderCommand
             {
                 Order = basketViewModel.Order,
                 HttpContext = HttpContext
-            });
-            return RedirectToAction("Index","shop");
+            }); ;
         }
     }
 }
