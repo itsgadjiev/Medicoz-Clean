@@ -1,4 +1,5 @@
 ﻿using Medicoz.Domain.Common.concrets;
+using Medicoz.Domain.Common.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -17,5 +18,6 @@ namespace Medicoz.Domain
         public string PasentNotes { get; set; }
         [DataType(DataType.Date)]
         public DateTime ReservationDate { get; set; }
+        public AppointmentStatus AppointmentStatus { get; set; }
     }
 }

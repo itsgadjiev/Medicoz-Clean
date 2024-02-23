@@ -70,7 +70,8 @@ namespace Medicoz.Identity.Services
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 UserName = request.UserName,
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                Id = request.Id,
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);

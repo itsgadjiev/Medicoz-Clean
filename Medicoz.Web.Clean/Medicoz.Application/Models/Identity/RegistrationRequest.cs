@@ -4,6 +4,7 @@ namespace Medicoz.Application.Models.Identity
 {
     public class RegistrationRequest
     {
+        public string Id { get; set; }
         [Required]
         public string FirstName { get; set; }
 

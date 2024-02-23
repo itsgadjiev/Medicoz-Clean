@@ -45,7 +45,8 @@ public class MakeAnAppointmentCommandHandler : IRequestHandler<MakeAnAppointment
             PasentPhone = request.PasentPhone,
             PasentNotes = request.PasentNotes,
             PasentId = request.PasentId,
-            Id = Guid.NewGuid().ToString()
+            Id = Guid.NewGuid().ToString(),
+            AppointmentStatus = Domain.Common.Enums.AppointmentStatus.Waiting
         };
 
         await _doctorAppointmentRepository.AddAsync(doctorAppointment);

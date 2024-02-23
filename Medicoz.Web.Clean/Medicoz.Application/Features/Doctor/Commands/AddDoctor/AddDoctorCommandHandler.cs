@@ -53,6 +53,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
             var path = Path.Combine(request.WebRootPath, "uploads/images");
             var imgUrl = _fileService.Upload(request.Image, path);
 
+            var newDoctorId=Guid.NewGuid().ToString();
 
             var doctor = new Domain.Doctor
             {
@@ -82,7 +83,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 Surname = request.Surname,
                 ImageURL = imgUrl,
                 Fee = request.Fee,
-                Id = Guid.NewGuid().ToString()
+                Id = newDoctorId
             };
 
             await _doctorRepository.AddAsync(doctor);
@@ -115,6 +116,8 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 LastName = request.Surname,
                 Password = password,
                 UserName = username,
+                Id = newDoctorId
+
             };
 
 
