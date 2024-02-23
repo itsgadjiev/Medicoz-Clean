@@ -24,7 +24,7 @@
                 <div class="dropdown">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <span>@Model.ApplicationUser.FirstName</span>   <span>@Model.ApplicationUser.LastName</span>
+                        <a asp-action="OutAsync" asp-controller="auth">@Model.ApplicationUser.FirstName  @Model.ApplicationUser.LastName</a>
                     }
 
                     <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

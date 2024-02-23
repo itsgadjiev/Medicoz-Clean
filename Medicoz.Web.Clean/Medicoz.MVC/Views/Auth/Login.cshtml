@@ -1,10 +1,77 @@
 ﻿@using Medicoz.Application.Models.Identity
 @model AuthRequest
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<title>Login Form</title>
+<style>
 
-<form asp-action="Login" method="post">
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .form-wrapper-div{
+        display:flex;
+        justify-content:center;
+        /* margin-top:100px ; */
+        padding-bottom:100px;
+        padding-top:100px;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .center-form-me{
+
+    }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .text-danger {
+        color: #dc3545;
+    }
+</style>
+
+
+<div class="form-wrapper-div">
+
+<form asp-action="Login" method="post" class="center-form-me">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
     <div class="mb-3">
         <label asp-for="Email" class="form-label">Email address</label>
         <input asp-for="Email" class="form-control" />
@@ -19,3 +86,5 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+

@@ -29,8 +29,8 @@ public class EmailSender : IEmailSender
         var msg = new SendGridMessage()
         {
             From = new EmailAddress(emailSettings["Username"], "Medicoz"),
-            Subject = $"Medicoz",
-            PlainTextContent = $"salam",
+            Subject = $"{subject}",
+            PlainTextContent = $"{messageText}",
         };
         msg.AddTo(new EmailAddress($"{toEmail}"));
 

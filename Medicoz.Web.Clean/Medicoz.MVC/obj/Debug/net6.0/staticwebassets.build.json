@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kHDAhwHXxpF4pEKMY6MMp4TvrWx7JPtEd2J2/4fNFys=",
+  "Hash": "+K/KHaZR9aS9b5L4BjZJgq21i2QnkenvL4Rh56/+ak8=",
   "Source": "Medicoz.MVC",
   "BasePath": "_content/Medicoz.MVC",
   "Mode": "Default",
@@ -22589,6 +22589,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\41c36e60-e487-4ef8-9940-8696ffb386ad.jpg"
     },
     {
+      "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\4609c371-562f-4dab-bcde-efc4e0de9bb4.jpg",
+      "SourceId": "Medicoz.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\",
+      "BasePath": "_content/Medicoz.MVC",
+      "RelativePath": "uploads/images/4609c371-562f-4dab-bcde-efc4e0de9bb4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\4609c371-562f-4dab-bcde-efc4e0de9bb4.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\4b7d4ea9-5795-412e-9807-d93aeae0aef1.jpg",
       "SourceId": "Medicoz.MVC",
       "SourceType": "Discovered",
@@ -22969,6 +22988,25 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\c2525cc3-96a4-44a3-b342-f77141b26abb.jpg"
     },
     {
+      "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\c7feb3e3-9aca-4b7d-8e40-a5edbba1b9ba.jpg",
+      "SourceId": "Medicoz.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\",
+      "BasePath": "_content/Medicoz.MVC",
+      "RelativePath": "uploads/images/c7feb3e3-9aca-4b7d-8e40-a5edbba1b9ba.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\c7feb3e3-9aca-4b7d-8e40-a5edbba1b9ba.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\cc9bc2c8-a7fb-4eb4-a9c9-ed40edc0dfd5.jpg",
       "SourceId": "Medicoz.MVC",
       "SourceType": "Discovered",
@@ -22986,6 +23024,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\cc9bc2c8-a7fb-4eb4-a9c9-ed40edc0dfd5.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\e118311c-aa32-44b4-a492-d333f9729627.jpg",
+      "SourceId": "Medicoz.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\",
+      "BasePath": "_content/Medicoz.MVC",
+      "RelativePath": "uploads/images/e118311c-aa32-44b4-a492-d333f9729627.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\e118311c-aa32-44b4-a492-d333f9729627.jpg"
     },
     {
       "Identity": "C:\\Users\\ceyhu\\OneDrive\\Рабочий стол\\uje bilmire\\Medicoz-Clean\\Medicoz.Web.Clean\\Medicoz.MVC\\wwwroot\\uploads\\images\\ed1df0df-2328-4872-8b9a-e8d12f87c80c.jpg",
