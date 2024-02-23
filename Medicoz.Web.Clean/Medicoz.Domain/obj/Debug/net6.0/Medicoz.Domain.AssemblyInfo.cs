@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Medicoz.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db047e17134aae03136c39d28a41376919ff597a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d26aa1385f0e1a785516b955af18ed40c9ea3a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Medicoz.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Medicoz.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

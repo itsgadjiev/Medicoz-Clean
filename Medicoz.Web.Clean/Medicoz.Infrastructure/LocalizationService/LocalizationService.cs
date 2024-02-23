@@ -34,6 +34,9 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
         return null;
     }
 
+
+   
+
     public string GetLocalizedCompositeValue(string propertyName, params object[] keys)
     {
         var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;

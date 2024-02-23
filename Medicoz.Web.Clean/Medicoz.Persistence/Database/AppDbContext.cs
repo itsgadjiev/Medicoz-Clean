@@ -26,6 +26,7 @@ public class AppDbContext : DbContext
     public DbSet<ProductComment> ProductComment { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Blog> Blogs { get; set; }
+    public DbSet<LocalizedStaticEntity> LocalizedStaticEntities { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -163,6 +164,15 @@ public class AppDbContext : DbContext
           .HasConversion(jsonConverter)
           .HasColumnType("nvarchar(MAX)");
 
+
+        #endregion
+
+        #region LocalizedStaticEntity
+
+        modelBuilder.Entity<LocalizedStaticEntity>()
+         .Property(e => e.Value)
+         .HasConversion(jsonConverter)
+         .HasColumnType("nvarchar(MAX)");
 
         #endregion
 

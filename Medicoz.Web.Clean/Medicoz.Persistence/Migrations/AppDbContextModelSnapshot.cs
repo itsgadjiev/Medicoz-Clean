@@ -312,6 +312,31 @@ namespace Medicoz.Persistence.Migrations
                     b.ToTable("DoctorSchedules");
                 });
 
+            modelBuilder.Entity("Medicoz.Domain.LocalizedStaticEntity", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(MAX)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LocalizedStaticEntities");
+                });
+
             modelBuilder.Entity("Medicoz.Domain.Order", b =>
                 {
                     b.Property<string>("Id")

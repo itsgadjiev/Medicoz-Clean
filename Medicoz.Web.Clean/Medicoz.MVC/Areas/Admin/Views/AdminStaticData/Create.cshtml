@@ -1,0 +1,60 @@
+﻿@using Medicoz.Application.Features.LocalizedStaticEntity.Commands.CreateLocalizedStaticEntity
+@model CreateLocalizedStaticEntityCommand
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-end">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="AdminStaticData" asp-action="index">Static Data</a></li>
+                    <li class="breadcrumb-item active">Add Data</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Add Static Data</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" asp-controller="AdminDepartment" asp-action="create" enctype="multipart/form-data" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label asp-for="Key">Key</label>
+                                <input asp-for="Key" class="form-control">
+                                <span asp-validation-for="Key" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="AzValue">AzValue</label>
+                                <input asp-for="AzValue" class="form-control">
+                                <span asp-validation-for="AzValue" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="EnValue"></label>
+                                <input asp-for="EnValue" class="form-control">
+                                <span asp-validation-for="EnValue" class="invalid-feedback text-danger" style="display:block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mt-3 text-end">
+                    <button class="btn btn-success" type="submit" form="submit-form">Create</button>
+                    <a asp-controller="AdminStaticData" asp-action="index" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
