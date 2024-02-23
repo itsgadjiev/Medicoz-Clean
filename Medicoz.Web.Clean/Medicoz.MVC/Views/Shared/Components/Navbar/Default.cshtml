@@ -15,8 +15,8 @@
             <div class="inner-container">
                 <div class="top-left">
                     <ul class="contact-list clearfix">
-                        <li><i class="flaticon-hospital-1"></i>234 Triumph, Los Angeles, California, US </li>
-                        <li><i class="flaticon-back-in-time"></i>Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+                        <li><i class="flaticon-hospital-1"></i> Baku, Azerbaijan</li>
+                        <li><i class="flaticon-back-in-time"></i>@(_IStaticDataLocalisationService.GetLocalizedValue("navtime"))</li>
 
 
                     </ul>
@@ -117,7 +117,7 @@
 
                     <div class="outer-box">
                         <a asp-action="index" asp-controller="basket" class="cart-btn" style="color:black;"><i class="icon flaticon-shopping-cart"></i><span class="count">@Model.Basket.BasketItems.Count</span></a>
-                        <a href="~/medicoz/appointment.html" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">@(_IStaticDataLocalisationService.GetLocalizedValue("appoint"))</span></a>
+                        <a asp-action="get" asp-controller="doctor" class="theme-btn btn-style-one"><span class="btn-title">@(_IStaticDataLocalisationService.GetLocalizedValue("appoint"))</span></a>
                     </div>
                 </div>
             </div>

@@ -38,14 +38,16 @@ public class GetDoctorDetailQueryHandler : IRequestHandler<GetDoctorDetailQuery,
         {
             return null;
         }
-                  
+
         var localizedValues = new List<string>();
 
         foreach (var doctorDepartment in _doctorDepartmentRepository.FindDoctorDepartmentsByDoctorId(doctor.Id))
         {
             var department = doctorDepartment.Department;
-            var localizedValue = _localizationServiceDocDep.GetLocalizedValue(department.Id,"Name");
+            var localizedValue = _localizationServiceDocDep.GetLocalizedValue(department.Id, "Name");
+
             localizedValues.Add(localizedValue);
+
         }
 
 

@@ -23,7 +23,7 @@
                 <div class="team-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="inner-box">
                         <div class="image-box">
-                            <figure class="image"><a asp-action="detail" asp-controller="doctor"><img src="~/uploads/images/@item.ImageUrl" alt=""></a></figure>
+                            <figure class="image"><a asp-action="detail" asp-controller="doctor" asp-route-doctorId="@item.Id"><img src="~/uploads/images/@item.ImageUrl" alt=""></a></figure>
                             <ul class="social-links">
                                 <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                                 <li><a href="#"><span class="fab fa-twitter"></span></a></li>

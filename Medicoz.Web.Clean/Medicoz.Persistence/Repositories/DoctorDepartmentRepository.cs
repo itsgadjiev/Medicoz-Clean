@@ -16,6 +16,7 @@ public class DoctorDepartmentRepository : GenericRepository<DoctorDepartment>, I
         return _context.DoctorDepartments
             .Include(dd => dd.Doctor)  
             .Include(dd => dd.Department)
+            .Where(x=>x.DoctorId == doctorId)   
             .ToList();
     }
 

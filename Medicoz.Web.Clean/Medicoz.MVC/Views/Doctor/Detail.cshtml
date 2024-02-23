@@ -1,6 +1,10 @@
 ﻿@using Medicoz.Application.ViewModels
 @using Medicoz.MVC.ViewModels
 @model DoctorDetailViewModel
+@using Medicoz.Application.Contracts.Localisation
+@using Medicoz.Domain
+@inject IStaticDataLocalisationService<LocalizedStaticEntity> _IStaticDataLocalisationService
+
 <!--End Main Header -->
 <!--Page Title-->
 <section class="page-title" style="background-image: url(images/background/8.jpg);">
@@ -27,7 +31,7 @@
                     <div class="text">@Model.Description</div>
                     <ul class="doctor-info-list">
                         <li>
-                            <strong>Speciality</strong>
+                            <strong>@(_IStaticDataLocalisationService.GetLocalizedValue("Speciality"))</strong>
 
                             @foreach (var item2 in Model.NamesDeps)
                             {
@@ -36,11 +40,11 @@
                             }
                         </li>
                         <li>
-                            <strong>Education</strong>
+                            <strong>@(_IStaticDataLocalisationService.GetLocalizedValue("Education"))</strong>
                             <p>@Model.Education</p>
                         </li>
                         <li>
-                            <strong>Experience</strong>
+                            <strong>@(_IStaticDataLocalisationService.GetLocalizedValue("detExperience"))</strong>
                             <p>@Model.Experience</p>
                         </li>
                         @* <li>
@@ -60,7 +64,7 @@
                         </div>
                         </li> *@
                         <li>
-                            <strong>Phone</strong>
+                            <strong>@(_IStaticDataLocalisationService.GetLocalizedValue("Phone"))</strong>
                             <p><a href="#">@Model.Phone</a></p>
                         </li>
                         <li>
@@ -72,8 +76,8 @@
 
                 <div class="appointment-form default-form">
                     <div class="sec-title">
-                        <span class="sub-title">Online Appoinment</span>
-                        <h2>Make An Appointment</h2>
+                        <span class="sub-title">@(_IStaticDataLocalisationService.GetLocalizedValue("Online"))</span>
+                        <h2>@(_IStaticDataLocalisationService.GetLocalizedValue("resdo"))</h2>
                         <span class="divider"></span>
                     </div>
 
@@ -102,7 +106,7 @@
                             @*   <div class="form-group col-lg-12 col-md-12 mt-5">
                             <button class="theme-btn btn-style-two" type="submit" >Submit<span class="btn-title">Submit Query</span></button>
                             </div> *@
-                            <button type="submit">Submit</button>
+                            <button  class="theme-btn btn-style-two ml-3" type="submit">@(_IStaticDataLocalisationService.GetLocalizedValue("Submit"))</button>
                         </div>
                     </form>
                 </div>
@@ -131,7 +135,7 @@
                                 <span class="sub-title">Fee</span>
                                 <h3>@Model.Fee$</h3>
                                 <span class="divider"></span>
-                                <div class="text">Already Reserved Appointments </div>
+                                <div class="text">@(_IStaticDataLocalisationService.GetLocalizedValue("resappo")) </div>
                             </div>
                             <ul class="timing-list-two">
                                 @foreach (var item in Model.ReservedDoctorAppointments)
@@ -163,10 +167,10 @@
 
                 <tbody>
                     <tr>
-                        <th>Monday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Monday"))</th>
                         @if (Model.DoctorSchedulesOnMonday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnMonday)
                         {
@@ -177,10 +181,10 @@
                         }
                     </tr>
                     <tr>
-                        <th>Tuesday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Tuesday"))</th>
                         @if (Model.DoctorSchedulesOnTuesday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnTuesday)
                         {
@@ -191,10 +195,10 @@
                         }
                     </tr>
                     <tr>
-                        <th>Wednesday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Wednesday"))</th>
                         @if (Model.DoctorSchedulesOnWednesday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnWednesday)
                         {
@@ -205,10 +209,10 @@
                         }
                     </tr>
                     <tr>
-                        <th>Thursday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Thursday"))</th>
                         @if (Model.DoctorSchedulesOnThursday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnThursday)
                         {
@@ -219,10 +223,10 @@
                         }
                     </tr>
                     <tr>
-                        <th>Friday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Friday"))</th>
                         @if (Model.DoctorSchedulesOnFriday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnFriday)
                         {
@@ -233,10 +237,10 @@
                         }
                     </tr>
                     <tr>
-                        <th>Saturday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Saturday"))</th>
                         @if (Model.DoctorSchedulesOnSaturday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnSaturday)
                         {
@@ -247,10 +251,10 @@
                         }
                     </tr>
                     <tr>
-                        <th>Sunday</th>
+                        <th>@(_IStaticDataLocalisationService.GetLocalizedValue("Sunday"))</th>
                         @if (Model.DoctorSchedulesOnSunday.Count == 0)
                         {
-                            <td>Not Working</td>
+                            <td>@(_IStaticDataLocalisationService.GetLocalizedValue("NotWorking"))</td>
                         }
                         @foreach (var item in Model.DoctorSchedulesOnSunday)
                         {
