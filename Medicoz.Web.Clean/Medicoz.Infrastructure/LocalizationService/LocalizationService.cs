@@ -34,6 +34,26 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
         return null;
     }
 
+    public string GetLocalizedCompositeValue(string propertyName, params object[] keys)
+    {
+        var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+        var entity = _context.Set<T>().Find(keys);
+
+        if (entity != null)
+        {
+            var property = entity.GetType().GetProperty(propertyName);
+            if (property != null)
+            {
+                var localizedData = property.GetValue(entity) as Dictionary<string, string>;
+                if (localizedData != null && localizedData.ContainsKey(language))
+                {
+                    return localizedData[language];
+                }
+            }
+        }
+        return null;
+    }
+
     public string GetLocalizedValueInsideView(T entity, string propertyName)
     {
         var language = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
@@ -96,6 +116,8 @@ public class LocalizationService<T> : ILocalizationService<T> where T : BaseEnti
             }
         }
     }
+
+   
 
     //public Dictionary<int, string> GetAllEntitiesLocalizedValues(string language)
     //{

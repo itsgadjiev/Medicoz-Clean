@@ -28,7 +28,12 @@
                     <ul class="doctor-info-list">
                         <li>
                             <strong>Speciality</strong>
-                            <p>Endocrinology <br>Paediatric Medicine <br>Urology</p>
+
+                            @foreach (var item2 in Model.NamesDeps)
+                            {
+                                <p>@item2 </p>
+
+                            }
                         </li>
                         <li>
                             <strong>Education</strong>
@@ -39,20 +44,20 @@
                             <p>@Model.Experience</p>
                         </li>
                         @* <li>
-                            <strong>Timing</strong>
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    See Doctor Schedule
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    @foreach (var item in Model.DoctorSchedulesOnMonday)
-                                    {
-                                        <a class="dropdown-item">
-                                            @item.DayOfWeek @item.StartTime.ToString("T") - @item.EndTime.ToString("T")
-                                        </a>
-                                    }
-                                </div>
-                            </div>
+                        <strong>Timing</strong>
+                        <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        See Doctor Schedule
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        @foreach (var item in Model.DoctorSchedulesOnMonday)
+                        {
+                        <a class="dropdown-item">
+                        @item.DayOfWeek @item.StartTime.ToString("T") - @item.EndTime.ToString("T")
+                        </a>
+                        }
+                        </div>
+                        </div>
                         </li> *@
                         <li>
                             <strong>Phone</strong>
@@ -150,7 +155,7 @@
             <!-- Doctors Time Table -->
             <table class="doctors-time-table">
                 <thead>
-                    
+
                     <tr>
                         <th class="dark" style="">Time Table</th>
                     </tr>
@@ -171,7 +176,7 @@
 
                         }
                     </tr>
-                     <tr>
+                    <tr>
                         <th>Tuesday</th>
                         @if (Model.DoctorSchedulesOnTuesday.Count == 0)
                         {
@@ -255,7 +260,7 @@
 
                         }
                     </tr>
-                
+
                 </tbody>
             </table>
         </div>

@@ -10,6 +10,8 @@ namespace Medicoz.Application.ViewModels.Areas.Admin
         public string Title { get; set; }
         public double Fee { get; set; }
         public string ImageUrl { get; set; }
+        public List<DoctorDepartment> DoctorDepartments { get; set; }
+        public List<Department> Departments { get; set; }
 
     }
 }

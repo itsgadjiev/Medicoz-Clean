@@ -105,13 +105,16 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 }
             }
 
+            string password = String.Concat(request.Name, request.Surname, '!', Guid.NewGuid().ToString().Substring(0, 3));
+            string username = String.Concat(request.Name, request.Surname, request.Email, Guid.NewGuid().ToString().Substring(0, 3));
+
             RegistrationRequest registrationRequest = new RegistrationRequest
             {
                 Email = request.Email,
                 FirstName = request.Name,
                 LastName = request.Surname,
-                Password = "123321Ab!",
-                UserName = String.Concat(request.Name, request.Surname,request.Email,Guid.NewGuid().ToString().Substring(0,5)),
+                Password = password,
+                UserName = username,
             };
 
 
@@ -136,10 +139,12 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
                 Name = _localizationService.GetLocalizedValue(x.Id, nameof(x.Name))
 
             }).ToList();
+
             request.DepartmentListDTO = departmetsListDto;
             await _authService.Register(registrationRequest, "Doctor");
             await _doctorRepository.SaveChangesAsync();
-            //_emailSender.SendEmail(request.Email, "Medicoz", $"Welcome to our Company Dear {request.Name + request.Surname} ");
+            await _emailSender.SendEmailAsync(request.Email, "Medicoz", $"Welcome to our Company Dear {request.Name + request.Surname} Your password is :{password} Your Username is: {username} ");
+            
             return Unit.Value;
         }
     }

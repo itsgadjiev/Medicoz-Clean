@@ -26,5 +26,17 @@ namespace Medicoz.Application.ViewModels
         public List<DoctorSchedule> AllDoctorSchedules { get; set; }
         public List<DoctorAppointment> ReservedDoctorAppointments { get; set; }
         public MakeAnAppointmentCommand MakeAnAppointmentCommand { get; set; }
+        public List<DoctorDepartmentViewModel> DoctorDepartmentViewModels { get; set; }
+
+        public List<string> NamesDeps { get; set; }
+
     }
+
+    public class DoctorDepartmentViewModel
+    {
+        public string Name{ get; set; }
+        public Department Department{ get; set; }
+    }
+
+
 }
