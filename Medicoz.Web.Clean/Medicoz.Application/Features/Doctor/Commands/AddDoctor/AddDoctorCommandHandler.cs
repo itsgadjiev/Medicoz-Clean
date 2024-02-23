@@ -106,7 +106,7 @@ namespace Medicoz.Application.Features.Doctor.Commands.AddDoctor
             }
 
             string password = String.Concat(request.Name, request.Surname, '!', Guid.NewGuid().ToString().Substring(0, 3));
-            string username = String.Concat(request.Name, request.Surname, request.Email, Guid.NewGuid().ToString().Substring(0, 3));
+            string username = String.Concat(request.Name, request.Surname,"123");
 
             RegistrationRequest registrationRequest = new RegistrationRequest
             {

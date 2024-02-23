@@ -53,10 +53,10 @@
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
                             <li><a asp-action="index" asp-controller="home">@(_IStaticDataLocalisationService.GetLocalizedValue("Home"))</a></li>
-                            <li><a asp-action="get" asp-controller="doctor" >Doctors</a></li>
-                            <li><a asp-action="index" asp-controller="department" asp-area="admin">Departments</a></li>
-                            <li><a asp-action="index" asp-controller="blog" asp-area="admin">Blogs</a></li>
-                            <li><a asp-action="index" asp-controller="Shop" >Shop</a></li>
+                            <li><a asp-action="get" asp-controller="doctor">@(_IStaticDataLocalisationService.GetLocalizedValue("doctor"))</a></li>
+                            <li><a asp-action="index" asp-controller="department" asp-area="admin">@(_IStaticDataLocalisationService.GetLocalizedValue("Department"))</a></li>
+                            <li><a asp-action="index" asp-controller="blog" asp-area="admin">@(_IStaticDataLocalisationService.GetLocalizedValue("blog"))</a></li>
+                            <li><a asp-action="index" asp-controller="Shop">@(_IStaticDataLocalisationService.GetLocalizedValue("shop"))</a></li>
 
                             @* <li class="dropdown">
                                 <span>Doctors</span>
@@ -117,7 +117,7 @@
 
                     <div class="outer-box">
                         <a asp-action="index" asp-controller="basket" class="cart-btn" style="color:black;"><i class="icon flaticon-shopping-cart"></i><span class="count">@Model.Basket.BasketItems.Count</span></a>
-                        <a href="~/medicoz/appointment.html" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">Appointment</span></a>
+                        <a href="~/medicoz/appointment.html" id="appointment-btn" class="theme-btn btn-style-one"><span class="btn-title">@(_IStaticDataLocalisationService.GetLocalizedValue("appoint"))</span></a>
                     </div>
                 </div>
             </div>

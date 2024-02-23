@@ -1,4 +1,6 @@
-﻿
+﻿@using Medicoz.Application.Contracts.Localisation
+@using Medicoz.Domain
+@inject IStaticDataLocalisationService<LocalizedStaticEntity> _IStaticDataLocalisationService
 
 
 <!DOCTYPE html>
@@ -57,8 +59,8 @@
                                             <a href="~/medicoz/index-2.html"><img src="~/medicoz/images/logo-2.png" alt="" /></a>
                                         </div>
                                         <div class="text">
-                                            <p>Our Clinic has grown to provide a world class facility for the clinic advanced restorative. </p>
-                                            <p>We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
+                                            <p>@(_IStaticDataLocalisationService.GetLocalizedValue("footer1")) </p>
+                                            <p>@(_IStaticDataLocalisationService.GetLocalizedValue("footer2"))</p>
                                         </div>
                                         <ul class="social-icon-three">
                                             <li><a href="~/medicoz/#"><i class="fab fa-facebook-f"></i></a></li>
@@ -73,7 +75,7 @@
                                 <!--Footer Column-->
                                 <div class="footer-column col-xl-5 col-lg-6 col-md-6 col-sm-12">
                                     <div class="footer-widget">
-                                        <h2 class="widget-title">Departments</h2>
+                                        <h2 class="widget-title">@(_IStaticDataLocalisationService.GetLocalizedValue("Department"))</h2>
                                         <ul class="user-links">
                                             <li><a href="~/medicoz/#">Surgery & Radiology</a></li>
                                             <li><a href="~/medicoz/#">Family Medicine</a></li>
@@ -94,7 +96,7 @@
                                 <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                     <!--Footer Column-->
                                     <div class="footer-widget recent-posts">
-                                        <h2 class="widget-title">Latest News</h2>
+                                        <h2 class="widget-title">@(_IStaticDataLocalisationService.GetLocalizedValue("LatestNews"))</h2>
                                         <!--Footer Column-->
                                         <div class="widget-content">
                                             <div class="post">
@@ -122,7 +124,7 @@
                                 <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                     <!--Footer Column-->
                                     <div class="footer-widget contact-widget">
-                                        <h2 class="widget-title">Contact Us</h2>
+                                        <h2 class="widget-title">@(_IStaticDataLocalisationService.GetLocalizedValue("contact"))</h2>
                                         <!--Footer Column-->
                                         <div class="widget-content">
                                             <ul class="contact-list">
