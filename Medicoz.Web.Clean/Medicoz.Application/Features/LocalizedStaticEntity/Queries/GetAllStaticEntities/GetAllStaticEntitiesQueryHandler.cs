@@ -12,12 +12,12 @@ namespace Medicoz.Application.Features.LocalizedStaticEntity.Queries.GetAllStati
     public class GetAllStaticEntitiesQueryHandler : IRequestHandler<GetAllStaticEntitiesQuery, List<StaticEntityListDTO>>
     {
         private readonly ILocalizedStaticEntityRepository _localizedStaticEntityRepository;
-        private readonly ILocalizationService<Domain.LocalizedStaticEntity> _localizationService;
+        private readonly IStaticDataLocalisationService<Domain.LocalizedStaticEntity> _staticDataLocalisationService;
 
-        public GetAllStaticEntitiesQueryHandler(ILocalizedStaticEntityRepository localizedStaticEntityRepository,ILocalizationService<Domain.LocalizedStaticEntity> localizationService)
+        public GetAllStaticEntitiesQueryHandler(ILocalizedStaticEntityRepository localizedStaticEntityRepository, IStaticDataLocalisationService<Domain.LocalizedStaticEntity> staticDataLocalisationService)
         {
             _localizedStaticEntityRepository = localizedStaticEntityRepository;
-            _localizationService = localizationService;
+            _staticDataLocalisationService = staticDataLocalisationService;
         }
         public async Task<List<StaticEntityListDTO>> Handle(GetAllStaticEntitiesQuery request, CancellationToken cancellationToken)
         {
@@ -27,8 +27,10 @@ namespace Medicoz.Application.Features.LocalizedStaticEntity.Queries.GetAllStati
             {
                 Id = e.Id,
                 Key = e.Key,
-                Value = _localizationService.GetLocalizedValue()
+                Value = _staticDataLocalisationService.GetLocalizedValue(e.Key)
             }).ToList();
+
+            return listDtos;
         }
     }
 }

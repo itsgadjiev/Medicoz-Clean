@@ -10,6 +10,7 @@ using Medicoz.Infrastructure.CartService;
 using Medicoz.Infrastructure.EmailService;
 using Medicoz.Infrastructure.LocalizationService;
 using Medicoz.Infrastructure.Logging;
+using Medicoz.Infrastructure.StaticDataLocalisationService;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
@@ -29,6 +30,7 @@ public static class InfrastructureServicesRegistration
             .AddScoped(typeof(IDatabaseLocalizationService<>), typeof(LocalizationService<>))
             .AddScoped(typeof(IStringLocalizer<>), typeof(DatabaseStringLocalizer<>))
             .AddScoped(typeof(ILocalizationService<>), typeof(LocalizationService<>))
+            .AddScoped(typeof(IStaticDataLocalisationService<>), typeof(StaticDataLocalisationService<>))
             .AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 
         return serviceDescriptors;

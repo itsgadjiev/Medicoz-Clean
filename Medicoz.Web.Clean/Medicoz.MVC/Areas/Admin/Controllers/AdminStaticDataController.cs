@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Medicoz.Application.Features.LocalizedStaticEntity.Commands.CreateLocalizedStaticEntity;
+using Medicoz.Application.Features.LocalizedStaticEntity.Queries.GetAllStaticEntities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
@@ -19,8 +20,8 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var entity = await _mediator.Send(new );
-            return View(entity);
+            var entites = await _mediator.Send(new GetAllStaticEntitiesQuery());
+            return View(entites);
         }
 
         [HttpGet("Create")]
@@ -33,7 +34,7 @@ namespace Medicoz.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateLocalizedStaticEntityCommand command)
         {
             var entity = await _mediator.Send(command);
-            return View(entity);
+            return RedirectToAction("index", "AdminStaticData");
         }
 
        

@@ -27,6 +27,7 @@ namespace Medicoz.Application.Features.LocalizedStaticEntity.Commands.CreateLoca
                      {    LocalizationLanguages.AZ, request.AzValue },
                      { LocalizationLanguages.EN, request.EnValue }
                 },
+                Id=Guid.NewGuid().ToString(),
             };
 
             await _localizedStaticEntityRepository.AddAsync(data);

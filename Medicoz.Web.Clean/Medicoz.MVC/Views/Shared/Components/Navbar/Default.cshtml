@@ -3,6 +3,9 @@
 @using Medicoz.Identity.Services;
 @using Medicoz.MVC.ViewModels
 @model NavbarViewModel
+@using Medicoz.Application.Contracts.Localisation
+@using Medicoz.Domain
+@inject IStaticDataLocalisationService<LocalizedStaticEntity> _IStaticDataLocalisationService
 
 <header class="main-header header-style-one">
 
@@ -49,7 +52,7 @@
                 <div class="nav-outer">
                     <nav class="nav main-menu">
                         <ul class="navigation" id="navbar">
-                            <li><a asp-action="index" asp-controller="home">Home</a></li>
+                            <li><a asp-action="index" asp-controller="home">@(_IStaticDataLocalisationService.GetLocalizedValue("Home"))</a></li>
                             <li><a asp-action="get" asp-controller="doctor" >Doctors</a></li>
                             <li><a asp-action="index" asp-controller="department" asp-area="admin">Departments</a></li>
                             <li><a asp-action="index" asp-controller="blog" asp-area="admin">Blogs</a></li>
