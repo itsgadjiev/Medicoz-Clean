@@ -8,12 +8,15 @@ using Medicoz.Application.Features.OurServices.Commands.UpdateOurService;
 using Medicoz.Application.Features.OurServices.Queries.GetOurServices;
 using Medicoz.Domain;
 using Medicoz.MVC.Areas.Admin.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
     [Route("admin/services")]
     [Area("admin")]
+    [Authorize(Roles = "Administrator")]
+
     public class OurServicesController : Controller
     {
         private readonly ILocalizationService<OurService> _localizationService;

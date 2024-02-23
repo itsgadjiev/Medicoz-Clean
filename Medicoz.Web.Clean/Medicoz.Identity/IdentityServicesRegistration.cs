@@ -41,6 +41,12 @@ namespace Medicoz.Identity
                 });
 
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/auth/login";
+                options.AccessDeniedPath = "/auth/login";
+            });
+
             return services;
 
         }

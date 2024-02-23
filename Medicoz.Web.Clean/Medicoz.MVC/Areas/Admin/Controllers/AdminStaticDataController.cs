@@ -1,12 +1,15 @@
 ﻿using MediatR;
 using Medicoz.Application.Features.LocalizedStaticEntity.Commands.CreateLocalizedStaticEntity;
 using Medicoz.Application.Features.LocalizedStaticEntity.Queries.GetAllStaticEntities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin/StaticData")]
+    [Authorize(Roles = "Administrator")]
+
     public class AdminStaticDataController : Controller
     {
         private readonly IMediator _mediator;

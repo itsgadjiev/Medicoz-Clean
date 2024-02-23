@@ -5,12 +5,15 @@ using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
 using Medicoz.Application.Features.Slider.Commands.CreateSlider;
 using Medicoz.Application.Features.Slider.Commands.UpdateSlider;
 using Medicoz.Application.Features.Slider.Queries.GetAllSliders;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
     [Route("admin/slider")]
     [Area("admin")]
+    [Authorize(Roles = "Administrator")]
+
     public class AdminSliderController : Controller
     {
         private readonly IMediator _mediator;

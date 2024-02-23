@@ -4,12 +4,15 @@ using Medicoz.Application.Features.Departments.Commands.AddDepartment;
 using Medicoz.Application.Features.Departments.Commands.UpdateDepartment;
 using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
 using Medicoz.Application.Features.Departments.Queries.GetDepartmentById;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("admin/departments")]
+    [Authorize(Roles = "Administrator")]
+
     public class AdminDepartmentController : Controller
     {
         private readonly IMediator _mediator;

@@ -46,12 +46,15 @@ namespace Medicoz.Identity.Services
 
             JwtSecurityToken jwtSecurityToken = await GenerateToken(user);
 
+            var roleName = await _userManager.GetRolesAsync(user);
             var response = new AuthResponse
             {
                 Id = user.Id,
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
                 Email = user.Email,
-                UserName = user.UserName
+                UserName = user.UserName,
+                Role= roleName.FirstOrDefault(),
+
             };
 
 

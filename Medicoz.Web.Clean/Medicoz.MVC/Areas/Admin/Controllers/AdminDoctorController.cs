@@ -5,12 +5,15 @@ using Medicoz.Application.Features.Doctor.Commands.AddDoctor;
 using Medicoz.Application.Features.Doctor.Commands.UpdateDoctor;
 using Medicoz.Application.Features.Doctor.Queries.GetDoctorByIdAp;
 using Medicoz.Application.Features.Doctor.Queries.GetDoctorsList;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Areas.Admin.Controllers
 {
     [Area("admin")]
     [Route("admin/doctor")]
+    [Authorize(Roles = "Administrator")]
+
     public class AdminDoctorController : Controller
     {
         private readonly IMediator _mediator;
