@@ -42,6 +42,7 @@ namespace Medicoz.Application.Features.OurServices.Commands.AddOurService
 
 
             await _ourServicesRepository.AddAsync(service);
+            await _ourServicesRepository.SaveChangesAsync();
             return Unit.Value;
 
         }

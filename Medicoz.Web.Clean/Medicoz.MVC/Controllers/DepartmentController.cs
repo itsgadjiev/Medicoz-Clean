@@ -1,19 +1,21 @@
-﻿using Medicoz.Application.Contracts.Percistance;
+﻿using MediatR;
+using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Features.Departments.Queries.GetAllDepartments;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Medicoz.MVC.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly IDepartmentRepository _departmentRepository;
+        private readonly IMediator _mediator;
 
-        public DepartmentController(IDepartmentRepository departmentRepository)
+        public DepartmentController(IMediator mediator)
         {
-            _departmentRepository = departmentRepository;
+            _mediator = mediator;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_departmentRepository.GetAllAsync());
+            return View(await _mediator.Send(new GetAllDepartmentsQuery()));
         }
     }
 }

@@ -37,6 +37,7 @@ namespace Medicoz.Application.Features.OurServices.Commands.UpdateOurService
             existingService.Icon = request.Icon;
 
             await _ourServicesRepository.UpdateAsync(existingService);
+            await _ourServicesRepository.SaveChangesAsync();
 
             return Unit.Value;
         }
