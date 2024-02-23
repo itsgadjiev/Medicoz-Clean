@@ -5,6 +5,7 @@ using Medicoz.Application.Features.Slider.Queries.GetAllSliders;
 using Medicoz.Domain;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 
 namespace Medicoz.MVC.Controllers
 {
@@ -32,6 +33,7 @@ namespace Medicoz.MVC.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            #region MyRegion
             HomeViewModel homeViewModel = new HomeViewModel();
 
             homeViewModel.OurServices = await _ourServicesRepository.GetAllAsync();
@@ -52,7 +54,9 @@ namespace Medicoz.MVC.Controllers
 
             }).ToList();
 
+            #endregion
             return View(homeViewModel);
+
         }
 
     }

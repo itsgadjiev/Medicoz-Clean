@@ -158,7 +158,7 @@
                 <div class="service-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         @Html.Raw(testModel.Icon)
-                        <h5><a href="~/medicoz/#">@Model.EntitiesLocalizedValuesTitle.GetValueOrDefault(testModel.Id, "Default TestModel Title")</a></h5>
+                        <h5><a href="#">@Model.EntitiesLocalizedValuesTitle.GetValueOrDefault(testModel.Id, "Default TestModel Title")</a></h5>
                         <div class="text">@Model.EntitiesLocalizedValuesDesc.GetValueOrDefault(testModel.Id, "Default TestModel Description")</div>
                     </div>
                 </div>
@@ -184,10 +184,10 @@
                     <div class="inner-box">
                         <figure class="image"><img src="~/uploads/images/@item.ImageURL" alt=""></figure>
                         <ul class="social-links">
-                            <li><a href="~/medicoz/#"><span class="fab fa-facebook"></span></a></li>
-                            <li><a href="~/medicoz/#"><span class="fab fa-linkedin-in"></span></a></li>
-                            <li><a href="~/medicoz/#"><span class="fab fa-twitter"></span></a></li>
-                            <li><a href="~/medicoz/#"><span class="fab fa-pinterest"></span></a></li>
+                            <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
                         </ul>
                         <div class="info-box">
                             <h4 class="name"><a asp-controller="doctor" asp-action="detail" asp-route-doctorId="@item.Id">Dr.@item.Name @item.Surname</a></h4>
@@ -219,10 +219,10 @@
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a asp-action="detail" asp-controller="blog"><img src="~/medicoz/images/resource/news-1.jpg" alt=""></a></figure>
-                        <a href="~/medicoz/#" class="date">Sep 19, 2020</a>
+                        <a href="#" class="date">Sep 19, 2020</a>
                     </div>
                     <div class="lower-content">
-                        <h4><a href="~/medicoz/blog-post-image.html">What is The Success rate<br> of a root canel?</a></h4>
+                        <h4><a asp-action="detail" asp-controller="blog">What is The Success rate<br> of a root canel?</a></h4>
                         <div class="text">Nullam mauris vitae tortor sodales efficitur. Quisque orci ante. Proin amet turpis</div>
                         <div class="post-info">
                             <div class="post-author">By Medicoz Admin</div>
@@ -236,10 +236,10 @@
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a asp-action="detail" asp-controller="blog"><img src="~/medicoz/images/resource/news-2.jpg" alt=""></a></figure>
-                        <a href="~/medicoz/#" class="date">Sep 19, 2020</a>
+                        <a href="#" class="date">Sep 19, 2020</a>
                     </div>
                     <div class="lower-content">
-                        <h4><a href="~/medicoz/blog-post-image.html">How to handle your kids’ <Br>mystery ailments?</a></h4>
+                        <h4><aasp-action ="detail" asp-controller="blog">How to handle your kids’ <Br>mystery ailments?</a></h4>
                         <div class="text">Nullam mauris vitae tortor sodales efficitur. Quisque orci ante. Proin amet turpis</div>
                         <div class="post-info">
                             <div class="post-author">By Medicoz Admin</div>
@@ -254,10 +254,10 @@
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a asp-action ="detail" asp-controller="blog"><img src="~/medicoz/images/resource/news-3.jpg" alt=""></a></figure>
-                        <a href="~/medicoz/#" class="date">Sep 19, 2020</a>
+                        <a href="#" class="date">Sep 19, 2020</a>
                     </div>
                     <div class="lower-content">
-                        <h4><a href="~/medicoz/blog-post-image.html">How to help the cardiology <br>department</a></h4>
+                        <h4><a asp-action="detail" asp-controller="blog">How to help the cardiology <br>department</a></h4>
                         <div class="text">Nullam mauris vitae tortor sodales efficitur. Quisque orci ante. Proin amet turpis</div>
                         <div class="post-info">
                             <div class="post-author">By Medicoz Admin</div>
@@ -272,20 +272,5 @@
 </section>
 <!--End News Section -->
 <!-- Clients Section -->
-<section class="clients-section">
-    <div class="auto-container">
 
-        <!-- Sponsors Outer -->
-        <div class="sponsors-outer">
-            <!--clients carousel-->
-            <ul class="clients-carousel owl-carousel owl-theme">
-                <li class="slide-item"> <a href="~/medicoz/#"><img src="~/medicoz/images/clients/1.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="~/medicoz/#"><img src="~/medicoz/images/clients/2.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="~/medicoz/#"><img src="~/medicoz/images/clients/3.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="~/medicoz/#"><img src="~/medicoz/images/clients/4.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="~/medicoz/#"><img src="~/medicoz/images/clients/5.png" alt=""></a> </li>
-            </ul>
-        </div>
-    </div>
-</section>
 <!--End Clients Section -->

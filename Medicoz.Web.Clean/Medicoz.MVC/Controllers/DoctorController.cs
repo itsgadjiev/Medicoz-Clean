@@ -57,6 +57,19 @@ public class DoctorController : Controller
             ModelState.AddModelError("", ex.ErrorMessage);
             return View(viewModel);
         }
+        catch (CustomValidationException e)
+        {
+            var query = new GetDoctorDetailQuery { DoctorId = doctorId };
+            var viewModel = await _mediator.Send(query);
+
+            foreach (var item in e.Errors)
+            {
+                ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            }
+            return View(viewModel);
+        }
+
+
 
         return RedirectToAction("Index", "Home");
     }

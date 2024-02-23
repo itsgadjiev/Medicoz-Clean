@@ -1,11 +1,14 @@
 ﻿<!--Page Title-->
-<section class="page-title" style="background-image: url(images/background/8.jpg);">
+@using Medicoz.Application.Contracts.Localisation
+@using Medicoz.Domain
+@inject IStaticDataLocalisationService<LocalizedStaticEntity> _IStaticDataLocalisationService
+<section class="page-title" style="background-image: url(./images/background/8.jpg);">
     <div class="auto-container">
         <div class="title-outer">
-            <h1>Blogs</h1>
+            <h1>@(_IStaticDataLocalisationService.GetLocalizedValue("blog"))</h1>
             <ul class="page-breadcrumb">
-                <li><a asp-action="index" asp-controller="home">Home</a></li>
-                <li>Blog</li>
+                <li><a asp-action="index" asp-controller="home">@(_IStaticDataLocalisationService.GetLocalizedValue("Home"))</a></li>
+                <li>@(_IStaticDataLocalisationService.GetLocalizedValue("blog"))</li>
             </ul>
         </div>
     </div>
@@ -74,20 +77,5 @@
 </section>
 <!--End Blog Section -->
 <!-- Clients Section -->
-<section class="clients-section alternate">
-    <div class="auto-container">
 
-        <!-- Sponsors Outer -->
-        <div class="sponsors-outer">
-            <!--clients carousel-->
-            <ul class="clients-carousel owl-carousel owl-theme">
-                <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
-            </ul>
-        </div>
-    </div>
-</section>
 <!--End Clients Section -->

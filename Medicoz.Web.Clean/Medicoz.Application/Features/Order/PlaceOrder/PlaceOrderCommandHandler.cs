@@ -60,7 +60,7 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
             System.IO.File.WriteAllBytes(filePath, fileContents);
             long total = (long)basket.BasketTotal;
             _basketService.DeleteBasket(request.HttpContext);
-
+            
             return _paymentService.Charge(request.HttpContext, total, "Medicoz");
         }
     }

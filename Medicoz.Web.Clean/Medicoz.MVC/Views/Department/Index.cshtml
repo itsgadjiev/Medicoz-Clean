@@ -1,13 +1,16 @@
 ﻿@using Medicoz.Application.Features.Departments.Queries.GetAllDepartments
 @model List<DepartmentListDTO>
+@using Medicoz.Application.Contracts.Localisation
+@using Medicoz.Domain
+@inject IStaticDataLocalisationService<LocalizedStaticEntity> _IStaticDataLocalisationService
 <!--Page Title-->
 <section class="page-title" style="background-image: url(images/background/8.jpg);">
     <div class="auto-container">
         <div class="title-outer">
-            <h1>Departments</h1>
+            <h1>@(_IStaticDataLocalisationService.GetLocalizedValue("Department"))</h1>
             <ul class="page-breadcrumb">
-                <li><a asp-action="index" asp-controller="home">Home</a></li>
-                <li>Departments</li>
+                <li><a asp-action="index" asp-controller="home"></a>@(_IStaticDataLocalisationService.GetLocalizedValue("Home"))</li>
+                <li>@(_IStaticDataLocalisationService.GetLocalizedValue("Department"))</li>
             </ul>
         </div>
     </div>
@@ -16,10 +19,8 @@
 <!-- Services Section -->
 <section class="services-section-two">
     <div class="auto-container">
-
         <div class="carousel-outer">
             <div class="row">
-
                 @foreach (var item in Model)
                 {
                     <!-- service Block -->
@@ -39,9 +40,6 @@
                         </div>
                     </div>
                 }
-                
-
-               
             </div>
         </div>
     </div>
