@@ -22,7 +22,7 @@ namespace Medicoz.Identity.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Medicoz.Identity.Models.ApplicationUser", b =>
+            modelBuilder.Entity("Medicoz.Application.Models.Identity.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -42,11 +42,9 @@ namespace Medicoz.Identity.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -71,6 +69,9 @@ namespace Medicoz.Identity.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("RoleName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -99,7 +100,7 @@ namespace Medicoz.Identity.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "39d79a00-8bdf-471a-830c-a1f5190d18f4",
+                            ConcurrencyStamp = "7e4ededa-484e-4c13-a547-b6147aa367e4",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             FirstName = "System",
@@ -107,9 +108,9 @@ namespace Medicoz.Identity.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEL93iB6sUz3Gi9z/uTuOZSXr1s6nG+x2wqQYffTZMzT4p4iya1zhGmUcwSjr10Egug==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAUGIUudIfpr9YGZBIWYuQum5it1LnQs8bMiwIjYED5cqUf3OHQDAwazqf+Khs49TQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8e129d44-05cc-4915-983c-d64acbc679c1",
+                            SecurityStamp = "86095ad0-3ebd-47c7-bd16-107d2017ab7e",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         },
@@ -117,7 +118,7 @@ namespace Medicoz.Identity.Migrations
                         {
                             Id = "9e224968-33e4-4652-b7b7-8574d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fd370d94-fd82-43b1-9ddf-af3e69201196",
+                            ConcurrencyStamp = "d41cad0b-7e44-439d-a04e-f8a11f73579e",
                             Email = "user@localhost.com",
                             EmailConfirmed = true,
                             FirstName = "System",
@@ -125,9 +126,9 @@ namespace Medicoz.Identity.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@LOCALHOST.COM",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMAGGU36r+M1EB9UNhbzEktkti65qn/IMCdDEAGPdR14NXolBMKTy4PEo3/OhXG5QQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDZVEkR2upE5VCjXW/tDTFLmOhVEm7LC7u5ekysrk7F5jFT1v/gfICWWnCBOYHUIOQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6f0df329-6e95-4f10-af03-b48249bfec6d",
+                            SecurityStamp = "0abc0df8-3f1d-43e0-95ca-afe041cc3f78",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
@@ -163,21 +164,21 @@ namespace Medicoz.Identity.Migrations
                         new
                         {
                             Id = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
-                            ConcurrencyStamp = "a9efc230-4706-4bec-9403-97224aeba60e",
+                            ConcurrencyStamp = "55593074-b239-471d-85ff-06d5eabb10b6",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = "cbc43a8e-f7bb-4445-baaf-1add431ffbbf",
-                            ConcurrencyStamp = "0fc5230c-9e09-495f-8b17-1fb904d50d77",
+                            ConcurrencyStamp = "2ad68abd-79f9-4046-b2c6-7bc37c116ed7",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "abc43a8e-f7bb-8875-baaf-1add431ffbbf",
-                            ConcurrencyStamp = "7703fcd2-dbb8-437c-9c94-790ace499151",
+                            ConcurrencyStamp = "fc538825-e17a-4525-b1c5-7cea9ab2b3ed",
                             Name = "Doctor",
                             NormalizedName = "DOCTOR"
                         });
@@ -312,7 +313,7 @@ namespace Medicoz.Identity.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Medicoz.Identity.Models.ApplicationUser", null)
+                    b.HasOne("Medicoz.Application.Models.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -321,7 +322,7 @@ namespace Medicoz.Identity.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Medicoz.Identity.Models.ApplicationUser", null)
+                    b.HasOne("Medicoz.Application.Models.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -336,7 +337,7 @@ namespace Medicoz.Identity.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Medicoz.Identity.Models.ApplicationUser", null)
+                    b.HasOne("Medicoz.Application.Models.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -345,7 +346,7 @@ namespace Medicoz.Identity.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Medicoz.Identity.Models.ApplicationUser", null)
+                    b.HasOne("Medicoz.Application.Models.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

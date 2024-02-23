@@ -11,7 +11,7 @@ namespace Medicoz.Identity.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IHttpContextAccessor _contextAccessor;
 
-        public UserService(UserManager<ApplicationUser> userManager, IHttpContextAccessor contextAccessor)
+        public UserService(UserManager<ApplicationUser> userManager, IHttpContextAccessor contextAccessor )
         {
             _userManager = userManager;
             _contextAccessor = contextAccessor;
@@ -22,7 +22,11 @@ namespace Medicoz.Identity.Services
         {
             var employee = await _userManager.FindByIdAsync(userId);
             if (employee is null) { throw new Exception("User is not authenticated"); }
+            var roleName = await _userManager.GetRolesAsync(employee);
+            employee.RoleName = roleName.FirstOrDefault();
             return employee;
+
+            
         }
 
         public async Task<ApplicationUser> GetCurrentUserAsync()

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Medicoz.MVC.Areas.Admin.Controllers;
 [Route("admin/dashboard")]
 [Area("admin")]
-[Authorize(Roles = "Administrator")]
+[Authorize(Roles = "Administrator , Doctor")]
 
 public class DashboardController : Controller
 {
