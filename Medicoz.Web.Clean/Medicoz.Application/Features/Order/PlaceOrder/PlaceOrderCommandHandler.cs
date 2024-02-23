@@ -30,7 +30,7 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
         public async Task<StatusCodeResult> Handle(PlaceOrderCommand request, CancellationToken cancellationToken)
         {
             var basket = await _basketService.GetBasketFromCookies(request.HttpContext);
-            if (basket is null)
+            if (basket.BasketItems.Count == 0)
             {
                 throw new BadRequestException("Order", "No item in basket");
             }
@@ -39,7 +39,7 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
             {
                 Id = Guid.NewGuid().ToString(),
                 Basket = basket,
-                BasketId =Guid.NewGuid().ToString(),
+                BasketId = Guid.NewGuid().ToString(),
                 Email = request.Order.Email,
                 FullName = request.Order.FullName,
                 Phone = request.Order.Phone,
@@ -61,7 +61,7 @@ namespace Medicoz.Application.Features.Order.PlaceOrder
             long total = (long)basket.BasketTotal;
             _basketService.DeleteBasket(request.HttpContext);
 
-            return _paymentService.Charge(request.HttpContext, total, "Medicoz"); 
+            return _paymentService.Charge(request.HttpContext, total, "Medicoz");
         }
     }
 }

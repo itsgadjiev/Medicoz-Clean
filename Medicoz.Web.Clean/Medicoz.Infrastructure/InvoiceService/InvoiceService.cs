@@ -46,7 +46,11 @@ namespace Medicoz.Infrastructure.InvoiceService
             PdfPage page = document.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            GlobalFontSettings.FontResolver = new FileFontResolver();
+            if (PdfSharp.Fonts.GlobalFontSettings.FontResolver is null)
+            {
+                GlobalFontSettings.FontResolver = new FileFontResolver();
+            }
+
             XFont font = new XFont(GlobalFontSettings.DefaultFontName, 12);
 
             int y = 20;

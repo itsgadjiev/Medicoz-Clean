@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Medicoz.Application.Exceptions;
 using Medicoz.Application.Features.Order.PlaceOrder;
 using Medicoz.MVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -16,12 +17,19 @@ namespace Medicoz.MVC.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateCheckoutSession(BasketViewModel basketViewModel)
         {
-
-            return await _mediator.Send(new PlaceOrderCommand
+            try
             {
-                Order = basketViewModel.Order,
-                HttpContext = HttpContext
-            }); ;
+                return await _mediator.Send(new PlaceOrderCommand
+                {
+                    Order = basketViewModel.Order,
+                    HttpContext = HttpContext
+                });
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Basket Items Cant Be null");
+                return RedirectToAction("Index","Basket");
+            }
         }
     }
 }

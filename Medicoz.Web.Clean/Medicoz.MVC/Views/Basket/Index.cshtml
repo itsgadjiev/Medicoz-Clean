@@ -15,44 +15,55 @@
 </section>
 <!--End Page Title-->
 <!--Cart Section-->
-<section class="cart-section">
-    <div class="auto-container">
-        <!--Cart Outer-->
-        <div class="cart-outer">
-            <div class="table-outer">
-                <table class="cart-table">
-                    <thead class="cart-header">
-                        <tr>
-                            <th>Preview</th>
-                            <th class="prod-column">product</th>
-                            <th class="price">Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.Basket.BasketItems)
-                        {
+@if (Model.Basket.BasketItems.Count == 0)
+{
+    <h2 style="text-align:center; margin-bottom:40vh;" class="text-primary">Your basket is empty...</h2>
+}
+
+else
+{
+    <section class="cart-section">
+        <div class="auto-container">
+            <!--Cart Outer-->
+            <div class="cart-outer">
+                <div class="table-outer">
+                    <table class="cart-table">
+                        <thead class="cart-header">
                             <tr>
-                                <td class="prod-column">
-                                    <div class="column-box">
-                                        <figure class="prod-thumb"><a href="#"><img src="~/uploads/images/@item.Product.ImageUrl" alt=""></a></figure>
-                                    </div>
-                                </td>
-                                <td><h4 class="prod-title">@item.Product.Name</h4></td>
-                                <td class="sub-total">$@item.Product.Price.00</td>
-                                <td class="qty"><div class="item-quantity"><input class="quantity-spinner" type="text" value="@item.ProductCount" name="quantity"></div></td>
-                                <td class="total">$@item.BasketItemTotal</td>
-                                <td><a href="#" class="remove-btn"><span class="fa fa-times"></span></a></td>
+                                <th>Preview</th>
+                                <th class="prod-column">product</th>
+                                <th class="price">Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>&nbsp;</th>
                             </tr>
-                        }
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Basket.BasketItems)
+                            {
+                                <tr>
+                                    <td class="prod-column">
+                                        <div class="column-box">
+                                            <figure class="prod-thumb"><a href="#"><img src="~/uploads/images/@item.Product.ImageUrl" alt=""></a></figure>
+                                        </div>
+                                    </td>
+                                    <td><h4 class="prod-title">@item.Product.Name</h4></td>
+                                    <td class="sub-total">$@item.Product.Price.00</td>
+                                    <td class="qty"><div class="item-quantity"><input class="quantity-spinner" type="text" value="@item.ProductCount" name="quantity"></div></td>
+                                    <td class="total">$@item.BasketItemTotal</td>
+                                    <td>
+                                        <form method="post" asp-controller="shop" asp-action="RemoveFromBasket" asp-route-id="@item.ProductId">
+                                            <button type="submit">-</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
 
-                    </tbody>
-                </table>
-            </div>
+                        </tbody>
+                    </table>
+                </div>
 
-            @*  <div class="cart-options clearfix">
+                @*  <div class="cart-options clearfix">
             <div class="pull-left">
             <div class="apply-coupon clearfix">
             <div class="form-group clearfix">
@@ -68,68 +79,60 @@
             <button type="button" class="theme-btn cart-btn">update cart</button>
             </div>
             </div> *@
-        </div>
+            </div>
 
-        <div class="row justify-content-between">
-            <div class="column pull-left col-lg-5 col-md-6 col-sm-12">
-                <div class="shipping-block">
-                    <div class="inner-box">
-                        <h3>Free Shipping</h3>
-                        <h4>Calculate Shipping</h4>
-                        <!-- Shipping Form -->
-                        <div class="shipping-form">
-                            <!--Shipping Form-->
-                            <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
-                                <div class="row clearfix">
-                                    <div class="form-group col-md-6 col-sm-12">
-                                        <input asp-for="Order.FullName" placeholder="Fullname" required>
+
+
+            <div class="row justify-content-between">
+                <div class="column pull-left col-lg-5 col-md-6 col-sm-12">
+                    <div class="shipping-block">
+                        <div class="inner-box">
+                            <h3>Free Shipping</h3>
+                            <!-- Shipping Form -->
+                            <div class="shipping-form">
+                                <!--Shipping Form-->
+                                <form method="post" asp-action="CreateCheckoutSession" asp-controller="Payment">
+                                    <div class="row clearfix">
+                                        <div class="form-group col-md-6 col-sm-12">
+                                            <input asp-for="Order.FullName" placeholder="Fullname" required>
+                                        </div>
+                                        <div class="form-group col-md-6 col-sm-12">
+                                            <input asp-for="Order.Phone" placeholder="Phone" required>
+                                        </div>
+                                        <div class="form-group col-md-12 col-sm-12">
+                                            <input asp-for="Order.Email" placeholder="Email" required>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-6 col-sm-12">
-                                        <input asp-for="Order.Phone" placeholder="Phone" required>
-                                    </div>
-                                    <div class="form-group col-md-12 col-sm-12">
-                                        <input asp-for="Order.Email" placeholder="Email" required>
-                                    </div>
-                                </div>
-                                <button class="theme-btn coupon-btn" type="submit">Place Order</button>
-                            </form>
+
+                                    <button class="theme-btn coupon-btn" type="submit">Place Order</button>
+
+
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="column pull-right col-lg-6 col-md-6 col-sm-12">
+                    <!--Totals Table-->
+                    <ul class="totals-table">
+                        <li><h3>Cart Totals</h3></li>
+                        <li class="clearfix total"><span class="col">Sub Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
+                        <li class="clearfix total"><span class="col">Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
+                        <li class="text-right">
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="column pull-right col-lg-6 col-md-6 col-sm-12">
-                <!--Totals Table-->
-                <ul class="totals-table">
-                    <li><h3>Cart Totals</h3></li>
-                    <li class="clearfix total"><span class="col">Sub Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
-                    <li class="clearfix total"><span class="col">Total</span><span class="col price">$@Model.Basket.BasketTotal</span></li>
-                    <li class="text-right">
-                    </li>
-                </ul>
-            </div>
+
         </div>
-    </div>
-</section>
+    </section>
+}
+
+
 <!--End Cart Section-->
-<!-- Clients Section -->
-<section class="clients-section alternate">
-    <div class="auto-container">
 
-        <!-- Sponsors Outer -->
-        <div class="sponsors-outer">
-            <!--clients carousel-->
-            <ul class="clients-carousel owl-carousel owl-theme">
-                <li class="slide-item"> <a href="#"><img src="images/clients/1.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/2.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/3.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/4.png" alt=""></a> </li>
-                <li class="slide-item"> <a href="#"><img src="images/clients/5.png" alt=""></a> </li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!--End Clients Section -->
 <style>
     .preloader {
         position: unset !important;

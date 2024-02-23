@@ -50,13 +50,6 @@
                                         <figure class="image"><a asp-action="detail" asp-route-id="@item.Id" asp-controller="shop"><img src="~/uploads/images/@item.ImageUrl" alt=""></a></figure>
                                     </div>
                                     <div class="lower-content">
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star light"></span>
-                                        </div>
                                         <h4 class="name"><a asp-action="detail" asp-route-id="@item.Id" asp-controller="shop">@item.Name</a></h4>
                                         <div class="price"> $@item.Price</div>
                                         <form method="post" asp-action="AddToBasket" asp-controller="Shop" asp-route-id="@item.Id">

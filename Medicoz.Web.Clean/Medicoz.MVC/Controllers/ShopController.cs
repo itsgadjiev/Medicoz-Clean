@@ -2,6 +2,7 @@
 using Medicoz.Application.Contracts.Cart;
 using Medicoz.Application.Contracts.Payment;
 using Medicoz.Application.Contracts.Percistance;
+using Medicoz.Application.Features.Basket.RemoveFromBasket;
 using Medicoz.Application.Features.Products.Queries.GetAllProducts;
 using Medicoz.Application.Features.Products.Queries.GetProductById;
 using Medicoz.Application.Features.Products.Queries.GetProductByIdDetail;
@@ -46,7 +47,7 @@ namespace Medicoz.MVC.Controllers
             return View(await _mediator.Send(new GetProductByIdQueryDetail { Id = id }));
         }
 
-        [HttpPost("product/{id}")]
+        [HttpPost("add/product/{id}")]
         public async Task<IActionResult> AddToBasket(ProductDetailDTO productDetailDTO, string id)
         {
             Basket basket = await _basketService.GetBasketFromCookies(Request.HttpContext);
@@ -87,7 +88,15 @@ namespace Medicoz.MVC.Controllers
 
             _basketService.SaveBasketToCookies(Request.HttpContext, basket);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "shop");
+        }
+
+        [HttpPost("remove/product/{id}")]
+        public async Task<IActionResult> RemoveFromBasket(string id)
+        {
+            await _mediator.Send(new RemoveItemFromBasketCommand { ProductId = id });
+
+            return RedirectToAction("index", "basket");
         }
 
     }

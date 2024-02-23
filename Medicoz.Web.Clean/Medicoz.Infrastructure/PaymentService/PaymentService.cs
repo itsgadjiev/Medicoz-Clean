@@ -24,7 +24,7 @@ namespace Medicoz.Infrastructure.PaymentService
 
             var options = new Stripe.Checkout.SessionCreateOptions
             {
-                SuccessUrl = "https://example.com/success",
+                SuccessUrl = $"{domain}/home",
                 LineItems = new List<Stripe.Checkout.SessionLineItemOptions>
                 {
                   new Stripe.Checkout.SessionLineItemOptions
