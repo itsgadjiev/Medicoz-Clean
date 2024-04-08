@@ -18,6 +18,7 @@
  - MediatR
  - Command–query separation
  - Inversion of Control / Dependency injection
+ - Stripe 
 
 ## Sotware architecture
 ##### Clean architecture
